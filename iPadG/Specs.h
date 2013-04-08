@@ -12,6 +12,7 @@ typedef enum {
     kWordToWord,
     kSoundToSound,
     kWordToSound,
+    kMath
 } GameType;
 
 typedef enum {
@@ -27,11 +28,11 @@ typedef enum {
     BOOL multiplayer;
     GameType gameType;
     DifficultyLevel difficultyLevel;
-    BOOL timed;
+    BOOL time;
 }
-@property(nonatomic)BOOL multiplayer;
-@property(nonatomic)GameType gameType;
-@property(nonatomic)DifficultyLevel difficultyLevel;
-@property(nonatomic)BOOL timed;
+@property (nonatomic) BOOL multiplayer;
+@property (nonatomic) GameType gameType;
+@property (nonatomic) DifficultyLevel difficultyLevel;
+@property (nonatomic) BOOL timed;
 
 @end

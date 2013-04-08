@@ -30,6 +30,7 @@
 - (IBAction)WordToWordPressed:(id)sender;
 - (IBAction)WordToSoundPressed:(id)sender;
 - (IBAction)SoundToSoundPressed:(id)sender;
+- (IBAction)MathPressed:(id)sender;
 
 //game difficulty
 - (IBAction)VeryEasyPressed:(id)sender;

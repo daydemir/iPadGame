@@ -9,14 +9,14 @@
 #import "Specs.h"
 
 @implementation Specs
-@synthesize multiplayer;
-@synthesize gameType;
-@synthesize difficultyLevel;
-@synthesize timed;
+@synthesize multiplayer = _multiplayer;
+@synthesize gameType = _gameType;
+@synthesize difficultyLevel = _difficultyLevel;
+@synthesize timed = _timed;
 -(id)init
 {
     self = [super init];
-   
+
     if(self)
     {
         
