@@ -191,10 +191,27 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMT-NR-rQT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NPJ-Md-hbw"/>
+                                    <constraint firstAttribute="width" constant="733" id="f5e-mS-e0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Math">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MathPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="mNf-Bn-Thq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-YV-blf">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="733" id="Bp0-UY-EtR"/>
-                                    <constraint firstAttribute="height" constant="240" id="Xih-ze-0XO"/>
+                                    <constraint firstAttribute="width" constant="733" id="e6J-8L-7EY"/>
+                                    <constraint firstAttribute="height" constant="200" id="ldE-sQ-r4w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Word to Word">
@@ -211,7 +228,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P3-ho-n0x">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="211" id="UKU-TF-hn5"/>
+                                    <constraint firstAttribute="width" constant="733" id="esI-dA-Ytk"/>
+                                    <constraint firstAttribute="height" constant="200" id="q9b-pO-cX8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Word to Sound">
@@ -228,7 +246,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-DR-8nQ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="259" id="bXS-Dg-rng"/>
+                                    <constraint firstAttribute="height" constant="200" id="EdU-Xc-OMo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sound to Sound">
@@ -251,23 +269,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kh5-DR-8nQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2AZ-IB-rFB"/>
                             <constraint firstItem="hwy-Ul-n71" firstAttribute="trailing" secondItem="8In-91-ioM" secondAttribute="trailing" type="default" id="5Ez-Z5-qsF"/>
-                            <constraint firstItem="8P3-ho-n0x" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" constant="469" id="6Hp-Vy-0HY"/>
                             <constraint firstItem="hwy-Ul-n71" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" type="default" id="8jb-WN-czW"/>
-                            <constraint firstItem="aZc-YV-blf" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CoE-Ib-4cH"/>
-                            <constraint firstItem="8P3-ho-n0x" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="En8-bH-F23"/>
-                            <constraint firstItem="aZc-YV-blf" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" constant="203" id="I14-cP-B0G"/>
+                            <constraint firstItem="8P3-ho-n0x" firstAttribute="centerX" secondItem="kh5-DR-8nQ" secondAttribute="centerX" type="default" id="8lL-EE-JvY"/>
+                            <constraint firstItem="sMT-NR-rQT" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" constant="74" id="J4R-c7-YNb"/>
+                            <constraint firstAttribute="trailing" secondItem="sMT-NR-rQT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Jwy-Ca-0SE"/>
                             <constraint firstAttribute="bottom" secondItem="kh5-DR-8nQ" secondAttribute="bottom" constant="36" id="LXD-6A-7K1"/>
-                            <constraint firstItem="8P3-ho-n0x" firstAttribute="trailing" secondItem="aZc-YV-blf" secondAttribute="trailing" type="default" id="RmE-Me-KS1"/>
                             <constraint firstItem="kh5-DR-8nQ" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="V82-7V-abb"/>
+                            <constraint firstItem="aZc-YV-blf" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" constant="309" id="atF-h3-UY1"/>
+                            <constraint firstAttribute="trailing" secondItem="kh5-DR-8nQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnV-u4-mop"/>
+                            <constraint firstAttribute="bottom" secondItem="8P3-ho-n0x" secondAttribute="bottom" constant="265" id="fCZ-lw-ZhM"/>
                             <constraint firstItem="hwy-Ul-n71" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" type="default" id="gIp-c0-RXb"/>
+                            <constraint firstItem="aZc-YV-blf" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uhz-bp-4Xc"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5e-Sx-H5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2097" y="-3026"/>
+            <point key="canvasLocation" x="-2109" y="-3032"/>
         </scene>
         <!--I Pad Game View Controller-->
         <scene sceneID="4">
@@ -789,6 +808,31 @@
     <resources>
         <image name="medium_blue_450px.png" width="450" height="178"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="iPadGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="BeginPressed:"/>
+                <relationship kind="action" name="EasyPressed:"/>
+                <relationship kind="action" name="MathPressed:"/>
+                <relationship kind="action" name="NotTimedPressed:"/>
+                <relationship kind="action" name="SinglePlayerPressed:"/>
+                <relationship kind="action" name="SoundToSoundPressed:"/>
+                <relationship kind="action" name="TimedPressed:"/>
+                <relationship kind="action" name="TwoPlayerPressed:"/>
+                <relationship kind="action" name="VeryEasyPressed:"/>
+                <relationship kind="action" name="WordToSoundPressed:"/>
+                <relationship kind="action" name="WordToWordPressed:"/>
+                <relationship kind="outlet" name="GameDifficultyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="GameTypeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="NumPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="TimerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
