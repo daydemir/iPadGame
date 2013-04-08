@@ -29,8 +29,6 @@
 		2256EE27171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
 		227C0EA317040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
 		227C0EA417040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
-		6DDED2E917138120004FF02C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2E817138120004FF02C /* Card.m */; };
-		6DDED2EC1713812F004FF02C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +69,6 @@
 		2256EE25171341830068C092 /* Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
 		227C0EA117040C2B00E16EBC /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		227C0EA217040C2B00E16EBC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
-		6DDED2E717138120004FF02C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		6DDED2E817138120004FF02C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		6DDED2EA1713812F004FF02C /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		6DDED2EB1713812F004FF02C /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +128,6 @@
 		222C691316E154D5000B5696 /* iPadG */ = {
 			isa = PBXGroup;
 			children = (
-				6DDED2EA1713812F004FF02C /* Test.h */,
-				6DDED2EB1713812F004FF02C /* Test.m */,
-				6DDED2E717138120004FF02C /* Card.h */,
-				6DDED2E817138120004FF02C /* Card.m */,
 				222C691C16E154D5000B5696 /* iPadGameAppDelegate.h */,
 				222C691D16E154D5000B5696 /* iPadGameAppDelegate.m */,
 				222C692516E154D5000B5696 /* MainStoryboard.storyboard */,
@@ -304,8 +294,6 @@
 				222C692A16E154D5000B5696 /* iPadGameViewController.m in Sources */,
 				227C0EA317040C2B00E16EBC /* Grid.m in Sources */,
 				2256EE26171341830068C092 /* Specs.m in Sources */,
-				6DDED2E917138120004FF02C /* Card.m in Sources */,
-				6DDED2EC1713812F004FF02C /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
