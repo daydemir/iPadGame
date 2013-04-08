@@ -1,6 +1,6 @@
 //
 //  Specs.m
-//  project
+//  COMP 523 Project
 //
 //  Created by Christopher Spargo on 3/27/13.
 //  Copyright (c) 2013 Christopher Spargo. All rights reserved.
@@ -9,30 +9,20 @@
 #import "Specs.h"
 
 @implementation Specs
-// setters
-- (void) setMultiplayer: (BOOL) p{
-    multiplayer = p;
+@synthesize multiplayer;
+@synthesize gameType;
+@synthesize difficultyLevel;
+@synthesize timed;
+-(id)init
+{
+    self = [super init];
+   
+    if(self)
+    {
+        
+    }
+    
+    return self;
 }
-- (void) setGameType: (GameType) type{
-    gameType = type;
-}
-- (void) setDifficultyLevel: (DifficultyLevel) difficulty{
-    difficultyLevel = difficulty;
-}
-- (void) setTimed: (BOOL) p{
-    timed = p;
-}
-// getters
-- (BOOL) getMultiplayer{
-    return multiplayer;
-}
-- (GameType) getGameType{
-    return gameType;
-}
-- (DifficultyLevel) getDifficultyLevel{
-    return difficultyLevel;
-}
-- (BOOL) getTimed{
-    return timed;
-}
+
 @end

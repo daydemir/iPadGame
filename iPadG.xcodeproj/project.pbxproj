@@ -25,8 +25,8 @@
 		222C693F16E154D6000B5696 /* iPadGTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C693E16E154D6000B5696 /* iPadGTests.m */; };
 		222C694916E15792000B5696 /* medium_blue_450px.png in Resources */ = {isa = PBXBuildFile; fileRef = 222C694816E15792000B5696 /* medium_blue_450px.png */; };
 		222C694A16E15792000B5696 /* medium_blue_450px.png in Resources */ = {isa = PBXBuildFile; fileRef = 222C694816E15792000B5696 /* medium_blue_450px.png */; };
-		227C0E9F17040BB400E16EBC /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0E9E17040BB400E16EBC /* Specs.m */; };
-		227C0EA017040BB400E16EBC /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0E9E17040BB400E16EBC /* Specs.m */; };
+		2256EE26171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
+		2256EE27171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
 		227C0EA317040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
 		227C0EA417040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
 /* End PBXBuildFile section */
@@ -65,8 +65,8 @@
 		222C693D16E154D6000B5696 /* iPadGTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadGTests.h; sourceTree = "<group>"; };
 		222C693E16E154D6000B5696 /* iPadGTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadGTests.m; sourceTree = "<group>"; };
 		222C694816E15792000B5696 /* medium_blue_450px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium_blue_450px.png; sourceTree = "<group>"; };
-		227C0E9D17040BB400E16EBC /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
-		227C0E9E17040BB400E16EBC /* Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
+		2256EE24171341830068C092 /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
+		2256EE25171341830068C092 /* Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
 		227C0EA117040C2B00E16EBC /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		227C0EA217040C2B00E16EBC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,8 +133,8 @@
 				222C692516E154D5000B5696 /* MainStoryboard.storyboard */,
 				227C0EA117040C2B00E16EBC /* Grid.h */,
 				227C0EA217040C2B00E16EBC /* Grid.m */,
-				227C0E9D17040BB400E16EBC /* Specs.h */,
-				227C0E9E17040BB400E16EBC /* Specs.m */,
+				2256EE24171341830068C092 /* Specs.h */,
+				2256EE25171341830068C092 /* Specs.m */,
 				222C692816E154D5000B5696 /* iPadGameViewController.h */,
 				222C692916E154D5000B5696 /* iPadGameViewController.m */,
 				222C691416E154D5000B5696 /* Supporting Files */,
@@ -292,8 +292,8 @@
 				222C691A16E154D5000B5696 /* main.m in Sources */,
 				222C691E16E154D5000B5696 /* iPadGameAppDelegate.m in Sources */,
 				222C692A16E154D5000B5696 /* iPadGameViewController.m in Sources */,
-				227C0E9F17040BB400E16EBC /* Specs.m in Sources */,
 				227C0EA317040C2B00E16EBC /* Grid.m in Sources */,
+				2256EE26171341830068C092 /* Specs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				222C693F16E154D6000B5696 /* iPadGTests.m in Sources */,
-				227C0EA017040BB400E16EBC /* Specs.m in Sources */,
 				227C0EA417040C2B00E16EBC /* Grid.m in Sources */,
+				2256EE27171341830068C092 /* Specs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //
 //  Specs.h
-//  project
+//  COMP 523 Project
 //
 //  Created by Christopher Spargo on 3/27/13.
 //  Copyright (c) 2013 Christopher Spargo. All rights reserved.
@@ -29,15 +29,9 @@ typedef enum {
     DifficultyLevel difficultyLevel;
     BOOL timed;
 }
-// setters
-- (void) setMultiplayer:(BOOL)p;
-- (void) setGameType:(GameType)type;
-- (void) setDifficultyLevel:(DifficultyLevel)difficulty;
-- (void) setTimed:(BOOL)p;
-// getters
-- (BOOL) getMultiplayer;
-- (GameType) getGameType;
-- (DifficultyLevel) getDifficultyLevel;
-- (BOOL) getTimed;
+@property(nonatomic)BOOL multiplayer;
+@property(nonatomic)GameType gameType;
+@property(nonatomic)DifficultyLevel difficultyLevel;
+@property(nonatomic)BOOL timed;
 
 @end
