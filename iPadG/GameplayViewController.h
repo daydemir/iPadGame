@@ -1,5 +1,5 @@
 //
-//  GamplayViewController.h
+//  GameplayViewController.h
 //  iPadG
 //
 //  Created by Deniz Aydemir on 4/9/13.
