@@ -22,8 +22,9 @@
     {
         
     }
-    
+    array = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     return self;
+    
 }
 
 - (void) decrementGC

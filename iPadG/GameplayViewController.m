@@ -8,12 +8,18 @@
 
 #import "GameplayViewController.h"
 #import "Grid.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GameplayViewController ()
 
 @end
 
 @implementation GameplayViewController
+
+@synthesize gameGrid = _gameGrid;
+
+BOOL oneButtonClickedAlready = false;
+UIButton *clickedButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,9 +34,13 @@
 {
     [super viewDidLoad];
     
-    Grid *grid = [[Grid alloc] init];
-    [self createButtons:16];
+    _gameGrid = [_gameGrid init];
+    //NSArray *gridContent = _gameGrid.array; //this should get the array of content from the Grid object...
+    //NSLog(@"%@", [gridContent objectAtIndex:3]);
     
+    
+    NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
+    [self createButtons:16 array:gridContent];
     
     
 
@@ -42,27 +52,85 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)createButtons:(int)numButtons
+-(void)createButtons:(int)numButtons array:(NSArray*)gc
 {
     int yOffset = 56;
     int xOffset = 0;
     for(int a = 0; a < numButtons; a++) {
         if((a%4==0) && (a>0)) { yOffset+=225; xOffset=0; }
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        CALayer * layer = [button layer];
+        [layer setMasksToBounds:YES];
+        [layer setCornerRadius:10.0]; //when radius is 0, the border is a rectangle
+        [layer setBorderWidth:1.0];
+        [layer setBorderColor:[[UIColor grayColor] CGColor]];
         [button addTarget:self
                    action:@selector(buttonClicked:)
          forControlEvents:UIControlEventTouchDown];
-        [button setTitle:@"Button x" forState:UIControlStateNormal];
+        [button setTitle:[NSString stringWithFormat:@"%@", [gc objectAtIndex:a]] forState:UIControlStateNormal];
         button.frame = CGRectMake(xOffset, yOffset, 192, 220);
+        button.clipsToBounds = YES;
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
+
+        //button.tag = a+1;
         [self.view addSubview:button];
         xOffset+=192;
     }
 }
 
 -(void)buttonClicked:(UIButton*)sender {
-    int tag = sender.tag;
+    //int tag = sender.tag;
     NSLog(@"button clicked");
+    
+    if(!oneButtonClickedAlready) {
+        oneButtonClickedAlready = true;
+        clickedButton = sender;
+        [self highlightSelectedButton:sender];
+    }
+    else {
+        if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton) {
+            [self highlightMatchedButtons:clickedButton secondButton:sender];
+        }
+        else {
+            [self highlightNoMatchButtons:clickedButton secondButton:sender];
+        }
+        oneButtonClickedAlready = false;
+            
+    }
 }
 
+-(void)highlightMatchedButtons:(UIButton*)sender secondButton:(UIButton*)sender2
+{
+    UIColor * green = [UIColor colorWithRed:60/255.0f green:226/255.0f blue:63/255.0f alpha:1.0f];
+    sender.backgroundColor = green;
+    sender2.backgroundColor = green;
+}
+
+-(void)highlightSelectedButton:(UIButton*)sender
+{
+    UIColor * gray = [UIColor colorWithRed:204/255.0f green:204/255.0f blue:204/255.0f alpha:1.0f];
+    sender.backgroundColor = gray;
+}
+
+-(void)highlightNoMatchButtons:(UIButton*)sender secondButton:(UIButton*)sender2
+{
+    UIColor * red = [UIColor colorWithRed:255/255.0f green:25/255.0f blue:54/255.0f alpha:1.0f];
+    sender.backgroundColor = red;
+    sender2.backgroundColor = red;
+    [self performSelector:@selector(clearButtonHighlighting:) withObject:sender afterDelay:1];
+    [self performSelector:@selector(clearButtonHighlighting:) withObject:sender2 afterDelay:1];
+}
+
+-(void)clearButtonHighlighting:(UIButton*)sender {
+    
+    if(sender.backgroundColor == [UIColor colorWithRed:204/255.0f green:204/255.0f blue:204/255.0f alpha:1.0f]) {
+        return;
+    }
+    else {
+        sender.backgroundColor = [UIColor whiteColor];
+        
+    }
+}
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Grid.h"    
 
 @interface GameplayViewController : UIViewController
+
+@property Grid *gameGrid;
 
 @end
