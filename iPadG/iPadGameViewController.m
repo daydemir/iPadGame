@@ -30,7 +30,7 @@ Specs *gameSpecs;
     NSLog(@"VIEW DID LOAD");
     
     
-    if([gameSpecs multiplayer]) {
+    if([gameSpecs getMultiplayer]) {
         _NumPlayersLabel.text = @"2";
         //NSLog(@"CHECKED MULTI");
     }
@@ -38,14 +38,14 @@ Specs *gameSpecs;
         _NumPlayersLabel.text = @"1";
     }
     
-    if([gameSpecs timed]) {
+    if([gameSpecs getTimed]) {
         _TimerLabel.text = @"Yes";
     }
     else {
         _TimerLabel.text = @"No";
     }
     
-    GameType gt = [gameSpecs gameType];
+    GameType gt = [gameSpecs getGameType];
     
     if(gt == kWordToWord) {
         _GameTypeLabel.text = @"Word To Word"; }
@@ -54,7 +54,7 @@ Specs *gameSpecs;
     else {
         _GameTypeLabel.text = @"Sound to Sound"; }
     
-    DifficultyLevel dl = [gameSpecs difficultyLevel];
+    DifficultyLevel dl = [gameSpecs getDifficultyLevel];
     if(dl == kEasy) {
         _GameDifficultyLabel.text = @"Easy"; }
     else if (dl == kVeryEasy) {
@@ -99,7 +99,7 @@ Specs *gameSpecs;
 
 - (IBAction)TimedPressed:(id)sender {
     [gameSpecs setTimed: true];
-    NSLog(@"Timer set to %s", [gameSpecs timed] ? "true" : "false" );
+    NSLog(@"Timer set to %s", [gameSpecs getTimed] ? "true" : "false" );
 }
 
 - (IBAction)NotTimedPressed:(id)sender {

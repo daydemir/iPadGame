@@ -1,26 +1,13 @@
 //
 //  Grid.h
-//  COMP 523 Project
+//  iPadG
 //
-//  Created by Christopher Spargo on 4/8/13.
-//  Copyright (c) 2013 Christopher Spargo. All rights reserved.
+//  Created by Deniz Aydemir on 3/28/13.
+//  Copyright (c) 2013 Deniz Aydemir. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Content.h"
-
 
 @interface Grid : NSObject
-{
-    int gameCounter;
-    Content *comparator;
-    NSMutableArray *array;
-}
-@property (nonatomic) int gameCounter;
-@property (nonatomic, retain) Content *comparator;
-@property (nonatomic, retain) NSArray *array;
-- (void) decrementGC;
-- (BOOL) isMatched: (Content *) useComparatorHere
-                  : (Content *) andGetThisStraightFromGrid;
 
 @end
