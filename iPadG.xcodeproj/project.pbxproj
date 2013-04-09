@@ -27,8 +27,14 @@
 		222C694A16E15792000B5696 /* medium_blue_450px.png in Resources */ = {isa = PBXBuildFile; fileRef = 222C694816E15792000B5696 /* medium_blue_450px.png */; };
 		2256EE26171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
 		2256EE27171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
-		227C0EA317040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
-		227C0EA417040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
+		227035B11714102200227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035AF1714102200227B56 /* Grid.m */; };
+		227035B21714102200227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035AF1714102200227B56 /* Grid.m */; };
+		227035B31714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
+		227035B41714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
+		227035B81714107E00227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B61714107E00227B56 /* GameplayViewController.m */; };
+		227035B91714107E00227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B61714107E00227B56 /* GameplayViewController.m */; };
+		227035BA1714107E00227B56 /* GamplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227035B71714107E00227B56 /* GamplayViewController.xib */; };
+		227035BB1714107E00227B56 /* GamplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227035B71714107E00227B56 /* GamplayViewController.xib */; };
 		6DDED2E917138120004FF02C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2E817138120004FF02C /* Card.m */; };
 		6DDED2EC1713812F004FF02C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* Test.m */; };
 /* End PBXBuildFile section */
@@ -69,8 +75,13 @@
 		222C694816E15792000B5696 /* medium_blue_450px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium_blue_450px.png; sourceTree = "<group>"; };
 		2256EE24171341830068C092 /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
 		2256EE25171341830068C092 /* Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
-		227C0EA117040C2B00E16EBC /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
-		227C0EA217040C2B00E16EBC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		227035AD1714102200227B56 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		227035AE1714102200227B56 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		227035AF1714102200227B56 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		227035B01714102200227B56 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		227035B51714107E00227B56 /* GameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayViewController.h; sourceTree = "<group>"; };
+		227035B61714107E00227B56 /* GameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayViewController.m; sourceTree = "<group>"; };
+		227035B71714107E00227B56 /* GamplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamplayViewController.xib; sourceTree = "<group>"; };
 		6DDED2E717138120004FF02C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		6DDED2E817138120004FF02C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		6DDED2EA1713812F004FF02C /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
@@ -141,8 +152,13 @@
 				222C691C16E154D5000B5696 /* iPadGameAppDelegate.h */,
 				222C691D16E154D5000B5696 /* iPadGameAppDelegate.m */,
 				222C692516E154D5000B5696 /* MainStoryboard.storyboard */,
-				227C0EA117040C2B00E16EBC /* Grid.h */,
-				227C0EA217040C2B00E16EBC /* Grid.m */,
+				227035B51714107E00227B56 /* GameplayViewController.h */,
+				227035B61714107E00227B56 /* GameplayViewController.m */,
+				227035B71714107E00227B56 /* GamplayViewController.xib */,
+				227035AD1714102200227B56 /* Content.h */,
+				227035B01714102200227B56 /* Content.m */,
+				227035AE1714102200227B56 /* Grid.h */,
+				227035AF1714102200227B56 /* Grid.m */,
 				2256EE24171341830068C092 /* Specs.h */,
 				2256EE25171341830068C092 /* Specs.m */,
 				222C692816E154D5000B5696 /* iPadGameViewController.h */,
@@ -264,6 +280,7 @@
 				222C692416E154D5000B5696 /* Default-568h@2x.png in Resources */,
 				222C692716E154D5000B5696 /* MainStoryboard.storyboard in Resources */,
 				222C694916E15792000B5696 /* medium_blue_450px.png in Resources */,
+				227035BA1714107E00227B56 /* GamplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +290,7 @@
 			files = (
 				222C693C16E154D6000B5696 /* InfoPlist.strings in Resources */,
 				222C694A16E15792000B5696 /* medium_blue_450px.png in Resources */,
+				227035BB1714107E00227B56 /* GamplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +320,12 @@
 				222C691A16E154D5000B5696 /* main.m in Sources */,
 				222C691E16E154D5000B5696 /* iPadGameAppDelegate.m in Sources */,
 				222C692A16E154D5000B5696 /* iPadGameViewController.m in Sources */,
-				227C0EA317040C2B00E16EBC /* Grid.m in Sources */,
 				2256EE26171341830068C092 /* Specs.m in Sources */,
 				6DDED2E917138120004FF02C /* Card.m in Sources */,
 				6DDED2EC1713812F004FF02C /* Test.m in Sources */,
+				227035B11714102200227B56 /* Grid.m in Sources */,
+				227035B31714102200227B56 /* Content.m in Sources */,
+				227035B81714107E00227B56 /* GameplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				222C693F16E154D6000B5696 /* iPadGTests.m in Sources */,
-				227C0EA417040C2B00E16EBC /* Grid.m in Sources */,
 				2256EE27171341830068C092 /* Specs.m in Sources */,
+				227035B21714102200227B56 /* Grid.m in Sources */,
+				227035B41714102200227B56 /* Content.m in Sources */,
+				227035B91714107E00227B56 /* GameplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

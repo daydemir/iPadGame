@@ -630,10 +630,10 @@
             </objects>
             <point key="canvasLocation" x="1052" y="-1913"/>
         </scene>
-        <!--View Controller-->
+        <!--Gamplay View Controller-->
         <scene sceneID="a54-7M-3dy">
             <objects>
-                <viewController id="Jty-Wa-dBJ" sceneMemberID="viewController">
+                <viewController id="Jty-Wa-dBJ" customClass="GamplayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOH-Ja-cwJ">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -839,10 +839,10 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="mie-3F-jTG"/>
+        <segue reference="aFK-eh-YGn"/>
+        <segue reference="Mn1-bz-cjO"/>
         <segue reference="GEv-cJ-uxP"/>
         <segue reference="jjj-IL-cSr"/>
-        <segue reference="mie-3F-jTG"/>
-        <segue reference="aGb-Xe-41E"/>
-        <segue reference="Mn1-bz-cjO"/>
     </inferredMetricsTieBreakers>
 </document>
