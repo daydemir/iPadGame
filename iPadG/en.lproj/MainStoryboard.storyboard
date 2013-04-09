@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpd-Ut-Ghi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3884" y="-3572"/>
+            <point key="canvasLocation" x="-3868" y="-3364"/>
         </scene>
         <!--I Pad Game View Controller-->
         <scene sceneID="gtt-Ec-anj">
@@ -358,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1238" y="-2736"/>
+            <point key="canvasLocation" x="-1250" y="-3000"/>
         </scene>
         <!--I Pad Game View Controller-->
         <scene sceneID="Oev-eT-TTY">
@@ -482,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjw-5Z-qxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="-2584"/>
+            <point key="canvasLocation" x="-387" y="-3094"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E3C-XR-bOz">
@@ -628,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xf4-wI-W0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="-1913"/>
+            <point key="canvasLocation" x="984" y="-2097"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="a54-7M-3dy">
@@ -802,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-8p-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-3476"/>
+            <point key="canvasLocation" x="854" y="-3256"/>
         </scene>
     </scenes>
     <resources>
@@ -817,7 +817,10 @@
             <relationships>
                 <relationship kind="action" name="BeginPressed:"/>
                 <relationship kind="action" name="EasyPressed:"/>
+<<<<<<< HEAD
                 <relationship kind="action" name="MathPressed:"/>
+=======
+>>>>>>> added grid and content files
                 <relationship kind="action" name="NotTimedPressed:"/>
                 <relationship kind="action" name="SinglePlayerPressed:"/>
                 <relationship kind="action" name="SoundToSoundPressed:"/>
@@ -839,10 +842,10 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="mie-3F-jTG"/>
+        <segue reference="aFK-eh-YGn"/>
+        <segue reference="Mn1-bz-cjO"/>
         <segue reference="GEv-cJ-uxP"/>
         <segue reference="jjj-IL-cSr"/>
-        <segue reference="mie-3F-jTG"/>
-        <segue reference="aGb-Xe-41E"/>
-        <segue reference="Mn1-bz-cjO"/>
     </inferredMetricsTieBreakers>
 </document>

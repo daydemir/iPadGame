@@ -27,10 +27,17 @@
 		222C694A16E15792000B5696 /* medium_blue_450px.png in Resources */ = {isa = PBXBuildFile; fileRef = 222C694816E15792000B5696 /* medium_blue_450px.png */; };
 		2256EE26171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
 		2256EE27171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
+<<<<<<< HEAD
 		227C0EA317040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
 		227C0EA417040C2B00E16EBC /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C0EA217040C2B00E16EBC /* Grid.m */; };
 		6DDED2E917138120004FF02C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2E817138120004FF02C /* Card.m */; };
 		6DDED2EC1713812F004FF02C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* Test.m */; };
+=======
+		227035A917140ECC00227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035A717140ECC00227B56 /* Grid.m */; };
+		227035AA17140ECC00227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035A717140ECC00227B56 /* Grid.m */; };
+		227035AB17140ECC00227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035A817140ECC00227B56 /* Content.m */; };
+		227035AC17140ECC00227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035A817140ECC00227B56 /* Content.m */; };
+>>>>>>> added grid and content files
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,12 +76,19 @@
 		222C694816E15792000B5696 /* medium_blue_450px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium_blue_450px.png; sourceTree = "<group>"; };
 		2256EE24171341830068C092 /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
 		2256EE25171341830068C092 /* Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		227C0EA117040C2B00E16EBC /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		227C0EA217040C2B00E16EBC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		6DDED2E717138120004FF02C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		6DDED2E817138120004FF02C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		6DDED2EA1713812F004FF02C /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		6DDED2EB1713812F004FF02C /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+=======
+		227035A517140ECC00227B56 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		227035A617140ECC00227B56 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		227035A717140ECC00227B56 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		227035A817140ECC00227B56 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+>>>>>>> added grid and content files
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +155,12 @@
 				222C691C16E154D5000B5696 /* iPadGameAppDelegate.h */,
 				222C691D16E154D5000B5696 /* iPadGameAppDelegate.m */,
 				222C692516E154D5000B5696 /* MainStoryboard.storyboard */,
-				227C0EA117040C2B00E16EBC /* Grid.h */,
-				227C0EA217040C2B00E16EBC /* Grid.m */,
 				2256EE24171341830068C092 /* Specs.h */,
 				2256EE25171341830068C092 /* Specs.m */,
+				227035A517140ECC00227B56 /* Content.h */,
+				227035A817140ECC00227B56 /* Content.m */,
+				227035A617140ECC00227B56 /* Grid.h */,
+				227035A717140ECC00227B56 /* Grid.m */,
 				222C692816E154D5000B5696 /* iPadGameViewController.h */,
 				222C692916E154D5000B5696 /* iPadGameViewController.m */,
 				222C691416E154D5000B5696 /* Supporting Files */,
@@ -302,10 +318,14 @@
 				222C691A16E154D5000B5696 /* main.m in Sources */,
 				222C691E16E154D5000B5696 /* iPadGameAppDelegate.m in Sources */,
 				222C692A16E154D5000B5696 /* iPadGameViewController.m in Sources */,
-				227C0EA317040C2B00E16EBC /* Grid.m in Sources */,
 				2256EE26171341830068C092 /* Specs.m in Sources */,
+<<<<<<< HEAD
 				6DDED2E917138120004FF02C /* Card.m in Sources */,
 				6DDED2EC1713812F004FF02C /* Test.m in Sources */,
+=======
+				227035A917140ECC00227B56 /* Grid.m in Sources */,
+				227035AB17140ECC00227B56 /* Content.m in Sources */,
+>>>>>>> added grid and content files
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				222C693F16E154D6000B5696 /* iPadGTests.m in Sources */,
-				227C0EA417040C2B00E16EBC /* Grid.m in Sources */,
 				2256EE27171341830068C092 /* Specs.m in Sources */,
+				227035AA17140ECC00227B56 /* Grid.m in Sources */,
+				227035AC17140ECC00227B56 /* Content.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
