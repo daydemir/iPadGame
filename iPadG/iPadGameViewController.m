@@ -51,8 +51,11 @@ Specs *gameSpecs;
         _GameTypeLabel.text = @"Word To Word"; }
     else if (gt == kWordToSound) {
         _GameTypeLabel.text  = @"Word to Sound"; }
-    else {
+    else if (gt == kSoundToSound){
         _GameTypeLabel.text = @"Sound to Sound"; }
+    else {
+        _GameTypeLabel.text = @"Math"; 
+    }
     
     DifficultyLevel dl = [gameSpecs difficultyLevel];
     if(dl == kEasy) {
@@ -120,6 +123,11 @@ Specs *gameSpecs;
 - (IBAction)SoundToSoundPressed:(id)sender {
     [gameSpecs setGameType:kSoundToSound];
     NSLog(@"Game Type is Sound to Sound");
+}
+
+-(IBAction)MathPressed:(id)sender {
+    [gameSpecs setGameType:kMath];
+    NSLog(@"Game Type is set to Math");
 }
 
 - (IBAction)VeryEasyPressed:(id)sender {
