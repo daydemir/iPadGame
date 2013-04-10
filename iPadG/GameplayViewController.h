@@ -11,6 +11,6 @@
 
 @interface GameplayViewController : UIViewController
 
-@property Grid *gameGrid;
+
 
 @end
