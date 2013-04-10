@@ -232,11 +232,7 @@
                                 </state>
                                 <connections>
                                     <action selector="MathPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="mNf-Bn-Thq"/>
-<<<<<<< HEAD
                                     <segue destination="2" kind="modal" id="LYb-to-PpN"/>
-=======
-                                    <segue destination="2" kind="modal" id="3yb-cZ-Pmi"/>
->>>>>>> okay this should do it
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-YV-blf">
