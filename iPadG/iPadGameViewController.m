@@ -130,14 +130,19 @@ Specs *gameSpecs;
     NSLog(@"Game Type is set to Math");
 }
 
-- (IBAction)MediumPressed:(id)sender {
-    [gameSpecs setDifficultyLevel:kMedium];
+- (IBAction)VeryEasyPressed:(id)sender {
+    [gameSpecs setDifficultyLevel:kVeryEasy];
     NSLog(@"Difficulty is Very Easy");
 }
 
 - (IBAction)EasyPressed:(id)sender {
     [gameSpecs setDifficultyLevel:kEasy];
     NSLog(@"Difficulty is Easy");
+}
+
+- (IBAction)MediumPressed:(id)sender {
+    [gameSpecs setDifficultyLevel:kMedium];
+    NSLog(@"Difficulty is Medium");
 }
 
 -(IBAction)HardPressed:(id)sender {
