@@ -33,7 +33,7 @@
 - (IBAction)MathPressed:(id)sender;
 
 //game difficulty
-- (IBAction)MediumPressed:(id)sender;
+- (IBAction)VeryEasyPressed:(id)sender;
 - (IBAction)EasyPressed:(id)sender;
 - (IBAction)HardPressed:(id)sender;
 
