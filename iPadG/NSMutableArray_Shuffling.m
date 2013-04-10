@@ -2,6 +2,7 @@
 // created by: Kristopher Johnson
 
 #import "NSMutableArray_Shuffling.h"
+#import <stdlib.h>
 
 @implementation NSMutableArray (Shuffling)
 
