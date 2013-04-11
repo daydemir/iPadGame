@@ -1,5 +1,8 @@
-//DDFileReader.m
-//created by Dave DeLong
+//
+//  DDFileReader.m
+//  
+//
+
 
 #import "DDFileReader.h"
 
@@ -12,14 +15,14 @@
 @implementation NSData (DDAdditions)
 
 - (NSRange) rangeOfData_dd:(NSData *)dataToFind {
-
+    
     const void * bytes = [self bytes];
     NSUInteger length = [self length];
-
+    
     const void * searchBytes = [dataToFind bytes];
     NSUInteger searchLength = [dataToFind length];
     NSUInteger searchIndex = 0;
-
+    
     NSRange foundRange = {NSNotFound, searchLength};
     for (NSUInteger index = 0; index < length; index++) {
         if (((char *)bytes)[index] == ((char *)searchBytes)[searchIndex]) {
@@ -46,12 +49,11 @@
     if (self = [super init]) {
         fileHandle = [NSFileHandle fileHandleForReadingAtPath:aPath];
         if (fileHandle == nil) {
-            [self release]; return nil;
+            return nil;
         }
-
-        lineDelimiter = [[NSString alloc] initWithString:@"\n"];
-        [fileHandle retain];
-        filePath = [aPath retain];
+        
+        lineDelimiter = @"\n";
+        filePath = aPath;
         currentOffset = 0ULL;
         chunkSize = 10;
         [fileHandle seekToEndOfFile];
@@ -63,28 +65,26 @@
 
 - (void) dealloc {
     [fileHandle closeFile];
-    [fileHandle release], fileHandle = nil;
-    [filePath release], filePath = nil;
-    [lineDelimiter release], lineDelimiter = nil;
+    fileHandle = nil;
+    filePath = nil;
+    lineDelimiter = nil;
     currentOffset = 0ULL;
-    [super dealloc];
 }
 
 - (NSString *) readLine {
     if (currentOffset >= totalFileLength) { return nil; }
-
+    
     NSData * newLineData = [lineDelimiter dataUsingEncoding:NSUTF8StringEncoding];
     [fileHandle seekToFileOffset:currentOffset];
     NSMutableData * currentData = [[NSMutableData alloc] init];
     BOOL shouldReadMore = YES;
-
-    NSAutoreleasePool * readPool = [[NSAutoreleasePool alloc] init];
+    
     while (shouldReadMore) {
         if (currentOffset >= totalFileLength) { break; }
         NSData * chunk = [fileHandle readDataOfLength:chunkSize];
         NSRange newLineRange = [chunk rangeOfData_dd:newLineData];
         if (newLineRange.location != NSNotFound) {
-
+            
             //include the length so we can include the delimiter in the string
             chunk = [chunk subdataWithRange:NSMakeRange(0, newLineRange.location+[newLineData length])];
             shouldReadMore = NO;
@@ -92,11 +92,11 @@
         [currentData appendData:chunk];
         currentOffset += [chunk length];
     }
-    [readPool release];
 
+    
     NSString * line = [[NSString alloc] initWithData:currentData encoding:NSUTF8StringEncoding];
-    [currentData release];
-    return [line autorelease];
+
+    return line;
 }
 
 - (NSString *) readTrimmedLine {
@@ -105,11 +105,11 @@
 
 #if NS_BLOCKS_AVAILABLE
 - (void) enumerateLinesUsingBlock:(void(^)(NSString*, BOOL*))block {
-  NSString * line = nil;
-  BOOL stop = NO;
-  while (stop == NO && (line = [self readLine])) {
-    block(line, &stop);
-  }
+    NSString * line = nil;
+    BOOL stop = NO;
+    while (stop == NO && (line = [self readLine])) {
+        block(line, &stop);
+    }
 }
 #endif
 

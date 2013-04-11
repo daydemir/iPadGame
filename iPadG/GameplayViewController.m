@@ -52,7 +52,6 @@ UIButton *clickedButton;
     while ((line = [reader readLine])) {
         [words addObject: line];
          }
-      [reader release];
 
     int totalLines = [words count];
     //for 16 objects, randomly select for 8 objects and put a pair in
