@@ -10,7 +10,6 @@
 #import "Grid.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DDFileReader.h"
-#import <stdlib.h>
 #import "NSMutableArray_Shuffling.h"
 
 @interface GameplayViewController ()
@@ -41,19 +40,21 @@ UIButton *clickedButton;
     gameGrid = [[Grid alloc] init];
     gridContent = gameGrid.array; //this should get the array of content from the Grid object...
     //NSLog(@"%@", [gridContent objectAtIndex:3]);
+    
+    //////////////////////////////////loading words from list/////////////////////////////
     NSMutableArray *words;
     NSMutableArray *words_chosen;
     words = [NSMutableArray array];
     words_chosen = [NSMutableArray array];
     //read file
-    DDFileReader * reader = [[DDFileReader alloc] initWithFilePath: @"./words.lst"];
+    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:@"/Users/wang_t/Downloads/word.lst"];
     NSString * line = nil;
     //fetch input by lines
     while ((line = [reader readLine])) {
         [words addObject: line];
-         }
-
-    int totalLines = [words count];
+    }
+    
+    NSUInteger totalLines = [words count];
     //for 16 objects, randomly select for 8 objects and put a pair in
     for (int i =0 ; i< 8; i++){
         int r = arc4random() % totalLines ;
@@ -63,17 +64,16 @@ UIButton *clickedButton;
     }
     //shuffling inside the words_chosen array
     [words_chosen shuffle];
-    //put nil at the end
-    [words_chosen addObject:nil];
     NSArray *gridContent = words_chosen;
-
-    /*   NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];*/
-
-
     
+    // testing purposes
+    //        for (int j =0 ; j<16;j++)
+    //            NSLog(@"%@", [gridContent objectAtIndex:j]);
     
-    
-    //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
+    // now, add nil at the end of gridContent?? necessary??
+    /////////////////////////////////////////////////////////////////////////////////////
+
+
     [self createButtons:16 array:gridContent];
     
     
