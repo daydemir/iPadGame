@@ -78,7 +78,9 @@
     words = [NSMutableArray array];
     words_chosen = [NSMutableArray array];
     //read file
-    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:@"/Users/Deniz/Developer/iPadGame/iPadG/words.lst"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"words"
+                                                     ofType:@"lst"];
+    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:path];
     NSString * line = nil;
     //fetch input by lines
     while ((line = [reader readLine])) {
