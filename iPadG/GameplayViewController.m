@@ -48,11 +48,11 @@ UIButton *clickedButton;
     words = [NSMutableArray array];
     words_chosen = [NSMutableArray array];
     //read file
-    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:@"/Users/wang_t/Downloads/word.lst"];
+    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:@"/Users/Deniz/Developer/iPadGame/iPadG/words.lst"];
     NSString * line = nil;
     //fetch input by lines
     while ((line = [reader readLine])) {
-        [words addObject: line];
+        [words addObject:line];
     }
     
     NSUInteger totalLines = [words count];
@@ -66,10 +66,10 @@ UIButton *clickedButton;
     //shuffling inside the words_chosen array
     [words_chosen shuffle];
     //put nil at the end
-    [words_chosen addObject:nil];
-    NSArray *gridContent = words_chosen; */
+    //[words_chosen addObject:nil];
+    NSArray *gridContent = words_chosen; 
 
-    /*   NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];*/
+    //   NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
 
 
     
@@ -79,7 +79,7 @@ UIButton *clickedButton;
     
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
-
+    [gameGrid ]
     [self createButtons:16 array:gridContent];
     
     
@@ -94,9 +94,23 @@ UIButton *clickedButton;
 
 -(void)createButtons:(int)numButtons array:(NSArray*)gc
 {
+    
+    /*NSMutableArray *doubledArray = [[NSMutableArray alloc] init];
+    
+    [doubledArray addObjectsFromArray:gc];
+    [doubledArray addObjectsFromArray:gc];
+    int len = [doubledArray count];
+    
+    [doubledArray shuffle];*/
+    
+    
+    //insert function that determines size of cards according to len
     int yOffset = 56;
     int xOffset = 0;
+    
+    
     for(int a = 0; a < numButtons; a++) {
+        
         if((a%4==0) && (a>0)) { yOffset+=225; xOffset=0; }
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         CALayer * layer = [button layer];
@@ -108,7 +122,7 @@ UIButton *clickedButton;
                    action:@selector(buttonClicked:)
          forControlEvents:UIControlEventTouchDown];
         Content *cardContent = [gc objectAtIndex:a];
-        [button setTitle:[NSString stringWithFormat:@"%@", [cardContent word]] forState:UIControlStateNormal];
+        [button setTitle:[NSString stringWithFormat:@"%@", cardContent] forState:UIControlStateNormal];
         button.frame = CGRectMake(xOffset, yOffset, 192, 220);
         button.clipsToBounds = YES;
         button.tag = a+1;
@@ -131,8 +145,8 @@ UIButton *clickedButton;
         [self highlightSelectedButton:sender];
     }
     else {
-        if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
-        //if([gameGrid isMatched:[gridContent objectAtIndex:tag] :[gridContent objectAtIndex:[clickedButton tag]]])
+        //if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
+        if([gameGrid isMatched:[gridContent objectAtIndex:tag] :[gridContent objectAtIndex:[clickedButton tag]]])
         {
             [self highlightMatchedButtons:clickedButton secondButton:sender];
         }

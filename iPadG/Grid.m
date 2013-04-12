@@ -33,7 +33,9 @@
     Content *snake = [[Content alloc] initWithWord:@"Snake"];
     Content *bee = [[Content alloc] initWithWord:@"Bee"];
     
-    _array = [NSArray arrayWithObjects: cow, dog, cat, dog, horse, elephant, elephant, cow, fish, snake, cat, snake, bee, fish, bee, horse, nil];
+    
+    _array = [NSArray arrayWithObjects: cow, dog, cat, horse, elephant, fish, snake, bee, nil];
+    //_array = [NSArray arrayWithObjects: cow, dog, cat, dog, horse, elephant, elephant, cow, fish, snake, cat, snake, bee, fish, bee, horse, nil];
     //_array = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     return self;
     
@@ -59,5 +61,11 @@
     }
     return false;
 }
+
+- (NSMutableArray)getGameContent
+{
+    
+}
+
 
 @end
