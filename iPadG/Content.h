@@ -14,5 +14,8 @@
 }
 -(id)initWithWord: (NSString *) aWord;
 @property(nonatomic) NSString *word;
+@property(nonatomic) NSInteger *matchID;
+@property(nonatomic) BOOL *matched;
+
 
 @end

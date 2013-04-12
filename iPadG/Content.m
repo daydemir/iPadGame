@@ -10,6 +10,8 @@
 
 @implementation Content
 @synthesize word;
+@synthesize matchID;
+@synthesize matched;
 - (id) initWithWord:(NSString *)aWord;
 {
     self = [super init];

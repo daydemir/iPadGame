@@ -15,21 +15,24 @@
 
 @interface GameplayViewController ()
 
+
 @end
 
 @implementation GameplayViewController
 
 Grid *gameGrid;
-NSArray *gridContent;
+
+
 
 BOOL oneButtonClickedAlready = false;
 UIButton *clickedButton;
+NSArray *gridContent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -39,6 +42,8 @@ UIButton *clickedButton;
     [super viewDidLoad];
     
     gameGrid = [[Grid alloc] init];
+    //gridContent = [[NSArray alloc] init];
+    
     //gridContent = gameGrid.array; //this should get the array of content from the Grid object...
     //NSLog(@"%@", [gridContent objectAtIndex:3]);
     
@@ -55,8 +60,9 @@ UIButton *clickedButton;
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     
-    gridContent = [gameGrid getGameContent];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent]];
     [self createButtons:[gridContent count] array:gridContent];
+    NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     
     
 
@@ -92,10 +98,12 @@ UIButton *clickedButton;
                    action:@selector(buttonClicked:)
          forControlEvents:UIControlEventTouchDown];
         Content *cardContent = [gc objectAtIndex:a];
-        [button setTitle:[NSString stringWithFormat:@"%@", cardContent] forState:UIControlStateNormal];
+        NSLog(@"%i", (int)[cardContent matchID]);
+        [button setTitle:[NSString stringWithFormat:@"%@", [cardContent word]] forState:UIControlStateNormal];
         button.frame = CGRectMake(xOffset, yOffset, 192, 220);
         button.clipsToBounds = YES;
-        button.tag = a+1;
+        [button setTag:a];
+        NSLog(@"%i", a);
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 
 
@@ -106,7 +114,13 @@ UIButton *clickedButton;
 }
 
 -(void)buttonClicked:(UIButton*)sender {
-    int tag = sender.tag;
+    int currentTag = [sender tag];
+    int previousTag = [clickedButton tag];
+    Content *currentContent =  [gridContent objectAtIndex:currentTag];
+    Content *previousContent = [gridContent objectAtIndex:previousTag];
+    NSLog(@"%i", currentTag);
+    Content *con = [gridContent objectAtIndex:currentTag];
+    NSLog(@"%@", [con word]);
     NSLog(@"button clicked");
     
     if(!oneButtonClickedAlready) {
@@ -116,9 +130,10 @@ UIButton *clickedButton;
     }
     else {
         //if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
-        if([gameGrid isMatched:[gridContent objectAtIndex:tag] :[gridContent objectAtIndex:[clickedButton tag]]])
+        if([currentContent matchID] == [previousContent matchID])
         {
             [self highlightMatchedButtons:clickedButton secondButton:sender];
+            //[clickedButton ]
         }
         else {
             [self highlightNoMatchButtons:clickedButton secondButton:sender];

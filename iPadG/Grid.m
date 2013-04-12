@@ -85,8 +85,10 @@
     for (int i =0 ; i< 8; i++){
         int r = arc4random() % totalLines ;
         NSString *word = [words objectAtIndex: r];
-        [words_chosen addObject:word];
-        [words_chosen addObject:word];
+        Content *wordAsContent = [[Content alloc] initWithWord:word];
+        [wordAsContent setMatchID:i];
+        [words_chosen addObject:wordAsContent];
+        [words_chosen addObject:wordAsContent];
     }
     //shuffling inside the words_chosen array
     [words_chosen shuffle];
