@@ -9,6 +9,9 @@
 #import "Grid.h"
 #import "Specs.h"
 #import "Content.h"
+#import "DDFileReader.h"
+#import <stdlib.h>
+#import "NSMutableArray_Shuffling.h"
 
 @implementation Grid
 @synthesize gameCounter;
@@ -62,9 +65,35 @@
     return false;
 }
 
-- (NSMutableArray)getGameContent
+- (NSArray*)getGameContent
 {
+    //////////////////////////////////loading words from list/////////////////////////////
+    NSMutableArray *words;
+    NSMutableArray *words_chosen;
+    words = [NSMutableArray array];
+    words_chosen = [NSMutableArray array];
+    //read file
+    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:@"/Users/Deniz/Developer/iPadGame/iPadG/words.lst"];
+    NSString * line = nil;
+    //fetch input by lines
+    while ((line = [reader readLine])) {
+        [words addObject:line];
+    }
     
+    NSUInteger totalLines = [words count];
+    //for 16 objects, randomly select for 8 objects and put a pair in
+    for (int i =0 ; i< 8; i++){
+        int r = arc4random() % totalLines ;
+        NSString *word = [words objectAtIndex: r];
+        [words_chosen addObject:word];
+        [words_chosen addObject:word];
+    }
+    //shuffling inside the words_chosen array
+    [words_chosen shuffle];
+    //put nil at the end
+    //[words_chosen addObject:nil];
+    NSArray *gridContent = words_chosen;
+    return gridContent;
 }
 
 

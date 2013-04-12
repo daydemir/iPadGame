@@ -22,5 +22,6 @@
 - (void) decrementGC;
 - (BOOL) isMatched: (Content *) useComparatorHere
                   : (Content *) andGetThisStraightFromGrid;
+- (NSArray*) getGameContent;
 
 @end
