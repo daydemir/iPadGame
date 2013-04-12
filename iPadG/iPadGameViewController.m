@@ -24,6 +24,8 @@
 Specs *gameSpecs;
 
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -85,8 +87,7 @@ Specs *gameSpecs;
 
 
 - (IBAction)BeginPressed:(id)sender {
-    gameSpecs = [Specs alloc];
-    gameSpecs = [gameSpecs init];
+    gameSpecs = [[Specs alloc] init];
     
 }
 

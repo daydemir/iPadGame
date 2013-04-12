@@ -14,6 +14,7 @@
 #import "NSMutableArray_Shuffling.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "SoundEffects.h"
+#import "iPadGameViewController.h"
 
 
 @interface GameplayViewController ()
@@ -44,6 +45,7 @@ NSArray *gridContent;
 {
     [super viewDidLoad];
     
+    
     gameGrid = [[Grid alloc] init];
     //gridContent = [[NSArray alloc] init];
     
@@ -63,7 +65,7 @@ NSArray *gridContent;
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:8]];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:20]];
     [self createButtons:[gridContent count] array:gridContent];
     //NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     
@@ -79,7 +81,7 @@ NSArray *gridContent;
 
 -(void)createButtons:(int)numButtons array:(NSArray*)gc
 {
-    //default for 16 cards
+    //default for 16 cards or 8 cards
     int yOffset = 56;
     int xOffset = 0;
     int yOffsetIncrement = 225;
@@ -89,22 +91,21 @@ NSArray *gridContent;
 
     
     
-    //insert function that determines size of cards according to len********************
+    //insert function that adjusts button distribution according to size of cards
     
     if(numButtons == 16) { //16 cards
-        yOffset = 56;
-        xOffset = 0;
-        yOffsetIncrement = 225;
-        width = 192;
-        height = 220;
-        cardsInRow = 4;
+        //anything else for 16?
     }
     else if(numButtons == 8) //8 cards
     {
-        yOffsetIncrement = 225;
         width = 384;
-        height = 220;
         cardsInRow = 2;
+    }
+    else //for 20 cards
+    {
+        width = 192;
+        height = 176;
+        yOffsetIncrement = 180;
     }
     
     
