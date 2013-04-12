@@ -974,36 +974,6 @@
     <resources>
         <image name="medium_blue_450px.png" width="450" height="178"/>
     </resources>
-    <classes>
-        <class className="GameplayViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameplayViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="iPadGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="BeginPressed:"/>
-                <relationship kind="action" name="EasyPressed:"/>
-                <relationship kind="action" name="HardPressed:"/>
-                <relationship kind="action" name="MathPressed:"/>
-                <relationship kind="action" name="MediumPressed:"/>
-                <relationship kind="action" name="NotTimedPressed:"/>
-                <relationship kind="action" name="SinglePlayerPressed:"/>
-                <relationship kind="action" name="SoundToSoundPressed:"/>
-                <relationship kind="action" name="TimedPressed:"/>
-                <relationship kind="action" name="TwoPlayerPressed:"/>
-                <relationship kind="action" name="VeryEasyPressed:"/>
-                <relationship kind="action" name="WordToSoundPressed:"/>
-                <relationship kind="action" name="WordToWordPressed:"/>
-                <relationship kind="outlet" name="GameDifficultyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="GameTypeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="NumPlayersLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="TimerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

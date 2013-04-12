@@ -76,7 +76,7 @@ UIButton *clickedButton;
     
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
-//>>>>>>> more correctly incorporated grid item 
+
     [self createButtons:16 array:gridContent];
     
     
