@@ -9,6 +9,7 @@
 #import "iPadGameViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Specs.h"
+#import "GameplayViewController.h"
 
 @interface iPadGameViewController ()
 
@@ -151,5 +152,13 @@ Specs *gameSpecs;
     NSLog(@"Difficulty is Hard");
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"gameStarts"]){
+        GameplayViewController  *controller = [segue destinationViewController];
+        [[GameplayViewController alloc] initWithSpecs:gameSpecs];
+        NSLog(@"SEGUE IDENTIFIED");
+    }
+}
 
 @end

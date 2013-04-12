@@ -15,16 +15,22 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "SoundEffects.h"
 #import "iPadGameViewController.h"
+#import "Specs.h"
 
 
 @interface GameplayViewController ()
+
 
 
 @end
 
 @implementation GameplayViewController
 
+
+@synthesize gameSpecs;
+
 Grid *gameGrid;
+
 
 
 
@@ -41,12 +47,20 @@ NSArray *gridContent;
     return self;
 }
 
+- (id)initWithSpecs:(Specs*)gs
+{
+    gameSpecs = gs;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    int gamesize = 20;
+    NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
     
     gameGrid = [[Grid alloc] init];
+    if([gameSpecs difficultyLevel] == kEasy) { gamesize = 8; }
     //gridContent = [[NSArray alloc] init];
     
     //gridContent = gameGrid.array; //this should get the array of content from the Grid object...
@@ -65,7 +79,7 @@ NSArray *gridContent;
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:20]];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:gamesize]];
     [self createButtons:[gridContent count] array:gridContent];
     //NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     

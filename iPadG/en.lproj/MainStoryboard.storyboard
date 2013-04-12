@@ -359,7 +359,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="EasyPressed:" destination="2" eventType="touchUpInside" id="kSf-qh-NIR"/>
+                                    <action selector="MediumPressed:" destination="2" eventType="touchUpInside" id="Bku-HV-LiY"/>
                                     <segue destination="4Dc-JS-sAC" kind="modal" id="10g-i2-VwO"/>
                                 </connections>
                             </button>
@@ -381,7 +381,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="EasyPressed:" destination="2" eventType="touchUpInside" id="JA3-Zn-liM"/>
                                     <action selector="HardPressed:" destination="2" eventType="touchUpInside" id="gAs-m9-q2p"/>
                                     <segue destination="4Dc-JS-sAC" kind="modal" id="Ild-x9-lS4"/>
                                 </connections>
@@ -469,7 +468,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jty-Wa-dBJ" kind="modal" id="hvV-JJ-zs7"/>
+                                    <segue destination="Jty-Wa-dBJ" kind="modal" identifier="gameStarts" modalTransitionStyle="crossDissolve" id="hvV-JJ-zs7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1F-OS-xnU">
@@ -974,17 +973,47 @@
     <resources>
         <image name="medium_blue_450px.png" width="450" height="178"/>
     </resources>
+    <classes>
+        <class className="GameplayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameplayViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="iPadGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="BeginPressed:"/>
+                <relationship kind="action" name="EasyPressed:"/>
+                <relationship kind="action" name="HardPressed:"/>
+                <relationship kind="action" name="MathPressed:"/>
+                <relationship kind="action" name="MediumPressed:"/>
+                <relationship kind="action" name="NotTimedPressed:"/>
+                <relationship kind="action" name="SinglePlayerPressed:"/>
+                <relationship kind="action" name="SoundToSoundPressed:"/>
+                <relationship kind="action" name="TimedPressed:"/>
+                <relationship kind="action" name="TwoPlayerPressed:"/>
+                <relationship kind="action" name="VeryEasyPressed:"/>
+                <relationship kind="action" name="WordToSoundPressed:"/>
+                <relationship kind="action" name="WordToWordPressed:"/>
+                <relationship kind="outlet" name="GameDifficultyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="GameTypeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="NumPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="TimerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="aGb-Xe-41E"/>
         <segue reference="Mn1-bz-cjO"/>
         <segue reference="GEv-cJ-uxP"/>
         <segue reference="jjj-IL-cSr"/>
         <segue reference="mie-3F-jTG"/>
-        <segue reference="aGb-Xe-41E"/>
         <segue reference="hvV-JJ-zs7"/>
     </inferredMetricsTieBreakers>
 </document>

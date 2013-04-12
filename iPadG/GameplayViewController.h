@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Grid.h"    
+#import "Specs.h"
 
 @interface GameplayViewController : UIViewController
 
+- (id)initWithSpecs:(Specs*)gs;
+@property (nonatomic) Specs *gameSpecs;
 
 @end

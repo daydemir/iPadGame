@@ -35,6 +35,7 @@
 //game difficulty
 - (IBAction)VeryEasyPressed:(id)sender;
 - (IBAction)EasyPressed:(id)sender;
+- (IBAction)MediumPressed:(id)sender;
 - (IBAction)HardPressed:(id)sender;
 
 
