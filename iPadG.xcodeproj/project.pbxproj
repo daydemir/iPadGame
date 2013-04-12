@@ -33,6 +33,16 @@
 		227035B41714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
 		227035BE1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		227035BF1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; };
+		22FFC11317187F680085FF86 /* Double_Toot_Button.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */; };
+		22FFC11417187F680085FF86 /* Double_Toot_Button.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */; };
+		22FFC117171880C80085FF86 /* SoundEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC116171880C80085FF86 /* SoundEffects.m */; };
+		22FFC118171880C80085FF86 /* SoundEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC116171880C80085FF86 /* SoundEffects.m */; };
+		22FFC11A1718826E0085FF86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FFC1191718826E0085FF86 /* AVFoundation.framework */; };
+		22FFC11C171883A60085FF86 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FFC11B171883A60085FF86 /* AudioToolbox.framework */; };
+		22FFC11E1718847D0085FF86 /* HitWallObs.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11D1718847D0085FF86 /* HitWallObs.aiff */; };
+		22FFC11F1718847D0085FF86 /* HitWallObs.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11D1718847D0085FF86 /* HitWallObs.aiff */; };
+		22FFC121171885700085FF86 /* Buzzer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC120171885700085FF86 /* Buzzer.aiff */; };
+		22FFC122171885700085FF86 /* Buzzer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC120171885700085FF86 /* Buzzer.aiff */; };
 		6DDED2E917138120004FF02C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2E817138120004FF02C /* Card.m */; };
 		6DDED2EC1713812F004FF02C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* Test.m */; };
 		F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A517172FB300C3D83C /* DDFileReader.m */; };
@@ -82,6 +92,13 @@
 		227035B01714102200227B56 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		227035BC1714121700227B56 /* GameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayViewController.h; sourceTree = "<group>"; };
 		227035BD1714121700227B56 /* GameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayViewController.m; sourceTree = "<group>"; };
+		22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Double_Toot_Button.aiff; sourceTree = "<group>"; };
+		22FFC115171880C80085FF86 /* SoundEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffects.h; sourceTree = "<group>"; };
+		22FFC116171880C80085FF86 /* SoundEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffects.m; sourceTree = "<group>"; };
+		22FFC1191718826E0085FF86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		22FFC11B171883A60085FF86 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
+		22FFC11D1718847D0085FF86 /* HitWallObs.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = HitWallObs.aiff; sourceTree = "<group>"; };
+		22FFC120171885700085FF86 /* Buzzer.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Buzzer.aiff; sourceTree = "<group>"; };
 		6D45E644171600CC00FE7C9C /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 		6DDED2E717138120004FF02C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		6DDED2E817138120004FF02C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
@@ -98,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FFC11C171883A60085FF86 /* AudioToolbox.framework in Frameworks */,
+				22FFC11A1718826E0085FF86 /* AVFoundation.framework in Frameworks */,
 				222C690E16E154D5000B5696 /* UIKit.framework in Frameworks */,
 				222C691016E154D5000B5696 /* Foundation.framework in Frameworks */,
 				222C691216E154D5000B5696 /* CoreGraphics.framework in Frameworks */,
@@ -120,6 +139,8 @@
 		222C690116E154D5000B5696 = {
 			isa = PBXGroup;
 			children = (
+				22FFC11B171883A60085FF86 /* AudioToolbox.framework */,
+				22FFC1191718826E0085FF86 /* AVFoundation.framework */,
 				222C691316E154D5000B5696 /* iPadG */,
 				222C693716E154D6000B5696 /* iPadGTests */,
 				222C690C16E154D5000B5696 /* Frameworks */,
@@ -159,6 +180,8 @@
 				222C692516E154D5000B5696 /* MainStoryboard.storyboard */,
 				227035BC1714121700227B56 /* GameplayViewController.h */,
 				227035BD1714121700227B56 /* GameplayViewController.m */,
+				22FFC115171880C80085FF86 /* SoundEffects.h */,
+				22FFC116171880C80085FF86 /* SoundEffects.m */,
 				227035AD1714102200227B56 /* Content.h */,
 				227035B01714102200227B56 /* Content.m */,
 				227035AE1714102200227B56 /* Grid.h */,
@@ -175,6 +198,9 @@
 		222C691416E154D5000B5696 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22FFC120171885700085FF86 /* Buzzer.aiff */,
+				22FFC11D1718847D0085FF86 /* HitWallObs.aiff */,
+				22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */,
 				F62A60A71717315700C3D83C /* NSMutableArray_Shuffling.h */,
 				F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */,
 				6D45E644171600CC00FE7C9C /* DDFileReader.h */,
@@ -290,6 +316,9 @@
 				222C692716E154D5000B5696 /* MainStoryboard.storyboard in Resources */,
 				222C694916E15792000B5696 /* medium_blue_450px.png in Resources */,
 				F6583AE017159B31007FE2C0 /* words.lst in Resources */,
+				22FFC11317187F680085FF86 /* Double_Toot_Button.aiff in Resources */,
+				22FFC11E1718847D0085FF86 /* HitWallObs.aiff in Resources */,
+				22FFC121171885700085FF86 /* Buzzer.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +328,9 @@
 			files = (
 				222C693C16E154D6000B5696 /* InfoPlist.strings in Resources */,
 				222C694A16E15792000B5696 /* medium_blue_450px.png in Resources */,
+				22FFC11417187F680085FF86 /* Double_Toot_Button.aiff in Resources */,
+				22FFC11F1718847D0085FF86 /* HitWallObs.aiff in Resources */,
+				22FFC122171885700085FF86 /* Buzzer.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +368,7 @@
 				227035BE1714121700227B56 /* GameplayViewController.m in Sources */,
 				F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */,
 				F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */,
+				22FFC117171880C80085FF86 /* SoundEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +381,7 @@
 				227035B21714102200227B56 /* Grid.m in Sources */,
 				227035B41714102200227B56 /* Content.m in Sources */,
 				227035BF1714121700227B56 /* GameplayViewController.m in Sources */,
+				22FFC118171880C80085FF86 /* SoundEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

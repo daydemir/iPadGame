@@ -12,6 +12,9 @@
 #import "DDFileReader.h"
 #import <stdlib.h>
 #import "NSMutableArray_Shuffling.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import "SoundEffects.h"
+
 
 @interface GameplayViewController ()
 
@@ -134,7 +137,12 @@ NSArray *gridContent;
         oneButtonClickedAlready = true;
         clickedButton = sender;
         [self highlightSelectedButton:sender];
-    }
+        
+        //play sound
+        SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"HitWallObs.aiff"];
+        [se play];
+        
+        }
     else if(clickedButton == sender){
         //action to be done if clicked button is clicked again...
     }
@@ -174,6 +182,8 @@ NSArray *gridContent;
 
 -(void)highlightNoMatchButtons:(UIButton*)sender secondButton:(UIButton*)sender2
 {
+    SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
+    [se play];
     UIColor * red = [UIColor colorWithRed:255/255.0f green:25/255.0f blue:54/255.0f alpha:1.0f];
     sender.backgroundColor = red;
     sender2.backgroundColor = red;
