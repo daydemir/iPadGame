@@ -63,9 +63,9 @@ NSArray *gridContent;
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:16]];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:8]];
     [self createButtons:[gridContent count] array:gridContent];
-    NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
+    //NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     
     
 
@@ -79,18 +79,38 @@ NSArray *gridContent;
 
 -(void)createButtons:(int)numButtons array:(NSArray*)gc
 {
-    
+    //default for 16 cards
+    int yOffset = 56;
+    int xOffset = 0;
+    int yOffsetIncrement = 225;
+    int width = 192;
+    int height = 220;
+    int cardsInRow = 4;
 
     
     
     //insert function that determines size of cards according to len********************
-    int yOffset = 56;
-    int xOffset = 0;
+    
+    if(numButtons == 16) { //16 cards
+        yOffset = 56;
+        xOffset = 0;
+        yOffsetIncrement = 225;
+        width = 192;
+        height = 220;
+        cardsInRow = 4;
+    }
+    else if(numButtons == 8) //8 cards
+    {
+        yOffsetIncrement = 225;
+        width = 384;
+        height = 220;
+        cardsInRow = 2;
+    }
     
     
     for(int a = 0; a < numButtons; a++) {
         
-        if((a%4==0) && (a>0)) { yOffset+=225; xOffset=0; }
+        if((a%cardsInRow==0) && (a>0)) { yOffset+=yOffsetIncrement; xOffset=0; }
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         CALayer * layer = [button layer];
         [layer setMasksToBounds:YES];
@@ -103,7 +123,7 @@ NSArray *gridContent;
         Content *cardContent = [gc objectAtIndex:a];
         NSLog(@"%i", (int)[cardContent matchID]);
         [button setTitle:[NSString stringWithFormat:@"%@", [cardContent word]] forState:UIControlStateNormal];
-        button.frame = CGRectMake(xOffset, yOffset, 192, 220);
+        button.frame = CGRectMake(xOffset, yOffset, width, height);
         button.clipsToBounds = YES;
         [button setTag:a];
         NSLog(@"%i", a);
@@ -112,7 +132,7 @@ NSArray *gridContent;
 
         //button.tag = a+1;
         [self.view addSubview:button];
-        xOffset+=192;
+        xOffset+=width;
     }
 }
 
