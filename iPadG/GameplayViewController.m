@@ -135,6 +135,9 @@ NSArray *gridContent;
         clickedButton = sender;
         [self highlightSelectedButton:sender];
     }
+    else if(clickedButton == sender){
+        //action to be done if clicked button is clicked again...
+    }
     else {
         //if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
         if([currentContent matchID] == [previousContent matchID])
