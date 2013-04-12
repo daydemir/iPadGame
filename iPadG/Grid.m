@@ -49,11 +49,14 @@
     _array = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     NSLog(@"init with ran");
 }
-- (void) decrementGC
+- (BOOL) gameOver
 {
-    if (gameCounter > 0) {
-        gameCounter = gameCounter - 1;
+    
+    gameCounter = gameCounter - 1;
+    if (gameCounter <= 0 ) {
+        return true;
     }
+    return false;
 }
 
 - (BOOL) isMatched: (Content *) useComparatorHere
@@ -65,8 +68,10 @@
     return false;
 }
 
-- (NSArray*)getGameContent
+- (NSArray*)getGameContent:(int)gameSize
 {
+    
+    gameCounter = gameSize/2;
     //////////////////////////////////loading words from list/////////////////////////////
     NSMutableArray *words;
     NSMutableArray *words_chosen;
@@ -82,7 +87,7 @@
     
     NSUInteger totalLines = [words count];
     //for 16 objects, randomly select for 8 objects and put a pair in
-    for (int i =0 ; i< 8; i++){
+    for (int i =0 ; i< gameCounter; i++){
         int r = arc4random() % totalLines ;
         NSString *word = [words objectAtIndex: r];
         Content *wordAsContent = [[Content alloc] initWithWord:word];

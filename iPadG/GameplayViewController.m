@@ -60,7 +60,7 @@ NSArray *gridContent;
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent]];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:16]];
     [self createButtons:[gridContent count] array:gridContent];
     NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     
@@ -118,12 +118,19 @@ NSArray *gridContent;
     int previousTag = [clickedButton tag];
     Content *currentContent =  [gridContent objectAtIndex:currentTag];
     Content *previousContent = [gridContent objectAtIndex:previousTag];
+    
+    //some test prints
     NSLog(@"%i", currentTag);
-    Content *con = [gridContent objectAtIndex:currentTag];
-    NSLog(@"%@", [con word]);
+    //Content *con = [gridContent objectAtIndex:currentTag];
+    //NSLog(@"%@", [con word]);
     NSLog(@"button clicked");
     
-    if(!oneButtonClickedAlready) {
+    if([currentContent matched])
+    {
+       //play some sound indicating they already matched this card?
+    }
+    
+    else if(!oneButtonClickedAlready) { // see if the button being clicked is the first or second of a pair
         oneButtonClickedAlready = true;
         clickedButton = sender;
         [self highlightSelectedButton:sender];
@@ -133,7 +140,12 @@ NSArray *gridContent;
         if([currentContent matchID] == [previousContent matchID])
         {
             [self highlightMatchedButtons:clickedButton secondButton:sender];
-            //[clickedButton ]
+            [currentContent setMatched:true];
+            [previousContent setMatched:true];
+            if([gameGrid gameOver])
+            {
+                NSLog(@"YOU WIN");
+            }
         }
         else {
             [self highlightNoMatchButtons:clickedButton secondButton:sender];

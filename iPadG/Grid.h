@@ -19,9 +19,9 @@
 @property (nonatomic) int gameCounter;
 @property (nonatomic, retain) Content *comparator;
 @property (nonatomic, retain) NSMutableArray *array;
-- (void) decrementGC;
+- (BOOL) gameOver;
 - (BOOL) isMatched: (Content *) useComparatorHere
                   : (Content *) andGetThisStraightFromGrid;
-- (NSArray*) getGameContent;
+- (NSArray*) getGameContent:(int)gameSize;
 
 @end
