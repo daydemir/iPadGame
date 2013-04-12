@@ -31,10 +31,12 @@
 		227035B21714102200227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035AF1714102200227B56 /* Grid.m */; };
 		227035B31714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
 		227035B41714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
-		227035BE1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; };
+		227035BE1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		227035BF1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; };
 		6DDED2E917138120004FF02C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2E817138120004FF02C /* Card.m */; };
 		6DDED2EC1713812F004FF02C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* Test.m */; };
+		F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A517172FB300C3D83C /* DDFileReader.m */; };
+		F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */; };
 		F6583AE017159B31007FE2C0 /* words.lst in Resources */ = {isa = PBXBuildFile; fileRef = F6583ADF17159B31007FE2C0 /* words.lst */; };
 /* End PBXBuildFile section */
 
@@ -80,10 +82,14 @@
 		227035B01714102200227B56 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		227035BC1714121700227B56 /* GameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayViewController.h; sourceTree = "<group>"; };
 		227035BD1714121700227B56 /* GameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayViewController.m; sourceTree = "<group>"; };
+		6D45E644171600CC00FE7C9C /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 		6DDED2E717138120004FF02C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		6DDED2E817138120004FF02C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		6DDED2EA1713812F004FF02C /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		6DDED2EB1713812F004FF02C /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		F62A60A517172FB300C3D83C /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
+		F62A60A71717315700C3D83C /* NSMutableArray_Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArray_Shuffling.h; sourceTree = "<group>"; };
+		F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArray_Shuffling.m; sourceTree = "<group>"; };
 		F6583ADF17159B31007FE2C0 /* words.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.lst; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +175,10 @@
 		222C691416E154D5000B5696 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F62A60A71717315700C3D83C /* NSMutableArray_Shuffling.h */,
+				F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */,
+				6D45E644171600CC00FE7C9C /* DDFileReader.h */,
+				F62A60A517172FB300C3D83C /* DDFileReader.m */,
 				F6583ADF17159B31007FE2C0 /* words.lst */,
 				222C691516E154D5000B5696 /* iPadG-Info.plist */,
 				222C691616E154D5000B5696 /* InfoPlist.strings */,
@@ -324,6 +334,8 @@
 				227035B11714102200227B56 /* Grid.m in Sources */,
 				227035B31714102200227B56 /* Content.m in Sources */,
 				227035BE1714121700227B56 /* GameplayViewController.m in Sources */,
+				F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */,
+				F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,7 +28,7 @@ typedef enum {
     BOOL multiplayer;
     GameType gameType;
     DifficultyLevel difficultyLevel;
-    BOOL time;
+    BOOL timed;
 }
 @property (nonatomic) BOOL multiplayer;
 @property (nonatomic) GameType gameType;
