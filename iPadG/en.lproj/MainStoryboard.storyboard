@@ -486,9 +486,6 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQe-fw-VOV">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="768" id="1ky-6R-ZtS"/>
-                                </constraints>
                                 <items>
                                     <navigationItem title="Settings Overview" id="c4I-mb-TYD"/>
                                 </items>
@@ -496,15 +493,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UQe-fw-VOV" firstAttribute="centerX" secondItem="pra-8E-aGJ" secondAttribute="centerX" type="default" id="4Nd-Z9-c25"/>
                             <constraint firstItem="fiq-Xi-L28" firstAttribute="leading" secondItem="oBR-ex-Quq" secondAttribute="leading" constant="113" id="5ov-xT-gpF"/>
-                            <constraint firstItem="5yS-Im-Gnz" firstAttribute="centerX" secondItem="w1F-OS-xnU" secondAttribute="centerX" type="default" id="6UZ-jP-3qG"/>
                             <constraint firstItem="UQe-fw-VOV" firstAttribute="top" secondItem="oBR-ex-Quq" secondAttribute="top" type="default" id="7ph-7d-9Zs"/>
                             <constraint firstItem="6F4-Ig-van" firstAttribute="trailing" secondItem="yFu-bI-cu2" secondAttribute="trailing" type="default" id="8tA-Qe-izy"/>
                             <constraint firstItem="w1F-OS-xnU" firstAttribute="top" secondItem="oBR-ex-Quq" secondAttribute="top" constant="74" id="C1F-i0-jcF"/>
                             <constraint firstItem="pra-8E-aGJ" firstAttribute="leading" secondItem="WfF-em-WnU" secondAttribute="leading" type="default" id="CGE-lA-iRz"/>
                             <constraint firstItem="5yS-Im-Gnz" firstAttribute="leading" secondItem="oBR-ex-Quq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CjH-Ce-JFL"/>
                             <constraint firstItem="fiq-Xi-L28" firstAttribute="top" secondItem="oBR-ex-Quq" secondAttribute="top" constant="195" id="I7Q-aT-dJ3"/>
+                            <constraint firstAttribute="trailing" secondItem="o5b-oe-cLx" secondAttribute="trailing" constant="300" id="IZw-aK-G5A"/>
                             <constraint firstAttribute="bottom" secondItem="5yS-Im-Gnz" secondAttribute="bottom" constant="12" id="OLD-ry-ECU"/>
                             <constraint firstItem="pra-8E-aGJ" firstAttribute="baseline" secondItem="yFu-bI-cu2" secondAttribute="baseline" type="default" id="Org-1S-CDa"/>
                             <constraint firstItem="tT9-tP-zuz" firstAttribute="leading" secondItem="pra-8E-aGJ" secondAttribute="leading" type="default" id="Q5P-I3-zoE"/>
@@ -516,9 +512,11 @@
                             <constraint firstItem="fiq-Xi-L28" firstAttribute="trailing" secondItem="yFu-bI-cu2" secondAttribute="trailing" type="default" id="dqI-Yo-9jo"/>
                             <constraint firstItem="iIm-t0-VeJ" firstAttribute="trailing" secondItem="6F4-Ig-van" secondAttribute="trailing" type="default" id="e5C-7o-WTj"/>
                             <constraint firstItem="o5b-oe-cLx" firstAttribute="leading" secondItem="tT9-tP-zuz" secondAttribute="leading" type="default" id="hQN-Sk-Fwk"/>
-                            <constraint firstItem="UQe-fw-VOV" firstAttribute="leading" secondItem="oBR-ex-Quq" secondAttribute="leading" constant="33" id="jDp-Qv-f4q"/>
+                            <constraint firstItem="UQe-fw-VOV" firstAttribute="centerX" secondItem="w1F-OS-xnU" secondAttribute="centerX" type="default" id="mYz-Ty-ekw"/>
                             <constraint firstItem="iIm-t0-VeJ" firstAttribute="top" secondItem="oBR-ex-Quq" secondAttribute="top" constant="461" id="n7o-Ut-eRC"/>
+                            <constraint firstItem="UQe-fw-VOV" firstAttribute="leading" secondItem="oBR-ex-Quq" secondAttribute="leading" type="default" id="noC-9Y-m4c"/>
                             <constraint firstItem="yFu-bI-cu2" firstAttribute="top" secondItem="oBR-ex-Quq" secondAttribute="top" constant="292" id="oZC-gF-ksE"/>
+                            <constraint firstItem="UQe-fw-VOV" firstAttribute="trailing" secondItem="oBR-ex-Quq" secondAttribute="trailing" type="default" id="uC9-4P-9Rt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -912,18 +910,13 @@
                             <constraint firstItem="eWB-RD-Aep" firstAttribute="bottom" secondItem="iiO-Kw-zLO" secondAttribute="bottom" type="default" id="4TH-ZE-Ygb"/>
                             <constraint firstItem="HRZ-hm-03p" firstAttribute="top" secondItem="u0r-rS-1xj" secondAttribute="top" type="default" id="4qX-aa-tRg"/>
                             <constraint firstItem="BqY-nW-AUr" firstAttribute="leading" secondItem="gOH-Ja-cwJ" secondAttribute="leading" type="default" id="5qF-Qv-Vlb"/>
-                            <constraint firstItem="RnB-bq-8ad" firstAttribute="baseline" secondItem="pAY-N2-kli" secondAttribute="baseline" type="default" id="6eC-eb-9Q7"/>
                             <constraint firstItem="iiO-Kw-zLO" firstAttribute="trailing" secondItem="HRZ-hm-03p" secondAttribute="trailing" type="default" id="8gl-kI-TBA"/>
-                            <constraint firstItem="4Yi-R8-ytl" firstAttribute="baseline" secondItem="pAY-N2-kli" secondAttribute="baseline" type="default" id="AGn-3k-PUW"/>
                             <constraint firstAttribute="bottom" secondItem="BqY-nW-AUr" secondAttribute="bottom" constant="45" id="Afk-vV-uR2"/>
                             <constraint firstItem="H8B-jz-n3x" firstAttribute="top" secondItem="AKB-MP-9a9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BvE-Ed-hGk"/>
                             <constraint firstItem="iiO-Kw-zLO" firstAttribute="top" secondItem="eWB-RD-Aep" secondAttribute="top" type="default" id="C4z-z0-FkP"/>
-                            <constraint firstItem="RnB-bq-8ad" firstAttribute="baseline" secondItem="pAY-N2-kli" secondAttribute="baseline" type="default" id="D1R-2e-f9w"/>
                             <constraint firstItem="eWB-RD-Aep" firstAttribute="bottom" secondItem="XI0-9w-bZm" secondAttribute="bottom" type="default" id="DpN-Mz-JS2"/>
-                            <constraint firstItem="H8B-jz-n3x" firstAttribute="baseline" secondItem="pAY-N2-kli" secondAttribute="baseline" type="default" id="EYc-Wz-vPm"/>
                             <constraint firstItem="gUy-sm-Cy8" firstAttribute="top" secondItem="gOH-Ja-cwJ" secondAttribute="top" constant="285" id="FNR-eR-D0W"/>
                             <constraint firstItem="wU2-sX-6eX" firstAttribute="top" secondItem="u0r-rS-1xj" secondAttribute="top" type="default" id="Fj8-ow-cNE"/>
-                            <constraint firstItem="4Yi-R8-ytl" firstAttribute="baseline" secondItem="H8B-jz-n3x" secondAttribute="baseline" type="default" id="GGu-rn-bn0"/>
                             <constraint firstAttribute="bottom" secondItem="R6w-z5-18H" secondAttribute="bottom" constant="273" id="GOI-tI-Up9"/>
                             <constraint firstItem="4Yi-R8-ytl" firstAttribute="bottom" secondItem="H8B-jz-n3x" secondAttribute="bottom" type="default" id="Htf-xh-sez"/>
                             <constraint firstItem="EwF-wO-oSZ" firstAttribute="top" secondItem="gOH-Ja-cwJ" secondAttribute="top" constant="965" id="IPi-OE-aM8"/>
@@ -931,27 +924,17 @@
                             <constraint firstItem="6YO-1Q-uZ1" firstAttribute="leading" secondItem="H8B-jz-n3x" secondAttribute="leading" type="default" id="KlE-uQ-7hL"/>
                             <constraint firstItem="4Yi-R8-ytl" firstAttribute="top" secondItem="AKB-MP-9a9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Kmd-sc-zvh"/>
                             <constraint firstItem="HRZ-hm-03p" firstAttribute="leading" secondItem="gUy-sm-Cy8" secondAttribute="leading" type="default" id="L6J-OK-A66"/>
-                            <constraint firstItem="pAY-N2-kli" firstAttribute="top" secondItem="AKB-MP-9a9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MLy-an-4cc"/>
                             <constraint firstItem="HRZ-hm-03p" firstAttribute="trailing" secondItem="gUy-sm-Cy8" secondAttribute="trailing" type="default" id="MPf-x6-p0X"/>
                             <constraint firstItem="RnB-bq-8ad" firstAttribute="leading" secondItem="gOH-Ja-cwJ" secondAttribute="leading" constant="192" id="OB3-RR-ZMN"/>
-<<<<<<< HEAD
-=======
-                            <constraint firstItem="RnB-bq-8ad" firstAttribute="baseline" secondItem="4Yi-R8-ytl" secondAttribute="baseline" type="default" id="POr-O3-EQH"/>
->>>>>>> more correctly incorporated grid item
                             <constraint firstItem="gUy-sm-Cy8" firstAttribute="bottom" secondItem="k7W-g3-ol9" secondAttribute="bottom" type="default" id="Qci-Si-VLC"/>
                             <constraint firstItem="gUy-sm-Cy8" firstAttribute="leading" secondItem="RnB-bq-8ad" secondAttribute="leading" type="default" id="RgH-HT-6aX"/>
                             <constraint firstItem="wU2-sX-6eX" firstAttribute="bottom" secondItem="u0r-rS-1xj" secondAttribute="bottom" type="default" id="Rxa-Eq-vMc"/>
                             <constraint firstItem="k7W-g3-ol9" firstAttribute="top" secondItem="6YO-1Q-uZ1" secondAttribute="top" type="default" id="SSq-qG-peA"/>
-                            <constraint firstItem="H8B-jz-n3x" firstAttribute="baseline" secondItem="pAY-N2-kli" secondAttribute="baseline" type="default" id="Sx2-Yp-DUa"/>
                             <constraint firstAttribute="bottom" secondItem="HRZ-hm-03p" secondAttribute="bottom" constant="272" id="T3r-f5-ZTh"/>
                             <constraint firstItem="wU2-sX-6eX" firstAttribute="leading" secondItem="6YO-1Q-uZ1" secondAttribute="leading" type="default" id="UMU-Ll-gBC"/>
                             <constraint firstItem="BqY-nW-AUr" firstAttribute="trailing" secondItem="R6w-z5-18H" secondAttribute="trailing" type="default" id="WLo-ro-RTN"/>
                             <constraint firstItem="k7W-g3-ol9" firstAttribute="trailing" secondItem="4Yi-R8-ytl" secondAttribute="trailing" type="default" id="XI5-Xa-cGN"/>
-<<<<<<< HEAD
                             <constraint firstItem="RnB-bq-8ad" firstAttribute="bottom" secondItem="pAY-N2-kli" secondAttribute="bottom" type="default" id="aGk-kV-nnp"/>
-=======
-                            <constraint firstItem="RnB-bq-8ad" firstAttribute="bottom" secondItem="pAY-N2-kli" secondAttribute="bottom" type="default" id="Xdg-08-oDJ"/>
->>>>>>> more correctly incorporated grid item
                             <constraint firstItem="u0r-rS-1xj" firstAttribute="bottom" secondItem="HRZ-hm-03p" secondAttribute="bottom" type="default" id="aK6-wk-cRh"/>
                             <constraint firstItem="H8B-jz-n3x" firstAttribute="trailing" secondItem="gOH-Ja-cwJ" secondAttribute="trailing" type="default" id="as9-Dp-uGz"/>
                             <constraint firstItem="k7W-g3-ol9" firstAttribute="leading" secondItem="4Yi-R8-ytl" secondAttribute="leading" type="default" id="azQ-ds-8Xk"/>
@@ -963,32 +946,20 @@
                             <constraint firstItem="u0r-rS-1xj" firstAttribute="trailing" secondItem="k7W-g3-ol9" secondAttribute="trailing" type="default" id="fh1-Hs-zM6"/>
                             <constraint firstItem="EwF-wO-oSZ" firstAttribute="leading" secondItem="gOH-Ja-cwJ" secondAttribute="leading" type="default" id="g2n-gh-koM"/>
                             <constraint firstItem="EwF-wO-oSZ" firstAttribute="trailing" secondItem="gOH-Ja-cwJ" secondAttribute="trailing" type="default" id="gWB-e8-IH6"/>
-                            <constraint firstItem="RnB-bq-8ad" firstAttribute="baseline" secondItem="H8B-jz-n3x" secondAttribute="baseline" type="default" id="gnx-eL-4a8"/>
                             <constraint firstItem="R6w-z5-18H" firstAttribute="leading" secondItem="gOH-Ja-cwJ" secondAttribute="leading" type="default" id="iD2-Cy-Heh"/>
-                            <constraint firstItem="H8B-jz-n3x" firstAttribute="baseline" secondItem="4Yi-R8-ytl" secondAttribute="baseline" type="default" id="m8u-xe-LQM"/>
                             <constraint firstItem="iiO-Kw-zLO" firstAttribute="leading" secondItem="HRZ-hm-03p" secondAttribute="leading" type="default" id="mR6-Iq-Nag"/>
                             <constraint firstItem="6YO-1Q-uZ1" firstAttribute="bottom" secondItem="k7W-g3-ol9" secondAttribute="bottom" type="default" id="pzg-VT-chm"/>
                             <constraint firstItem="eWB-RD-Aep" firstAttribute="top" secondItem="XI0-9w-bZm" secondAttribute="top" type="default" id="q6M-7p-aNo"/>
-                            <constraint firstItem="4Yi-R8-ytl" firstAttribute="baseline" secondItem="pAY-N2-kli" secondAttribute="baseline" type="default" id="r0f-T9-N62"/>
                             <constraint firstItem="4Yi-R8-ytl" firstAttribute="bottom" secondItem="RnB-bq-8ad" secondAttribute="bottom" type="default" id="r4w-dO-w5m"/>
-<<<<<<< HEAD
-                            <constraint firstItem="H8B-jz-n3x" firstAttribute="baseline" secondItem="RnB-bq-8ad" secondAttribute="baseline" type="default" id="rUY-P9-8Bk"/>
-=======
                             <constraint firstItem="pAY-N2-kli" firstAttribute="top" secondItem="AKB-MP-9a9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ri7-HO-eRE"/>
->>>>>>> more correctly incorporated grid item
                             <constraint firstItem="k7W-g3-ol9" firstAttribute="top" secondItem="gUy-sm-Cy8" secondAttribute="top" type="default" id="rpc-Sz-9t2"/>
                             <constraint firstItem="eWB-RD-Aep" firstAttribute="leading" secondItem="u0r-rS-1xj" secondAttribute="leading" type="default" id="s2o-n7-JUv"/>
                             <constraint firstItem="XI0-9w-bZm" firstAttribute="leading" secondItem="wU2-sX-6eX" secondAttribute="leading" type="default" id="sFW-wL-wVs"/>
                             <constraint firstItem="AKB-MP-9a9" firstAttribute="trailing" secondItem="gOH-Ja-cwJ" secondAttribute="trailing" type="default" id="tzx-h5-QOf"/>
                             <constraint firstItem="eWB-RD-Aep" firstAttribute="trailing" secondItem="u0r-rS-1xj" secondAttribute="trailing" type="default" id="vIr-qa-hfq"/>
                             <constraint firstItem="XI0-9w-bZm" firstAttribute="trailing" secondItem="gOH-Ja-cwJ" secondAttribute="trailing" type="default" id="vc9-cf-uwU"/>
-                            <constraint firstItem="RnB-bq-8ad" firstAttribute="baseline" secondItem="4Yi-R8-ytl" secondAttribute="baseline" type="default" id="wew-QC-7jH"/>
                             <constraint firstItem="6YO-1Q-uZ1" firstAttribute="trailing" secondItem="gOH-Ja-cwJ" secondAttribute="trailing" type="default" id="wtQ-4k-aH8"/>
-<<<<<<< HEAD
-                            <constraint firstItem="AKB-MP-9a9" firstAttribute="top" secondItem="gOH-Ja-cwJ" secondAttribute="top" constant="-1" id="wuP-X5-BOo"/>
-=======
                             <constraint firstItem="AKB-MP-9a9" firstAttribute="top" secondItem="gOH-Ja-cwJ" secondAttribute="top" constant="-1" id="xl1-WF-7Jx"/>
->>>>>>> more correctly incorporated grid item
                             <constraint firstItem="ViZ-BC-aC2" firstAttribute="leading" secondItem="gOH-Ja-cwJ" secondAttribute="leading" type="default" id="yHU-4Z-aJo"/>
                             <constraint firstAttribute="bottom" secondItem="iiO-Kw-zLO" secondAttribute="bottom" constant="44" id="yif-gM-DEs"/>
                             <constraint firstItem="R6w-z5-18H" firstAttribute="trailing" secondItem="ViZ-BC-aC2" secondAttribute="trailing" type="default" id="z5p-Uj-YOW"/>
@@ -1003,17 +974,47 @@
     <resources>
         <image name="medium_blue_450px.png" width="450" height="178"/>
     </resources>
+    <classes>
+        <class className="GameplayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameplayViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="iPadGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="BeginPressed:"/>
+                <relationship kind="action" name="EasyPressed:"/>
+                <relationship kind="action" name="HardPressed:"/>
+                <relationship kind="action" name="MathPressed:"/>
+                <relationship kind="action" name="MediumPressed:"/>
+                <relationship kind="action" name="NotTimedPressed:"/>
+                <relationship kind="action" name="SinglePlayerPressed:"/>
+                <relationship kind="action" name="SoundToSoundPressed:"/>
+                <relationship kind="action" name="TimedPressed:"/>
+                <relationship kind="action" name="TwoPlayerPressed:"/>
+                <relationship kind="action" name="VeryEasyPressed:"/>
+                <relationship kind="action" name="WordToSoundPressed:"/>
+                <relationship kind="action" name="WordToWordPressed:"/>
+                <relationship kind="outlet" name="GameDifficultyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="GameTypeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="NumPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="TimerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Mn1-bz-cjO"/>
+        <segue reference="GEv-cJ-uxP"/>
         <segue reference="jjj-IL-cSr"/>
         <segue reference="mie-3F-jTG"/>
-        <segue reference="aFK-eh-YGn"/>
-        <segue reference="ZR7-rT-yDn"/>
-        <segue reference="GEv-cJ-uxP"/>
-        <segue reference="Mn1-bz-cjO"/>
+        <segue reference="aGb-Xe-41E"/>
+        <segue reference="hvV-JJ-zs7"/>
     </inferredMetricsTieBreakers>
 </document>

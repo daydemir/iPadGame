@@ -41,7 +41,7 @@ UIButton *clickedButton;
     gameGrid = [[Grid alloc] init];
     gridContent = gameGrid.array; //this should get the array of content from the Grid object...
     //NSLog(@"%@", [gridContent objectAtIndex:3]);
-<<<<<<< HEAD
+/*<<<<<<< HEAD
     NSMutableArray *words;
     NSMutableArray *words_chosen;
     words = [NSMutableArray array];
@@ -67,17 +67,16 @@ UIButton *clickedButton;
     [words_chosen shuffle];
     //put nil at the end
     [words_chosen addObject:nil];
-    NSArray *gridContent = words_chosen;
+    NSArray *gridContent = words_chosen; */
 
     /*   NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];*/
 
 
-=======
     
     
     
     //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
->>>>>>> more correctly incorporated grid item
+//>>>>>>> more correctly incorporated grid item 
     [self createButtons:16 array:gridContent];
     
     
@@ -129,8 +128,8 @@ UIButton *clickedButton;
         [self highlightSelectedButton:sender];
     }
     else {
-        if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
-        //if([gameGrid isMatched:[gridContent objectAtIndex:tag] :[gridContent objectAtIndex:[clickedButton tag]]])
+        //if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
+        if([gameGrid isMatched:[gridContent objectAtIndex:tag] :[gridContent objectAtIndex:[clickedButton tag]]])
         {
             [self highlightMatchedButtons:clickedButton secondButton:sender];
         }
