@@ -50,6 +50,7 @@ NSArray *gridContent;
 - (id)initWithSpecs:(Specs*)gs
 {
     gameSpecs = gs;
+    return self;
 }
 
 - (void)viewDidLoad
