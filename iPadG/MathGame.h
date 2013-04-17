@@ -5,24 +5,23 @@
 //  Created by dst3708 on 4/1/13.
 //
 
-@class Card;
 @class IOSObjectArray;
 
 
-@interface Test : NSObject {
+@interface MathGame : NSObject {
     int matchID;
 }
 
 @property int matchID;
 
 + (NSMutableArray*)generateGrid:(int)gridSize
-                  withDifficulty:(int)difficulty
-                        withOp:(unichar)operation;
+                 withDifficulty:(int)difficulty
+                         withOp:(unichar)operation;
 + (void)getNumbers:(int)limit
-                 add:(BOOL)op;
-+ (void)getCards:(int)match
-                withA:(int)a
-                withB:(int)b
-                withC:(int)c
                add:(BOOL)op;
++ (void)getCards:(int)match
+           withA:(int)a
+           withB:(int)b
+           withC:(int)c
+             add:(BOOL)op;
 @end

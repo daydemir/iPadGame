@@ -5,11 +5,16 @@
 //  Created by dst3708 on 4/1/13.
 //
 
-#import "stdlib.h"
-#import "Card.h"
-#import "Test.h"
+//note:
+//in modified morgan's code
+//gridSize = total grids
+//difficulty = maxi number which the math operation runs below
+//operation = 'addition' 'subtraction' and 'combination'
 
-@implementation Test
+#import "stdlib.h"
+#import "MathGame.h"
+
+@implementation MathGame
 
 @synthesize matchID;
 NSMutableArray *cardArray;
@@ -20,64 +25,64 @@ int matchID = 0;
                  withDifficulty:(int)difficulty
                          withOp:(unichar)operation {
     
-  cardArray = [NSMutableArray arrayWithCapacity:(gridSize + gridSize)];
-
-  if (operation == 'a') {
-    for (int x = 0; x < gridSize; x++) {
-      [self getNumbers:difficulty add:YES];
+    cardArray = [NSMutableArray array];
+    
+    if (operation == 'a') {
+        for (int x = 0; x < gridSize/2; x++) {
+            [self getNumbers:difficulty add:YES];
+        }
     }
-  }
-  else if (operation == 's') {
-    for (int x = 0; x < gridSize; x++) {
-      [self getNumbers:difficulty add:NO];
+    else if (operation == 's') {
+        for (int x = 0; x < gridSize/2; x++) {
+            [self getNumbers:difficulty add:NO];
+        }
     }
-  }
-  else if (operation == 'b') {
-    for (int x = 0; x < gridSize / 2; x++) {
-      [self getNumbers:difficulty add:NO];
+    else if (operation == 'b') {
+        for (int x = 0; x < gridSize / 4; x++) {
+            [self getNumbers:difficulty add:NO];
+        }
+        for (int x = gridSize / 4; x < gridSize; x++) {
+            [self getNumbers:difficulty add:YES];
+        }
     }
-    for (int x = gridSize / 2; x < gridSize; x++) {
-      [self getNumbers:difficulty add:YES];
+    else {
     }
-  }
-  else {
-  }
-return cardArray;
+    return cardArray;
 }
 
 + (void)getNumbers:(int)limit
                add:(BOOL)op {
-  int a, b, c;
-  if (limit == 10) {
-    c = arc4random() % 11;
-    b = arc4random() % (c+1);
-    a = c - b;
-  }
-  else {
-    limit = limit / 2;
-    a = arc4random() % limit + 1;
-    b = arc4random() % limit + 1;
-    c = a + b;
-  }
+    int a, b, c;
+    if (limit == 10) {
+        c = arc4random() % 11;
+        b = arc4random() % (c+1);
+        a = c - b;
+    }
+    else {
+        limit = limit / 2;
+        a = arc4random() % limit + 1;
+        b = arc4random() % limit + 1;
+        c = a + b;
+    }
     [self getCards:matchID withA:a withB:b withC:c add:op];
-  matchID++;
+    matchID++;
 }
 
 + (void)getCards:(int)match
-               withA:(int)a
-                withB:(int)b
-                withC:(int)c
-               add:(BOOL)op {
-  Card *card1;
-  Card *card2;
-  if (op) {
-    card1.text = [NSString stringWithFormat:@"%d + %d", a, b];
-    card2.text = [NSString stringWithFormat:@"%d", c];
-  }
-  else {
-    card1.text = [NSString stringWithFormat:@"%d - %d", c, a];
-    card2.text = [NSString stringWithFormat:@"%d", b];
-  }
+           withA:(int)a
+           withB:(int)b
+           withC:(int)c
+             add:(BOOL)op {
+    NSString *card1;
+    NSString *card2;
+    if (op) {
+        card1 = [NSString stringWithFormat:@"%d + %d", a, b];
+        card2 = [NSString stringWithFormat:@"%d", c];
+    }
+    else {
+        card1 = [NSString stringWithFormat:@"%d - %d", c, a];
+        card2 = [NSString stringWithFormat:@"%d", b];
+    }
     [cardArray addObject: card1];
     [cardArray addObject: card2];
 }
