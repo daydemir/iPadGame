@@ -12,7 +12,7 @@
 
 @interface GameplayViewController : UIViewController
 
-- (id)initWithSpecs:(Specs*)gs;
+
 @property (nonatomic) Specs *gameSpecs;
 
 @end

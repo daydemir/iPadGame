@@ -156,7 +156,7 @@ Specs *gameSpecs;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"gameStarts"]){
         GameplayViewController  *controller = [segue destinationViewController];
-        [[GameplayViewController alloc] initWithSpecs:gameSpecs];
+        [controller setGameSpecs:gameSpecs];
         NSLog(@"SEGUE IDENTIFIED");
     }
 }

@@ -47,10 +47,9 @@ NSArray *gridContent;
     return self;
 }
 
-- (id)initWithSpecs:(Specs*)gs
+- (void)setSpecs:(Specs*)gs
 {
     gameSpecs = gs;
-    return self;
 }
 
 - (void)viewDidLoad
@@ -61,7 +60,12 @@ NSArray *gridContent;
     NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
     
     gameGrid = [[Grid alloc] init];
-    if([gameSpecs difficultyLevel] == kEasy) { gamesize = 8; }
+    if([gameSpecs difficultyLevel] == kMedium) {
+        NSLog(@"MEDIUM GAME DIFF");
+        gamesize = 16; }
+    else if([gameSpecs difficultyLevel] == kEasy) {
+        gamesize = 8;
+    }
     //gridContent = [[NSArray alloc] init];
     
     //gridContent = gameGrid.array; //this should get the array of content from the Grid object...
@@ -69,7 +73,7 @@ NSArray *gridContent;
 
     
     
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:20 andGameType:3]];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:gamesize andGameType:[gameSpecs gameType]]];
     [self createButtons:[gridContent count] array:gridContent];
     //NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     
