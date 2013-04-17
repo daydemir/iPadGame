@@ -18,30 +18,30 @@
 
 @synthesize matchID;
 NSMutableArray *cardArray;
+int answers[20];
+BOOL duplicate = false;
 
 int matchID = 0;
 
 + (NSMutableArray*)generateGrid:(int)gridSize
                  withDifficulty:(int)difficulty
                          withOp:(unichar)operation {
-    
     cardArray = [NSMutableArray array];
-    
     if (operation == 'a') {
-        for (int x = 0; x < gridSize/2; x++) {
+        while(matchID < gridSize/2) {
             [self getNumbers:difficulty add:YES];
         }
     }
     else if (operation == 's') {
-        for (int x = 0; x < gridSize/2; x++) {
+        while(matchID < gridSize/2) {
             [self getNumbers:difficulty add:NO];
         }
     }
     else if (operation == 'b') {
-        for (int x = 0; x < gridSize / 4; x++) {
+        while(matchID < gridSize/4) {
             [self getNumbers:difficulty add:NO];
         }
-        for (int x = gridSize / 4; x < gridSize; x++) {
+        while(matchID < gridSize/2) {
             [self getNumbers:difficulty add:YES];
         }
     }
@@ -52,7 +52,8 @@ int matchID = 0;
 
 + (void)getNumbers:(int)limit
                add:(BOOL)op {
-    int a, b, c;
+    duplicate = false;
+    int a, b, c, d;
     if (limit == 10) {
         c = arc4random() % 11;
         b = arc4random() % (c+1);
@@ -64,8 +65,23 @@ int matchID = 0;
         b = arc4random() % limit + 1;
         c = a + b;
     }
-    [self getCards:matchID withA:a withB:b withC:c add:op];
-    matchID++;
+    NSLog(@"%s", "answer[c] is");
+    if (op) {
+        d = c;
+        }
+    else {
+        d = a;
+    }
+    for (int x = 0; x < matchID; x++) {
+        if (answers[x] == d){
+            duplicate = true;
+        }
+    }
+    if (!duplicate){
+        answers[matchID] = d;
+        [self getCards:matchID withA:a withB:b withC:c add:op];
+        matchID++;
+    }
 }
 
 + (void)getCards:(int)match
@@ -80,8 +96,8 @@ int matchID = 0;
         card2 = [NSString stringWithFormat:@"%d", c];
     }
     else {
-        card1 = [NSString stringWithFormat:@"%d - %d", c, a];
-        card2 = [NSString stringWithFormat:@"%d", b];
+        card1 = [NSString stringWithFormat:@"%d - %d", c, b];
+        card2 = [NSString stringWithFormat:@"%d", a];
     }
     [cardArray addObject: card1];
     [cardArray addObject: card2];
