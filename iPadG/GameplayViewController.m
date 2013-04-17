@@ -66,21 +66,10 @@ NSArray *gridContent;
     
     //gridContent = gameGrid.array; //this should get the array of content from the Grid object...
     //NSLog(@"%@", [gridContent objectAtIndex:3]);
-    
-
-
-    //   NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
-
 
     
-    // testing purposes
-    //        for (int j =0 ; j<16;j++)
-    //            NSLog(@"%@", [gridContent objectAtIndex:j]);
     
-    
-    //NSArray *gridContent = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
-    
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:gamesize]];
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:20 andGameType:3]];
     [self createButtons:[gridContent count] array:gridContent];
     //NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
     

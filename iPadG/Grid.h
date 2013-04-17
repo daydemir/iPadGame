@@ -22,6 +22,6 @@
 - (BOOL) gameOver;
 - (BOOL) isMatched: (Content *) useComparatorHere
                   : (Content *) andGetThisStraightFromGrid;
-- (NSArray*) getGameContent:(int)gameSize;
+- (NSArray*) getGameContent:(int)gameSize andGameType: (int)gameType;
 
 @end
