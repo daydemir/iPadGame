@@ -27,6 +27,7 @@ int matchID = 0;
                  withDifficulty:(int)difficulty
                          withOp:(unichar)operation {
     cardArray = [NSMutableArray array];
+    
     if (operation == 'a') {
         while(matchID < gridSize/2) {
             [self getNumbers:difficulty add:YES];
@@ -65,7 +66,6 @@ int matchID = 0;
         b = arc4random() % limit + 1;
         c = a + b;
     }
-    NSLog(@"%s", "answer[c] is");
     if (op) {
         d = c;
         }

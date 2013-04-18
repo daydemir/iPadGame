@@ -12,6 +12,7 @@
 @synthesize word;
 @synthesize matchID;
 @synthesize matched;
+@synthesize position = _position;
 - (id) initWithWord:(NSString *)aWord;
 {
     self = [super init];
@@ -22,6 +23,22 @@
     }
     
     return self;
+}
+
+- (void) setPosition:(int)position withSize:(int)size {
+    int r, c;
+    switch(size) {
+        case (20): {
+            r = 5;
+            c = 4;
+        }
+    }
+    row = position/r + 65;
+    column = position % c;
+    if (column == 0) {
+        column = c;
+    }
+    _position = [NSString stringWithFormat:@"%c%i", row, column];
 }
 
 @end

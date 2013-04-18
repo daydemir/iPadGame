@@ -11,11 +11,13 @@
 @interface Content : NSObject
 {
     NSString *word;
+    int row;
+    int column;
 }
 -(id)initWithWord: (NSString *) aWord;
 @property(nonatomic) NSString *word;
 @property(nonatomic) NSInteger *matchID;
 @property(nonatomic) BOOL *matched;
-
+@property(nonatomic) NSString *position;
 
 @end

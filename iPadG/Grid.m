@@ -95,7 +95,7 @@
             
             NSUInteger totalLines = [words count];
             //for 16 objects, randomly select for 8 objects and put a pair in
-            for (int i =0 ; i< gameCounter; i++){
+            for (int i = 0 ; i< gameCounter; i++){
                 int r = arc4random() % totalLines ;
                 NSString *word = [words objectAtIndex: r];
                 Content *wordAsContent = [[Content alloc] initWithWord:word];
@@ -143,7 +143,10 @@
                 [words_chosen addObject:mathContentA];
             }
             
+            
             [words_chosen shuffle];
+            
+
             
             NSArray *gridContent = words_chosen;
             return gridContent;
