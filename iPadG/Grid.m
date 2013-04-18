@@ -99,7 +99,7 @@
                 int r = arc4random() % totalLines ;
                 NSString *word = [words objectAtIndex: r];
                 Content *wordAsContent = [[Content alloc] initWithWord:word];
-                [wordAsContent setMatchID:&i];
+                [wordAsContent setMatchID:i];
                 [words_chosen addObject:wordAsContent];
                 [words_chosen addObject:wordAsContent];
             }
@@ -137,8 +137,8 @@
             for (int i =0 ; i< gameCounter; i++){
                 Content *mathContentQ = [[Content alloc] initWithWord: [mathCards objectAtIndex:2*i]];
                 Content *mathContentA = [[Content alloc] initWithWord: [mathCards objectAtIndex:2*i+1]];
-                [mathContentQ setMatchID:&i];
-                [mathContentA setMatchID:&i];
+                [mathContentQ setMatchID:i];
+                [mathContentA setMatchID:i];
                 [words_chosen addObject:mathContentQ];
                 [words_chosen addObject:mathContentA];
             }

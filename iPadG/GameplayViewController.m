@@ -168,12 +168,14 @@ NSArray *gridContent;
         [self highlightSelectedButton:sender];
         
         //play sound
-        SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"HitWallObs.aiff"];
+        SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Blop.mp3"];
         [se play];
         
         }
     else if(clickedButton == sender){
         //action to be done if clicked button is clicked again...
+        SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Blop.mp3"];
+        [se play];
     }
     else {
         //if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
@@ -182,9 +184,17 @@ NSArray *gridContent;
             [self highlightMatchedButtons:clickedButton secondButton:sender];
             [currentContent setMatched:true];
             [previousContent setMatched:true];
+            SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"A-Tone.mp3"];
+            [se play];
             if([gameGrid gameOver])
             {
                 NSLog(@"YOU WIN");
+                [self performSegueWithIdentifier:@"winSegue" sender:self];
+                SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Yahoo.mp3"];
+                SoundEffects *se2 = [[SoundEffects alloc] initWithSoundNamed:@"Donkey_Kong_Win.mp3"];
+                [se play];
+                [se2 play];
+                
             }
         }
         else {

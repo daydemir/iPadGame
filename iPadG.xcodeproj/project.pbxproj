@@ -33,6 +33,22 @@
 		227035B41714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
 		227035BE1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		227035BF1714121700227B56 /* GameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035BD1714121700227B56 /* GameplayViewController.m */; };
+		22B98575171F52AB00CEF8A3 /* A-Tone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98574171F52AB00CEF8A3 /* A-Tone.mp3 */; };
+		22B98576171F52AB00CEF8A3 /* A-Tone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98574171F52AB00CEF8A3 /* A-Tone.mp3 */; };
+		22B98578171F54E700CEF8A3 /* Blop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98577171F54E700CEF8A3 /* Blop.mp3 */; };
+		22B98579171F54E700CEF8A3 /* Blop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98577171F54E700CEF8A3 /* Blop.mp3 */; };
+		22B9857B171F593400CEF8A3 /* Crowd_Applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B9857A171F593400CEF8A3 /* Crowd_Applause.mp3 */; };
+		22B9857C171F593400CEF8A3 /* Crowd_Applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B9857A171F593400CEF8A3 /* Crowd_Applause.mp3 */; };
+		22B9857E171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */; };
+		22B9857F171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */; };
+		22B98581171F5A2600CEF8A3 /* Sad_Trombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */; };
+		22B98582171F5A2600CEF8A3 /* Sad_Trombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */; };
+		22B98584171F5B4B00CEF8A3 /* Yahoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */; };
+		22B98585171F5B4B00CEF8A3 /* Yahoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */; };
+		22B98587171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */; };
+		22B98588171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */; };
+		22B9858A171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */; };
+		22B9858B171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */; };
 		22FFC11317187F680085FF86 /* Double_Toot_Button.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */; };
 		22FFC11417187F680085FF86 /* Double_Toot_Button.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */; };
 		22FFC117171880C80085FF86 /* SoundEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC116171880C80085FF86 /* SoundEffects.m */; };
@@ -91,11 +107,19 @@
 		227035B01714102200227B56 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		227035BC1714121700227B56 /* GameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayViewController.h; sourceTree = "<group>"; };
 		227035BD1714121700227B56 /* GameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayViewController.m; sourceTree = "<group>"; };
+		22B98574171F52AB00CEF8A3 /* A-Tone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A-Tone.mp3"; sourceTree = "<group>"; };
+		22B98577171F54E700CEF8A3 /* Blop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Blop.mp3; sourceTree = "<group>"; };
+		22B9857A171F593400CEF8A3 /* Crowd_Applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Crowd_Applause.mp3; sourceTree = "<group>"; };
+		22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SMALL_CROWD_APPLAUSE.mp3; sourceTree = "<group>"; };
+		22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sad_Trombone.mp3; sourceTree = "<group>"; };
+		22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Yahoo.mp3; sourceTree = "<group>"; };
+		22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JazzyElevatorMusic.mp3; sourceTree = "<group>"; };
+		22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Donkey_Kong_Win.mp3; sourceTree = "<group>"; };
 		22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Double_Toot_Button.aiff; sourceTree = "<group>"; };
 		22FFC115171880C80085FF86 /* SoundEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffects.h; sourceTree = "<group>"; };
 		22FFC116171880C80085FF86 /* SoundEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffects.m; sourceTree = "<group>"; };
 		22FFC1191718826E0085FF86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		22FFC11B171883A60085FF86 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
+		22FFC11B171883A60085FF86 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		22FFC11D1718847D0085FF86 /* HitWallObs.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = HitWallObs.aiff; sourceTree = "<group>"; };
 		22FFC120171885700085FF86 /* Buzzer.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Buzzer.aiff; sourceTree = "<group>"; };
 		6D45E644171600CC00FE7C9C /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
@@ -112,8 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22FFC11C171883A60085FF86 /* AudioToolbox.framework in Frameworks */,
 				22FFC11A1718826E0085FF86 /* AVFoundation.framework in Frameworks */,
+				22FFC11C171883A60085FF86 /* AudioToolbox.framework in Frameworks */,
 				222C690E16E154D5000B5696 /* UIKit.framework in Frameworks */,
 				222C691016E154D5000B5696 /* Foundation.framework in Frameworks */,
 				222C691216E154D5000B5696 /* CoreGraphics.framework in Frameworks */,
@@ -193,6 +217,14 @@
 		222C691416E154D5000B5696 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */,
+				22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */,
+				22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */,
+				22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */,
+				22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */,
+				22B9857A171F593400CEF8A3 /* Crowd_Applause.mp3 */,
+				22B98577171F54E700CEF8A3 /* Blop.mp3 */,
+				22B98574171F52AB00CEF8A3 /* A-Tone.mp3 */,
 				22FFC120171885700085FF86 /* Buzzer.aiff */,
 				22FFC11D1718847D0085FF86 /* HitWallObs.aiff */,
 				22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */,
@@ -314,6 +346,14 @@
 				22FFC11317187F680085FF86 /* Double_Toot_Button.aiff in Resources */,
 				22FFC11E1718847D0085FF86 /* HitWallObs.aiff in Resources */,
 				22FFC121171885700085FF86 /* Buzzer.aiff in Resources */,
+				22B98575171F52AB00CEF8A3 /* A-Tone.mp3 in Resources */,
+				22B98578171F54E700CEF8A3 /* Blop.mp3 in Resources */,
+				22B9857B171F593400CEF8A3 /* Crowd_Applause.mp3 in Resources */,
+				22B9857E171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 in Resources */,
+				22B98581171F5A2600CEF8A3 /* Sad_Trombone.mp3 in Resources */,
+				22B98584171F5B4B00CEF8A3 /* Yahoo.mp3 in Resources */,
+				22B98587171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */,
+				22B9858A171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +366,14 @@
 				22FFC11417187F680085FF86 /* Double_Toot_Button.aiff in Resources */,
 				22FFC11F1718847D0085FF86 /* HitWallObs.aiff in Resources */,
 				22FFC122171885700085FF86 /* Buzzer.aiff in Resources */,
+				22B98576171F52AB00CEF8A3 /* A-Tone.mp3 in Resources */,
+				22B98579171F54E700CEF8A3 /* Blop.mp3 in Resources */,
+				22B9857C171F593400CEF8A3 /* Crowd_Applause.mp3 in Resources */,
+				22B9857F171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 in Resources */,
+				22B98582171F5A2600CEF8A3 /* Sad_Trombone.mp3 in Resources */,
+				22B98585171F5B4B00CEF8A3 /* Yahoo.mp3 in Resources */,
+				22B98588171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */,
+				22B9858B171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

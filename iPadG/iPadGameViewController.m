@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Specs.h"
 #import "GameplayViewController.h"
+#import "AVFoundation/AVFoundation.h"
+#import "SoundEffects.h"
 
 @interface iPadGameViewController ()
 
@@ -31,6 +33,19 @@ Specs *gameSpecs;
 {
     [super viewDidLoad];
     NSLog(@"VIEW DID LOAD");
+    
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"JazzyElevatorMusic" ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    player.numberOfLoops = -1; //infinite
+    
+    [player play];
+    
+    SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
+    [se play];
+    
+    
+    
     
     
     if([gameSpecs multiplayer]) {
@@ -132,11 +147,6 @@ Specs *gameSpecs;
     NSLog(@"Game Type is set to Math");
 }
 
-- (IBAction)VeryEasyPressed:(id)sender {
-    [gameSpecs setDifficultyLevel:kVeryEasy];
-    NSLog(@"Difficulty is Very Easy");
-}
-
 - (IBAction)EasyPressed:(id)sender {
     [gameSpecs setDifficultyLevel:kEasy];
     NSLog(@"Difficulty is Easy");
@@ -153,7 +163,7 @@ Specs *gameSpecs;
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ //send specs to gameplayviewcontroller
     if([segue.identifier isEqualToString:@"gameStarts"]){
         GameplayViewController  *controller = [segue destinationViewController];
         [controller setGameSpecs:gameSpecs];
