@@ -52,7 +52,6 @@
 		22FFC11317187F680085FF86 /* Double_Toot_Button.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */; };
 		22FFC11417187F680085FF86 /* Double_Toot_Button.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */; };
 		22FFC117171880C80085FF86 /* SoundEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC116171880C80085FF86 /* SoundEffects.m */; };
-		22FFC118171880C80085FF86 /* SoundEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC116171880C80085FF86 /* SoundEffects.m */; };
 		22FFC11A1718826E0085FF86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FFC1191718826E0085FF86 /* AVFoundation.framework */; };
 		22FFC11C171883A60085FF86 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FFC11B171883A60085FF86 /* AudioToolbox.framework */; };
 		22FFC11E1718847D0085FF86 /* HitWallObs.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11D1718847D0085FF86 /* HitWallObs.aiff */; };
@@ -63,6 +62,7 @@
 		F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A517172FB300C3D83C /* DDFileReader.m */; };
 		F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */; };
 		F6583AE017159B31007FE2C0 /* words.lst in Resources */ = {isa = PBXBuildFile; fileRef = F6583ADF17159B31007FE2C0 /* words.lst */; };
+		F6658163171F68BB0085955F /* MathGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* MathGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,7 +423,7 @@
 				227035B21714102200227B56 /* Grid.m in Sources */,
 				227035B41714102200227B56 /* Content.m in Sources */,
 				227035BF1714121700227B56 /* GameplayViewController.m in Sources */,
-				22FFC118171880C80085FF86 /* SoundEffects.m in Sources */,
+				F6658163171F68BB0085955F /* MathGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
