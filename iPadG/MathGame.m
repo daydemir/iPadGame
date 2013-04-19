@@ -16,12 +16,12 @@
 
 @implementation MathGame
 
-@synthesize matchID;
+@synthesize count;
 NSMutableArray *cardArray;
 int answers[20];
 BOOL duplicate = false;
 
-int matchID = 0;
+int count = 0;
 
 + (NSMutableArray*)generateGrid:(int)gridSize
                  withDifficulty:(int)difficulty
@@ -29,20 +29,20 @@ int matchID = 0;
     cardArray = [NSMutableArray array];
     
     if (operation == 'a') {
-        while(matchID < gridSize/2) {
+        while(count < gridSize/2) {
             [self getNumbers:difficulty add:YES];
         }
     }
     else if (operation == 's') {
-        while(matchID < gridSize/2) {
+        while(count < gridSize/2) {
             [self getNumbers:difficulty add:NO];
         }
     }
     else if (operation == 'b') {
-        while(matchID < gridSize/4) {
+        while(count < gridSize/4) {
             [self getNumbers:difficulty add:NO];
         }
-        while(matchID < gridSize/2) {
+        while(count < gridSize/2) {
             [self getNumbers:difficulty add:YES];
         }
     }
@@ -72,23 +72,22 @@ int matchID = 0;
     else {
         d = a;
     }
-    for (int x = 0; x < matchID; x++) {
+    for (int x = 0; x < count; x++) {
         if (answers[x] == d){
             duplicate = true;
         }
     }
     if (!duplicate){
-        answers[matchID] = d;
-        [self getCards:matchID withA:a withB:b withC:c add:op];
-        matchID++;
+        answers[count] = d;
+        [self getCards:op withA:a withB:b withC:c];
+        count++;
     }
 }
 
-+ (void)getCards:(int)match
++ (void)getCards:(BOOL)op
            withA:(int)a
            withB:(int)b
-           withC:(int)c
-             add:(BOOL)op {
+           withC:(int)c {
     NSString *card1;
     NSString *card2;
     if (op) {

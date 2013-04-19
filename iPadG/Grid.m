@@ -134,7 +134,7 @@
             NSMutableArray *words_chosen = [NSMutableArray array];
             NSMutableArray *mathCards = [[NSMutableArray alloc] initWithArray:[MathGame generateGrid:gameSize withDifficulty:10 withOp:'b']];
             
-            for (int i =0 ; i< gameCounter; i++){
+            for (int i = 0 ; i < gameCounter; i++){
                 Content *mathContentQ = [[Content alloc] initWithWord: [mathCards objectAtIndex:2*i]];
                 Content *mathContentA = [[Content alloc] initWithWord: [mathCards objectAtIndex:2*i+1]];
                 [mathContentQ setMatchID:i];
@@ -143,10 +143,14 @@
                 [words_chosen addObject:mathContentA];
             }
             
-            
             [words_chosen shuffle];
             
-
+            Content *card;
+            
+            for (int i = 0; i < gameCounter; i++) {
+                card = [words_chosen objectAtIndex:(i)];
+                [card setLabel:true useGrid:true withIndex:i withSize:gameCounter];
+            }
             
             NSArray *gridContent = words_chosen;
             return gridContent;

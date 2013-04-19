@@ -15,9 +15,17 @@
     int column;
 }
 -(id)initWithWord: (NSString *) aWord;
+@property(nonatomic) NSString *label;
 @property(nonatomic) NSString *word;
 @property(nonatomic) NSInteger *matchID;
 @property(nonatomic) BOOL *matched;
-@property(nonatomic) NSString *position;
+@property(nonatomic) NSString *grid;
+@property(nonatomic) NSString *directional;
 
+- (NSString*)setGrid:(int)index
+               withSize:(int)size;
+- (void) setLabel:(BOOL)memory
+          useGrid:(BOOL)alpha
+        withIndex:(int)index
+         withSize:(int)size;
 @end

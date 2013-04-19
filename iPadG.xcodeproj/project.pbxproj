@@ -58,6 +58,7 @@
 		22FFC11F1718847D0085FF86 /* HitWallObs.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC11D1718847D0085FF86 /* HitWallObs.aiff */; };
 		22FFC121171885700085FF86 /* Buzzer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC120171885700085FF86 /* Buzzer.aiff */; };
 		22FFC122171885700085FF86 /* Buzzer.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 22FFC120171885700085FF86 /* Buzzer.aiff */; };
+		6D83DF451721CEF900689A97 /* braille.lst in Resources */ = {isa = PBXBuildFile; fileRef = 6D83DF441721CEF900689A97 /* braille.lst */; };
 		6DDED2EC1713812F004FF02C /* MathGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* MathGame.m */; };
 		F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A517172FB300C3D83C /* DDFileReader.m */; };
 		F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */; };
@@ -123,6 +124,7 @@
 		22FFC11D1718847D0085FF86 /* HitWallObs.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = HitWallObs.aiff; sourceTree = "<group>"; };
 		22FFC120171885700085FF86 /* Buzzer.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Buzzer.aiff; sourceTree = "<group>"; };
 		6D45E644171600CC00FE7C9C /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
+		6D83DF441721CEF900689A97 /* braille.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = braille.lst; sourceTree = "<group>"; };
 		6DDED2EA1713812F004FF02C /* MathGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathGame.h; sourceTree = "<group>"; };
 		6DDED2EB1713812F004FF02C /* MathGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathGame.m; sourceTree = "<group>"; };
 		F62A60A517172FB300C3D83C /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */,
 				22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */,
+				6D83DF441721CEF900689A97 /* braille.lst */,
 				22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */,
 				22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */,
 				22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */,
@@ -354,6 +357,7 @@
 				22B98584171F5B4B00CEF8A3 /* Yahoo.mp3 in Resources */,
 				22B98587171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */,
 				22B9858A171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */,
+				6D83DF451721CEF900689A97 /* braille.lst in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

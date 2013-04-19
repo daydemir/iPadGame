@@ -9,19 +9,18 @@
 
 
 @interface MathGame : NSObject {
-    int matchID;
+    int count;
 }
 
-@property int matchID;
+@property int count;
 
 + (NSMutableArray*)generateGrid:(int)gridSize
                  withDifficulty:(int)difficulty
                          withOp:(unichar)operation;
 + (void)getNumbers:(int)limit
                add:(BOOL)op;
-+ (void)getCards:(int)match
++ (void)getCards:(BOOL)op
            withA:(int)a
            withB:(int)b
-           withC:(int)c
-             add:(BOOL)op;
+           withC:(int)c;
 @end
