@@ -55,9 +55,9 @@ NSArray *gridContent;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    clickedButton = nil;
     int gamesize = 20;
-    NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
+    //NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
     
     gameGrid = [[Grid alloc] init];
     if([gameSpecs difficultyLevel] == kMedium) {
@@ -160,6 +160,7 @@ NSArray *gridContent;
     if([currentContent matched])
     {
        //play some sound indicating they already matched this card?
+        NSLog(@"This card already matched!");
     }
     
     else if(!oneButtonClickedAlready) { // see if the button being clicked is the first or second of a pair
@@ -190,6 +191,7 @@ NSArray *gridContent;
             {
                 NSLog(@"YOU WIN");
                 [self performSegueWithIdentifier:@"winSegue" sender:self];
+                
                 SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Yahoo.mp3"];
                 SoundEffects *se2 = [[SoundEffects alloc] initWithSoundNamed:@"Donkey_Kong_Win.mp3"];
                 [se play];
