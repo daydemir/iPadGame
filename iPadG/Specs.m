@@ -16,7 +16,7 @@
 -(id)init
 {
     self = [super init];
-
+    _gameType = -1; //this means uninitialized specs
     if(self)
     {
         

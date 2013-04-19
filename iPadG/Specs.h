@@ -16,9 +16,9 @@ typedef enum {
 } GameType;
 
 typedef enum {
+    kMedium,
     kVeryEasy,
     kEasy,
-    kMedium,
     kHard,
     kVeryHard
 } DifficultyLevel;

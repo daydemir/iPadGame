@@ -102,8 +102,9 @@ Specs *gameSpecs;
 
 
 
-- (IBAction)BeginPressed:(id)sender {
+- (IBAction)ChooseSettingsSelected:(id)sender {
     gameSpecs = [[Specs alloc] init];
+    NSLog(@"gamespecs init");
     
 }
 
@@ -165,6 +166,14 @@ Specs *gameSpecs;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ //send specs to gameplayviewcontroller
     if([segue.identifier isEqualToString:@"gameStarts"]){
+        if(gameSpecs == nil) {
+            gameSpecs = [[Specs alloc] init];
+            [gameSpecs setDifficultyLevel:kEasy];
+            [gameSpecs setGameType:kWordToWord];
+            [gameSpecs setMultiplayer:false];
+            [gameSpecs setTimed:false];
+            NSLog(@"default settings activated");
+        }
         GameplayViewController  *controller = [segue destinationViewController];
         [controller setGameSpecs:gameSpecs];
         NSLog(@"SEGUE IDENTIFIED");

@@ -16,7 +16,7 @@
 
 
 
-- (IBAction)BeginPressed:(id)sender;
+- (IBAction)ChooseSettingsSelected:(id)sender;
 
 //number of players
 - (IBAction)SinglePlayerPressed:(id)sender;

@@ -49,6 +49,7 @@
 -(id)initWith:(int)numCards {
     _array = [NSArray arrayWithObjects:@"Cow", @"Dog", @"Cat", @"Dog", @"Horse", @"Elephant", @"Elephant", @"Cow", @"Fish", @"Snake", @"Cat", @"Snake", @"Bee", @"Fish", @"Bee", @"Horse", nil];
     NSLog(@"init with ran");
+    return self;
 }
 - (BOOL) gameOver
 {
@@ -130,7 +131,7 @@
             
             gameCounter = gameSize/2;
             
-            
+            NSLog(@"MATH TYPE");
             NSMutableArray *words_chosen = [NSMutableArray array];
             NSMutableArray *mathCards = [[NSMutableArray alloc] initWithArray:[MathGame generateGrid:gameSize withDifficulty:10 withOp:'b']];
             
@@ -142,9 +143,10 @@
                 [words_chosen addObject:mathContentQ];
                 [words_chosen addObject:mathContentA];
             }
+            NSLog(@"Completed MATH GENERATION");
             
             [words_chosen shuffle];
-            
+        
             Content *card;
             
             for (int i = 0; i < gameCounter; i++) {
@@ -153,6 +155,7 @@
             }
             
             NSArray *gridContent = words_chosen;
+            NSLog(@"RETURN GRID CONTENT");
             return gridContent;
         }
             break;

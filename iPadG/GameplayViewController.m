@@ -56,15 +56,22 @@ NSArray *gridContent;
 {
     [super viewDidLoad];
     clickedButton = nil;
-    int gamesize = 20;
+    int gamesize=0;
+
+    //int gamesize = 20;
     //NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
     
     gameGrid = [[Grid alloc] init];
     if([gameSpecs difficultyLevel] == kMedium) {
-        NSLog(@"MEDIUM GAME DIFF");
+        
         gamesize = 16; }
     else if([gameSpecs difficultyLevel] == kEasy) {
         gamesize = 8;
+    }
+    else
+    {
+        gamesize = 20;
+        NSLog(@"Hard GAME DIFF");
     }
     //gridContent = [[NSArray alloc] init];
     
@@ -80,6 +87,24 @@ NSArray *gridContent;
     
 
 }
+
+
+/*- (void)willAnimateRotationToInterfaceOrientation:
+(UIInterfaceOrientation)toInterfaceOrientation
+                                         duration:(NSTimeInterval)duration
+{
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+     //   firstButton.frame = CGRectMake(20, 20, 482, 708);
+      //  secondButton.frame = CGRectMake(522, 20, 482, 708);
+    }
+    else
+    {
+       // firstButton.frame = CGRectMake(20, 20, 728, 472);
+        //secondButton.frame = CGRectMake(20, 512, 728, 472);
+    }
+}*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -135,11 +160,11 @@ NSArray *gridContent;
         button.frame = CGRectMake(xOffset, yOffset, width, height);
         button.clipsToBounds = YES;
         [button setTag:a];
+        [button setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin]; //makes autoresize work for orientation change
         NSLog(@"%i", a);
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 
 
-        //button.tag = a+1;
         [self.view addSubview:button];
         xOffset+=width;
     }
@@ -190,7 +215,7 @@ NSArray *gridContent;
             if([gameGrid gameOver])
             {
                 NSLog(@"YOU WIN");
-                [self performSegueWithIdentifier:@"winSegue" sender:self];
+                [self performSegueWithIdentifier:@"winSegue'" sender:self];
                 
                 SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Yahoo.mp3"];
                 SoundEffects *se2 = [[SoundEffects alloc] initWithSoundNamed:@"Donkey_Kong_Win.mp3"];
