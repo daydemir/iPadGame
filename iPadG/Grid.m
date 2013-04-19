@@ -235,10 +235,7 @@
             
         case 3://Math
         {
-            
             gameCounter = gameSize/2;
-            
-            
             NSMutableArray *words_chosen = [NSMutableArray array];
             NSMutableArray *mathCards = [[NSMutableArray alloc] initWithArray:[MathGame generateGrid:gameSize withDifficulty:10 withOp:'b']];
             
@@ -252,12 +249,11 @@
             }
             
             [words_chosen shuffle];
-            
             Content *card;
             
-            for (int i = 0; i < gameCounter; i++) {
-                card = [words_chosen objectAtIndex:(i)];
-                [card setLabel:true useGrid:true withIndex:i withSize:gameCounter];
+            for (int i = 0; i < gameSize; i++) {
+                card = [words_chosen objectAtIndex:i];
+                [card setLabel:true useGrid:true withIndex:i withSize:gameSize];
             }
             
             NSArray *gridContent = words_chosen;
