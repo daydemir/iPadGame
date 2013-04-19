@@ -10,10 +10,9 @@
 
 typedef enum {
     kWordToWord,
-    kWordToSound,
     kSoundToSound,
-    kMath,
-    kBraille
+    kWordToSound,
+    kMath
 } GameType;
 
 typedef enum {
