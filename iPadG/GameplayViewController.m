@@ -157,6 +157,17 @@ NSArray *gridContent;
     //NSLog(@"%@", [con word]);
     NSLog(@"button clicked");
     
+    if([currentContent hasSound]){
+        
+        //play sound
+        NSString *addr = [[sender titleLabel] text];
+        NSString *myString = [addr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        SoundEffects *sound = [[SoundEffects alloc] initWithSoundNamed:myString];
+        [sound play];
+        
+    }
+    
+    
     if([currentContent matched])
     {
        //play some sound indicating they already matched this card?

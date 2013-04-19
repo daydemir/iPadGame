@@ -13,6 +13,8 @@
 @synthesize word;
 @synthesize matchID;
 @synthesize matched;
+@synthesize position = _position;
+@synthesize hasSound = False;
 
 - (id) initWithWord:(NSString *)aWord;
 {
