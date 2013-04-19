@@ -641,7 +641,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="CJB-ht-Goc" kind="modal" identifier="winSegue" id="3lo-ko-fh2"/>
+                        <segue destination="CJB-ht-Goc" kind="modal" identifier="winSegue'" id="3lo-ko-fh2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-8p-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
