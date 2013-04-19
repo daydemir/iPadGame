@@ -19,8 +19,13 @@
 @property(nonatomic) NSString *word;
 @property(nonatomic) NSInteger *matchID;
 @property(nonatomic) BOOL *matched;
+<<<<<<< HEAD
 @property(nonatomic) NSString *grid;
 @property(nonatomic) NSString *directional;
+=======
+@property(nonatomic) NSString *position;
+@property(nonatomic) BOOL *hasSound;
+>>>>>>> All GameType available! Duplicated Tab fixed!
 
 - (NSString*)setGrid:(int)index
                withSize:(int)size;

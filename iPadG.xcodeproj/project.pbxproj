@@ -64,6 +64,8 @@
 		F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */; };
 		F6583AE017159B31007FE2C0 /* words.lst in Resources */ = {isa = PBXBuildFile; fileRef = F6583ADF17159B31007FE2C0 /* words.lst */; };
 		F6658163171F68BB0085955F /* MathGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* MathGame.m */; };
+		F68A09041721F3C300429C24 /* braille.lst in Resources */ = {isa = PBXBuildFile; fileRef = F68A09031721F3C300429C24 /* braille.lst */; };
+		F6DBC8811721D42C005142E3 /* word_sound.lst in Resources */ = {isa = PBXBuildFile; fileRef = F6DBC8801721D42C005142E3 /* word_sound.lst */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		F62A60A71717315700C3D83C /* NSMutableArray_Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArray_Shuffling.h; sourceTree = "<group>"; };
 		F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArray_Shuffling.m; sourceTree = "<group>"; };
 		F6583ADF17159B31007FE2C0 /* words.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.lst; sourceTree = "<group>"; };
+		F68A09031721F3C300429C24 /* braille.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = braille.lst; sourceTree = "<group>"; };
+		F6DBC8801721D42C005142E3 /* word_sound.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_sound.lst; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 				222C691F16E154D5000B5696 /* Default.png */,
 				222C692116E154D5000B5696 /* Default@2x.png */,
 				222C692316E154D5000B5696 /* Default-568h@2x.png */,
+				F6DBC8801721D42C005142E3 /* word_sound.lst */,
+				F68A09031721F3C300429C24 /* braille.lst */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -357,7 +363,12 @@
 				22B98584171F5B4B00CEF8A3 /* Yahoo.mp3 in Resources */,
 				22B98587171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */,
 				22B9858A171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */,
+<<<<<<< HEAD
 				6D83DF451721CEF900689A97 /* braille.lst in Resources */,
+=======
+				F6DBC8811721D42C005142E3 /* word_sound.lst in Resources */,
+				F68A09041721F3C300429C24 /* braille.lst in Resources */,
+>>>>>>> All GameType available! Duplicated Tab fixed!
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

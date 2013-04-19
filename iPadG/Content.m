@@ -13,6 +13,11 @@
 @synthesize word;
 @synthesize matchID;
 @synthesize matched;
+<<<<<<< HEAD
+=======
+@synthesize position = _position;
+@synthesize hasSound = False;
+>>>>>>> All GameType available! Duplicated Tab fixed!
 
 - (id) initWithWord:(NSString *)aWord;
 {
