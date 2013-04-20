@@ -69,12 +69,9 @@
     return false;
 }
 
-- (NSArray*)getGameContent:(int)gameSize andGameType: (int)gameType
+- (NSArray*)getGameContent:(int)gameSize andGameType:(int)gameType
 {
-    
-    switch (gameType) {
-            
-            
+    switch (gameType) {            
         case 0://wordToWord
         {
             gameCounter = gameSize/2;
@@ -110,15 +107,21 @@
                 }
                 NSString *word = [words objectAtIndex: r];
                 Content *wordAsContent = [[Content alloc] initWithWord:word];
+                Content *wordAsContent2 = [[Content alloc] initWithWord:word];
                 [wordAsContent setMatchID:i];
+                [wordAsContent2 setMatchID:i];
                 [words_chosen addObject:wordAsContent];
-                [words_chosen addObject:wordAsContent];
+                [words_chosen addObject:wordAsContent2];
             }
-            //shuffling inside the words_chosen array
+                       
             [words_chosen shuffle];
-            //put nil at the end
-            //[words_chosen addObject:nil];
             
+            Content *card;
+            for (int i = 0; i < gameSize; i++) {
+                card = [words_chosen objectAtIndex:i];
+                [card setLabel:true useGrid:true withIndex:i withSize:gameSize];
+            }
+           
             NSArray *gridContent = words_chosen;
             return gridContent;
         }
@@ -249,8 +252,8 @@
             }
             
             [words_chosen shuffle];
-            Content *card;
             
+            Content *card;
             for (int i = 0; i < gameSize; i++) {
                 card = [words_chosen objectAtIndex:i];
                 [card setLabel:true useGrid:true withIndex:i withSize:gameSize];

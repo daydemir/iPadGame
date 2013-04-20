@@ -29,6 +29,7 @@
 }
 
 - (void) setLabel:(BOOL)memory useGrid:(BOOL)alpha withIndex:(int)index withSize:(int)size {
+
     if (size == 4 || size == 6) {
         if (alpha) {
             label = [NSString stringWithFormat:@"%@ %@", [self getDirectional:index withSize:size], [self getGrid:index withSize:size]];
@@ -40,7 +41,7 @@
     else {
             label = [NSString stringWithFormat:@"%@", [self getGrid:index withSize:size]];
     }
-    if (memory) {
+    if (!memory) {
         label = [NSString stringWithFormat:@"%@ %@", label, word];
     }
 }
@@ -49,49 +50,53 @@
 - (NSString *) getDirectional:(int)index withSize:(int)size {
     if (size == 4) {
         switch(index) {
-            case(1): {
+            case 0: {
                 return [NSString stringWithFormat:@"%s", "Top Left"];
                 break;
             }
-            case(2): {
+            case 1: {
                 return [NSString stringWithFormat:@"%s", "Top Right"];
                 break;
             }
-            case(3): {
+            case 2: {
                 return [NSString stringWithFormat:@"%s", "Bottom Left"];
                 break;
             }
-            case(4): {
+            case 3: {
                 return [NSString stringWithFormat:@"%s", "Bottom Right"];
                 break;
+            }
+            default: {
             }
         }
     }
     else {
         switch (index) {
-            case(1): {
+            case 0: {
                 return [NSString stringWithFormat:@"%s", "Top Left"];
                 break;
             }
-            case(2): {
+            case 1: {
                 return [NSString stringWithFormat:@"%s", "Top Right"];
                 break;
             }
-            case(3): {
+            case 2: {
                 return [NSString stringWithFormat:@"%s", "Middle Left"];
                 break;
             }
-            case(4): {
+            case 3: {
                 return [NSString stringWithFormat:@"%s", "Middle Right"];
                 break;
             }
-            case(5): {
+            case 4: {
                 return [NSString stringWithFormat:@"%s", "Bottom Left"];
                 break;
             }
-            case(6): {
+            case 5: {
                 return [NSString stringWithFormat:@"%s", "Bottom Right"];
                 break;
+            }
+            default: {
             }
         }
     }
@@ -100,7 +105,7 @@
 - (NSString*) getGrid:(int)index withSize:(int)size {
     int c;
     switch(size) {
-        case (4): {
+        case 4: {
             c = 2;
             break;
         }

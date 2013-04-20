@@ -44,10 +44,6 @@ Specs *gameSpecs;
     SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
     [se play];
     
-    
-    
-    
-    
     if([gameSpecs multiplayer]) {
         _NumPlayersLabel.text = @"2";
         //NSLog(@"CHECKED MULTI");
@@ -87,9 +83,6 @@ Specs *gameSpecs;
     else {
         _GameDifficultyLabel.text = @"Very Hard!"; }
     
-
-    
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -99,12 +92,8 @@ Specs *gameSpecs;
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
 - (IBAction)BeginPressed:(id)sender {
     gameSpecs = [[Specs alloc] init];
-    
 }
 
 - (IBAction)SinglePlayerPressed:(id)sender {
@@ -147,6 +136,11 @@ Specs *gameSpecs;
     NSLog(@"Game Type is set to Math");
 }
 
+- (IBAction)VeryEasyPressed:(id)sender {
+    [gameSpecs setDifficultyLevel:kVeryEasy];
+    NSLog(@"Difficulty is Very Easy");
+}
+
 - (IBAction)EasyPressed:(id)sender {
     [gameSpecs setDifficultyLevel:kEasy];
     NSLog(@"Difficulty is Easy");
@@ -162,10 +156,14 @@ Specs *gameSpecs;
     NSLog(@"Difficulty is Hard");
 }
 
+-(IBAction)VeryHardPressed:(id)sender {
+    [gameSpecs setDifficultyLevel:kVeryHard];
+    NSLog(@"Difficulty is Very Hard");
+}
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ //send specs to gameplayviewcontroller
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender { //send specs to gameplayviewcontroller
     if([segue.identifier isEqualToString:@"gameStarts"]){
-        GameplayViewController  *controller = [segue destinationViewController];
+        GameplayViewController *controller = [segue destinationViewController];
         [controller setGameSpecs:gameSpecs];
         NSLog(@"SEGUE IDENTIFIED");
     }
