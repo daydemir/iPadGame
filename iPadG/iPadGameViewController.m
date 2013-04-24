@@ -32,6 +32,7 @@
 @synthesize WordToWordButton;
 @synthesize SoundToSoundButton;
 @synthesize gameTypeControl;
+@synthesize memoryControl;
 
 Specs *gameSpecs = nil;
 
@@ -54,6 +55,14 @@ Specs *gameSpecs = nil;
     
     
 }
+
+
+/*-(id)initWithCoder:(NSCoder *)decoder
+{
+    //should be called only once i think..
+    NSLog(@"init with coder!");
+    return self;
+}*/
 
 
 - (void)viewDidLoad
@@ -218,6 +227,18 @@ Specs *gameSpecs = nil;
 
 - (IBAction)submitSettingsPressed:(id)sender {
     
+}
+
+- (IBAction)memorySegmentPressed:(id)sender {
+    NSLog(@"selected memory index: %ld", (long)memoryControl.selectedSegmentIndex);
+    if(memoryControl.selectedSegmentIndex == 0){
+        [gameSpecs setMemory:FALSE];
+        NSLog(@"memory set to false");
+    }
+    else {
+        [gameSpecs setMemory:TRUE];
+        NSLog(@"memory set to true");
+    }
 }
 
 

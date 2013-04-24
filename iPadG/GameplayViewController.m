@@ -50,19 +50,13 @@ NSArray *gridContent;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
     clickedButton = nil;
     int gamesize=0;
-
-    //int gamesize = 20;
-    //NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
-    
-=======
-    int gamesize;
-    NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
->>>>>>> alphanumeric + directional labels done
     gameGrid = [[Grid alloc] init];
-
+    if ([gameSpecs memory] != FALSE || [gameSpecs memory] != TRUE) { //make default memory setting false
+        [gameSpecs setMemory:FALSE];
+    }
+    
     if ([gameSpecs difficultyLevel] == kVeryEasy) {
         gamesize = 4;
     }
@@ -79,8 +73,9 @@ NSArray *gridContent;
     else {
         gamesize = 20;
     }
-
-    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:gamesize andGameType:[gameSpecs gameType]]];
+    
+    NSLog(@"memory is %@", [gameSpecs memory]? @"true":@"false");
+    gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:gamesize andGameType:[gameSpecs gameType] andMemory:[gameSpecs memory]]];
     
     [self createButtons:[gridContent count] array:gridContent];
 }
@@ -175,7 +170,12 @@ NSArray *gridContent;
          forControlEvents:UIControlEventTouchDown];
         Content *cardContent = [gc objectAtIndex:a];
         NSLog(@"%i", (int)[cardContent matchID]);
-        [button setTitle:[NSString stringWithFormat:@"%@", [cardContent label]] forState:UIControlStateNormal];
+        if ([cardContent label] == NULL) {
+            [button setTitle:[NSString stringWithFormat:@"iMATCH"] forState:UIControlStateNormal];
+        }
+        else {
+            [button setTitle:[NSString stringWithFormat:@"%@", [cardContent label]] forState:UIControlStateNormal];
+        }
         button.frame = CGRectMake(xOffset, yOffset, width, height);
         button.clipsToBounds = YES;
         [button setTag:a];

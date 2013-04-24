@@ -70,9 +70,10 @@
     return false;
 }
 
-- (NSArray*)getGameContent:(int)gameSize andGameType:(int)gameType
+- (NSArray*)getGameContent:(int)gameSize andGameType:(int)gameType andMemory:(BOOL)mem
 {
-    switch (gameType) {            
+    NSLog(@"getGameContent running");
+    switch (gameType) {
         case 0://wordToWord
         {
             gameCounter = gameSize/2;
@@ -84,7 +85,7 @@
             words_chosen = [NSMutableArray array];
             selectedSet = [NSMutableArray array];
             //read file
-            NSString* path = [[NSBundle mainBundle] pathForResource:@"easy_word"
+            NSString* path = [[NSBundle mainBundle] pathForResource:@"words"
                                                              ofType:@"lst"];
             DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:path];
             NSString * line = nil;
@@ -120,7 +121,7 @@
             Content *card;
             for (int i = 0; i < gameSize; i++) {
                 card = [words_chosen objectAtIndex:i];
-                [card setLabel:true useGrid:true withIndex:i withSize:gameSize];
+                [card setLabel:mem useGrid:true withIndex:i withSize:gameSize];
             }
            
             NSArray *gridContent = words_chosen;
@@ -176,6 +177,13 @@
             //put nil at the end
             //[words_chosen addObject:nil];
             
+            Content *card;
+            for (int i = 0; i < gameSize; i++) {
+                card = [words_chosen objectAtIndex:i];
+                [card setLabel:mem useGrid:true withIndex:i withSize:gameSize];
+            }
+
+            
             NSArray *gridContent = words_chosen;
             return gridContent;
 
@@ -230,6 +238,13 @@
             [words_chosen shuffle];
             //put nil at the end
             //[words_chosen addObject:nil];
+            Content *card;
+            for (int i = 0; i < gameSize; i++) {
+                card = [words_chosen objectAtIndex:i];
+                [card setLabel:mem useGrid:true withIndex:i withSize:gameSize];
+            }
+
+            
             
             NSArray *gridContent = words_chosen;
             return gridContent;
@@ -246,24 +261,27 @@
             NSMutableArray *mathCards = [[NSMutableArray alloc] initWithArray:[MathGame generateGrid:gameSize withDifficulty:10 withOp:'b']];
             
             for (int i = 0 ; i < gameCounter; i++){
+                
                 Content *mathContentQ = [[Content alloc] initWithWord: [mathCards objectAtIndex:2*i]];
+                
                 Content *mathContentA = [[Content alloc] initWithWord: [mathCards objectAtIndex:2*i+1]];
                 [mathContentQ setMatchID:i];
                 [mathContentA setMatchID:i];
                 [words_chosen addObject:mathContentQ];
                 [words_chosen addObject:mathContentA];
             }
-            NSLog(@"Completed MATH GENERATION");
             
             [words_chosen shuffle];
         
             Content *card;
             for (int i = 0; i < gameSize; i++) {
                 card = [words_chosen objectAtIndex:i];
-                [card setLabel:true useGrid:true withIndex:i withSize:gameSize];
+                [card setLabel:mem useGrid:true withIndex:i withSize:gameSize];
             }
             
             NSArray *gridContent = words_chosen;
+            
+            NSLog(@"Completed MATH GENERATION");
             return gridContent;
         }
             break;

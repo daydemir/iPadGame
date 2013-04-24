@@ -30,10 +30,12 @@ typedef enum {
     GameType gameType;
     DifficultyLevel difficultyLevel;
     BOOL timed;
+    BOOL memory;
 }
 @property (nonatomic) BOOL multiplayer;
 @property (nonatomic) GameType gameType;
 @property (nonatomic) DifficultyLevel difficultyLevel;
 @property (nonatomic) BOOL timed;
+@property (nonatomic) BOOL memory;
 
 @end

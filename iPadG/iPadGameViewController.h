@@ -25,6 +25,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *HardButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameTypeControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *difficultyControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *memoryControl;
 
 
 
@@ -55,5 +56,6 @@
 
 - (IBAction)submitSettingsPressed:(id)sender;
 
+- (IBAction)memorySegmentPressed:(id)sender;
 
 @end

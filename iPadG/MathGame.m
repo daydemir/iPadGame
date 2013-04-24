@@ -26,33 +26,53 @@ int count = 0;
 + (NSMutableArray*)generateGrid:(int)gridSize
                  withDifficulty:(int)difficulty
                          withOp:(unichar)operation {
+    NSLog(@"GENERATING MATH GRID");
+    count = 0;
+    
+    
     cardArray = [NSMutableArray array];
+    NSLog(@"about to get numbers for math problems");
+
     
     if (operation == 'a') {
         while(count < gridSize/2) {
+            NSLog(@"a is the problem");
+
             [self getNumbers:difficulty add:YES];
         }
     }
     else if (operation == 's') {
         while(count < gridSize/2) {
+            NSLog(@"s this the problem");
+
             [self getNumbers:difficulty add:NO];
         }
     }
     else if (operation == 'b') {
+        NSLog(@"b this the problem");
+
         while(count < gridSize/4) {
             [self getNumbers:difficulty add:NO];
+            
+            NSLog(@"b this the problem2");
+            
         }
         while(count < gridSize/2) {
             [self getNumbers:difficulty add:YES];
+            NSLog(@"b this the problem3");
         }
     }
     else {
+        NSLog(@"is this the problem");
     }
+    NSLog(@"is this the problem2");
+
     return cardArray;
 }
 
 + (void)getNumbers:(int)limit
                add:(BOOL)op {
+    
     duplicate = false;
     int a, b, c, d;
     if (limit == 10) {
@@ -98,6 +118,7 @@ int count = 0;
         card1 = [NSString stringWithFormat:@"%d - %d", c, b];
         card2 = [NSString stringWithFormat:@"%d", a];
     }
+    NSLog(@"adding math cards to card array");
     [cardArray addObject: card1];
     [cardArray addObject: card2];
 }

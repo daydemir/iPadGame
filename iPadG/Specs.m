@@ -13,6 +13,8 @@
 @synthesize gameType = _gameType;
 @synthesize difficultyLevel = _difficultyLevel;
 @synthesize timed = _timed;
+@synthesize memory = _memory;
+
 -(id)init
 {
     self = [super init];

@@ -30,19 +30,23 @@
 
 - (void) setLabel:(BOOL)memory useGrid:(BOOL)alpha withIndex:(int)index withSize:(int)size {
 
-    if (size == 4 || size == 6) {
-        if (alpha) {
-            label = [NSString stringWithFormat:@"%@ %@", [self getDirectional:index withSize:size], [self getGrid:index withSize:size]];
+    if(memory)
+    {
+        if (size == 4 || size == 6) {
+            if (alpha) {
+                label = [NSString stringWithFormat:@"%@ %@", [self getDirectional:index withSize:size], [self getGrid:index withSize:size]];
+            }
+            else {
+                label = [NSString stringWithFormat:@"%@",  [self getDirectional:index withSize:size]];
+            }
         }
         else {
-            label = [NSString stringWithFormat:@"%@",  [self getDirectional:index withSize:size]];
+            label = [NSString stringWithFormat:@"%@", [self getGrid:index withSize:size]];
+            NSLog(@"label = grid spot");
         }
     }
     else {
-            label = [NSString stringWithFormat:@"%@", [self getGrid:index withSize:size]];
-    }
-    if (!memory) {
-        label = [NSString stringWithFormat:@"%@ %@", label, word];
+        label = [NSString stringWithFormat:@"%@", word];
     }
 }
 
