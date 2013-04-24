@@ -227,8 +227,8 @@
                 NSArray *items = [word componentsSeparatedByString:@":"];
                 Content *sound1 = [[Content alloc] initWithWord:[items objectAtIndex:1]];
                 Content *sound2 = [[Content alloc] initWithWord:[items objectAtIndex:1]];
-                [sound1 setHasSound:true];
-                [sound2 setHasSound:true];
+                [sound1 setHasSound:TRUE];
+                [sound2 setHasSound:TRUE];
                 [sound1 setMatchID:i];
                 [sound2 setMatchID:i];
                 [words_chosen addObject:sound1];

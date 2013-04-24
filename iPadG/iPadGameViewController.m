@@ -135,14 +135,14 @@ Specs *gameSpecs = nil;
     [difficultyControl setSelectedSegmentIndex:[gameSpecs difficultyLevel]];
     [gameTypeControl setSelectedSegmentIndex:[gameSpecs gameType]];
     
-    UIFont *font = [UIFont boldSystemFontOfSize:22.0];
+    UIFont *font = [UIFont boldSystemFontOfSize:20.0];
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
                                                           forKey:UITextAttributeFont ];
     //[memoryControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
     //[[UISegmentedControl appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
     NSDictionary *unselectedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont boldSystemFontOfSize:22], UITextAttributeFont,
+                                [UIFont boldSystemFontOfSize:20], UITextAttributeFont,
                                 [UIColor blackColor], UITextAttributeTextColor,
                                 nil];
     [[UISegmentedControl appearance] setTitleTextAttributes:unselectedAttributes forState:UIControlStateNormal];
@@ -312,7 +312,7 @@ Specs *gameSpecs = nil;
 }
 
 - (IBAction)submitSettingsPressed:(id)sender {
-    //settings submitted!!!!!
+    //settings submitted!!
 }
 
 - (IBAction)memorySegmentPressed:(id)sender {
@@ -328,7 +328,7 @@ Specs *gameSpecs = nil;
 }
 
 
--(void)printGameSpecs
+-(void)printGameSpecs //just for testing
 {
     GameType gt = [gameSpecs gameType];
     
@@ -368,22 +368,6 @@ Specs *gameSpecs = nil;
     }
 
     NSLog(@"Specs are: %@, %@, %@", gametype, difficulty, memory);
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration :(UIInterfaceOrientation)fromInterfaceOrientation {
-    
-    // change background here
-    /*if(fromInterfaceOrientation == UIInterfaceOrientationPortrait){
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        [[UIImage imageNamed:@"background2.png"] drawInRect:self.view.bounds];
-        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    }*/
-    
-
-    
 }
 
 

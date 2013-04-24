@@ -173,8 +173,8 @@ NSArray *gridContent;
         if ([cardContent label] == NULL) {
             [button setTitle:[NSString stringWithFormat:@"iMATCH"] forState:UIControlStateNormal];
         }
-        else if([cardContent hasSound]){
-            [button setTitle:@"~" forState:UIControlStateNormal];
+        else if([cardContent hasSound] && ![gameSpecs memory]){
+            [button setTitle:@"" forState:UIControlStateNormal];
         }
         else {
             [button setTitle:[NSString stringWithFormat:@"%@", [cardContent label]] forState:UIControlStateNormal];
@@ -269,12 +269,12 @@ NSArray *gridContent;
     sender2.backgroundColor = green;
     Content *currentCard1 = [gridContent objectAtIndex:[sender tag]];
     if([currentCard1 hasSound] == false){
-        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard1.word] forState:UIControlStateNormal];
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard1.label] forState:UIControlStateNormal];
     }
     
     Content *currentCard2 = [gridContent objectAtIndex:[sender2 tag]];
     if([currentCard2 hasSound] == false){
-        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard2.label] forState:UIControlStateNormal];
     }
 }
 
@@ -312,10 +312,11 @@ NSArray *gridContent;
     }
     else {
         sender.backgroundColor = [UIColor whiteColor];
-        [sender setTitle:[NSString stringWithFormat:@"%@", @"~"] forState:UIControlStateNormal];
+        
         Content *currentCard = [gridContent objectAtIndex:[sender tag]];
-        if([currentCard hasSound] == false){
-            [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.word] forState:UIControlStateNormal];
+        [sender setTitle:[NSString stringWithFormat:@"%@", @""] forState:UIControlStateNormal];
+        if([gameSpecs memory]){
+            [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.label] forState:UIControlStateNormal];
         }
 
     }
