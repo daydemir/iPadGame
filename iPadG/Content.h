@@ -21,8 +21,10 @@
 @property(nonatomic) BOOL *matched;
 @property(nonatomic) NSString *grid;
 @property(nonatomic) NSString *directional;
+@property(nonatomic) NSString *position;
+@property(nonatomic) BOOL *hasSound;
 
-- (NSString*)setGrid:(int)index
+- (NSString*)getGrid:(int)index
                withSize:(int)size;
 - (void) setLabel:(BOOL)memory
           useGrid:(BOOL)alpha

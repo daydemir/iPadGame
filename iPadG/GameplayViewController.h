@@ -12,7 +12,6 @@
 
 @interface GameplayViewController : UIViewController
 
-
 @property (nonatomic) Specs *gameSpecs;
 
 @end

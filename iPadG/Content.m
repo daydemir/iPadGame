@@ -13,6 +13,8 @@
 @synthesize word;
 @synthesize matchID;
 @synthesize matched;
+@synthesize position = _position;
+@synthesize hasSound = False;
 
 - (id) initWithWord:(NSString *)aWord;
 {
@@ -27,6 +29,7 @@
 }
 
 - (void) setLabel:(BOOL)memory useGrid:(BOOL)alpha withIndex:(int)index withSize:(int)size {
+
     if (size == 4 || size == 6) {
         if (alpha) {
             label = [NSString stringWithFormat:@"%@ %@", [self getDirectional:index withSize:size], [self getGrid:index withSize:size]];
@@ -38,7 +41,7 @@
     else {
             label = [NSString stringWithFormat:@"%@", [self getGrid:index withSize:size]];
     }
-    if (memory) {
+    if (!memory) {
         label = [NSString stringWithFormat:@"%@ %@", label, word];
     }
 }
@@ -47,70 +50,84 @@
 - (NSString *) getDirectional:(int)index withSize:(int)size {
     if (size == 4) {
         switch(index) {
-            case(1): {
+            case 0: {
                 return [NSString stringWithFormat:@"%s", "Top Left"];
+                break;
             }
-            case(2): {
+            case 1: {
                 return [NSString stringWithFormat:@"%s", "Top Right"];
+                break;
             }
-            case(3): {
+            case 2: {
                 return [NSString stringWithFormat:@"%s", "Bottom Left"];
+                break;
             }
-            case(4): {
+            case 3: {
                 return [NSString stringWithFormat:@"%s", "Bottom Right"];
+                break;
+            }
+            default: {
             }
         }
     }
     else {
         switch (index) {
-            case(1): {
+            case 0: {
                 return [NSString stringWithFormat:@"%s", "Top Left"];
+                break;
             }
-            case(2): {
+            case 1: {
                 return [NSString stringWithFormat:@"%s", "Top Right"];
+                break;
             }
-            case(3): {
+            case 2: {
                 return [NSString stringWithFormat:@"%s", "Middle Left"];
+                break;
             }
-            case(4): {
+            case 3: {
                 return [NSString stringWithFormat:@"%s", "Middle Right"];
+                break;
             }
-            case(5): {
+            case 4: {
                 return [NSString stringWithFormat:@"%s", "Bottom Left"];
+                break;
             }
-            case(6): {
+            case 5: {
                 return [NSString stringWithFormat:@"%s", "Bottom Right"];
+                break;
+            }
+            default: {
             }
         }
     }
 }
 
 - (NSString*) getGrid:(int)index withSize:(int)size {
-    int r, c;
+    int c;
     switch(size) {
-        case (4): {
-            r = 2;
+        case 4: {
             c = 2;
+            break;
         }
-        case (6): {
-            r = 3;
+        case 8: {
             c = 2;
+            break;
         }
-        case (12): {
-            r = 3;
-            c = 2;
+        case 12: {
+            c = 3;
+            break;
         }
-        case (16): {
-            r = 4;
+        case 16: {
             c = 4;
+            break;
         }
-        case (20): {
-            r = 5;
+        case 20: {
             c = 4;
+            break;
         }
     }
-    row = index/r + 65;
-    column = index % c;
+    row = floor(index/c) + 65;
+    column = (index + 1) % c;
     if (column == 0) {
         column = c;
     }

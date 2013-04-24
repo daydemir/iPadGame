@@ -26,14 +26,9 @@
 
 @implementation GameplayViewController
 
-
 @synthesize gameSpecs;
 
 Grid *gameGrid;
-
-
-
-
 BOOL oneButtonClickedAlready = false;
 UIButton *clickedButton;
 NSArray *gridContent;
@@ -55,37 +50,39 @@ NSArray *gridContent;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+<<<<<<< HEAD
     clickedButton = nil;
     int gamesize=0;
 
     //int gamesize = 20;
     //NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
     
+=======
+    int gamesize;
+    NSLog(@"%@", [gameSpecs timed] ? @"YES" : @"NO");
+>>>>>>> alphanumeric + directional labels done
     gameGrid = [[Grid alloc] init];
-    if([gameSpecs difficultyLevel] == kMedium) {
-        
-        gamesize = 16; }
-    else if([gameSpecs difficultyLevel] == kEasy) {
-        gamesize = 8;
+
+    if ([gameSpecs difficultyLevel] == kVeryEasy) {
+        gamesize = 4;
     }
-    else
-    {
+    else if ([gameSpecs difficultyLevel] == kEasy) {
+        gamesize = 6;
+    }
+    else if ([gameSpecs difficultyLevel] == kMedium) {
+        NSLog(@"MEDIUM GAME DIFF");
+        gamesize = 12;
+    }
+    else if ([gameSpecs difficultyLevel] == kHard) {
+        gamesize = 16;
+    }
+    else {
         gamesize = 20;
-        NSLog(@"Hard GAME DIFF");
     }
-    //gridContent = [[NSArray alloc] init];
-    
-    //gridContent = gameGrid.array; //this should get the array of content from the Grid object...
-    //NSLog(@"%@", [gridContent objectAtIndex:3]);
 
-    
-    
     gridContent = [[NSArray alloc] initWithArray:[gameGrid getGameContent:gamesize andGameType:[gameSpecs gameType]]];
+    
     [self createButtons:[gridContent count] array:gridContent];
-    //NSLog(@"%@", [[gridContent objectAtIndex:4] word]);
-    
-    
-
 }
 
 
@@ -121,20 +118,42 @@ NSArray *gridContent;
     int width = 192;
     int height = 220;
     int cardsInRow = 4;
-
-    
     
     //insert function that adjusts button distribution according to size of cards
     
-    if(numButtons == 16) { //16 cards
-        //anything else for 16?
+    if(numButtons == 4)
+    {
+        width = 384;
+        height = 440;
+        yOffsetIncrement = 450;
+        cardsInRow = 2;
     }
-    else if(numButtons == 8) //8 cards
+    
+    else if(numButtons == 6)
+    {
+        height = 293;
+        width = 384;
+        yOffsetIncrement = 300;
+        cardsInRow = 2;
+    }
+    
+    else if(numButtons == 8)
     {
         width = 384;
         cardsInRow = 2;
     }
-    else //for 20 cards
+    
+    else if(numButtons == 12)
+    {
+        width = 256;
+        cardsInRow = 3;
+    }
+    
+    else if(numButtons == 16) {
+        //anything else for 16?
+    }
+    
+    else
     {
         width = 192;
         height = 176;
@@ -156,7 +175,7 @@ NSArray *gridContent;
          forControlEvents:UIControlEventTouchDown];
         Content *cardContent = [gc objectAtIndex:a];
         NSLog(@"%i", (int)[cardContent matchID]);
-        [button setTitle:[NSString stringWithFormat:@"%@", [cardContent word]] forState:UIControlStateNormal];
+        [button setTitle:[NSString stringWithFormat:@"%@", [cardContent label]] forState:UIControlStateNormal];
         button.frame = CGRectMake(xOffset, yOffset, width, height);
         button.clipsToBounds = YES;
         [button setTag:a];
@@ -175,12 +194,20 @@ NSArray *gridContent;
     int previousTag = [clickedButton tag];
     Content *currentContent =  [gridContent objectAtIndex:currentTag];
     Content *previousContent = [gridContent objectAtIndex:previousTag];
-    
     //some test prints
     NSLog(@"%i", currentTag);
-    //Content *con = [gridContent objectAtIndex:currentTag];
-    //NSLog(@"%@", [con word]);
     NSLog(@"button clicked");
+    
+    if([currentContent hasSound]){
+        
+        //play sound
+        NSString *addr = [[sender titleLabel] text];
+        NSString *myString = [addr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        SoundEffects *sound = [[SoundEffects alloc] initWithSoundNamed:myString];
+        [sound play];
+        
+    }
+    
     
     if([currentContent matched])
     {
@@ -204,7 +231,6 @@ NSArray *gridContent;
         [se play];
     }
     else {
-        //if([clickedButton.titleLabel.text isEqualToString:sender.titleLabel.text] && sender != clickedButton)
         if([currentContent matchID] == [previousContent matchID])
         {
             [self highlightMatchedButtons:clickedButton secondButton:sender];
@@ -238,12 +264,18 @@ NSArray *gridContent;
     UIColor * green = [UIColor colorWithRed:60/255.0f green:226/255.0f blue:63/255.0f alpha:1.0f];
     sender.backgroundColor = green;
     sender2.backgroundColor = green;
+    Content *currentCard1 = [gridContent objectAtIndex:[sender tag]];
+    [sender setTitle:[NSString stringWithFormat:@"%@", currentCard1.word] forState:UIControlStateNormal];
+    Content *currentCard2 = [gridContent objectAtIndex:[sender2 tag]];
+    [sender2 setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
 }
 
 -(void)highlightSelectedButton:(UIButton*)sender
-{
+{    
     UIColor * gray = [UIColor colorWithRed:204/255.0f green:204/255.0f blue:204/255.0f alpha:1.0f];
     sender.backgroundColor = gray;
+    Content *currentCard = [gridContent objectAtIndex:[sender tag]];
+    [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.word] forState:UIControlStateNormal];
 }
 
 -(void)highlightNoMatchButtons:(UIButton*)sender secondButton:(UIButton*)sender2
@@ -253,6 +285,9 @@ NSArray *gridContent;
     UIColor * red = [UIColor colorWithRed:255/255.0f green:25/255.0f blue:54/255.0f alpha:1.0f];
     sender.backgroundColor = red;
     sender2.backgroundColor = red;
+    Content *currentCard2 = [gridContent objectAtIndex:[sender2 tag]];
+    [sender2 setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
+
     [self performSelector:@selector(clearButtonHighlighting:) withObject:sender afterDelay:1];
     [self performSelector:@selector(clearButtonHighlighting:) withObject:sender2 afterDelay:1];
 }
@@ -264,7 +299,9 @@ NSArray *gridContent;
     }
     else {
         sender.backgroundColor = [UIColor whiteColor];
-        
+        [sender setTitle:[NSString stringWithFormat:@"%@", @"hello"] forState:UIControlStateNormal];
+        Content *currentCard = [gridContent objectAtIndex:[sender tag]];
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.label] forState:UIControlStateNormal];
     }
 }
 

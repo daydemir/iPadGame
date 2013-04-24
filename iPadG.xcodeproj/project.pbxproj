@@ -64,6 +64,20 @@
 		6DDED2EC1713812F004FF02C /* MathGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* MathGame.m */; };
 		F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A517172FB300C3D83C /* DDFileReader.m */; };
 		F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */; };
+		F650AF871722053800AC7BE4 /* tiger.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF7A1722053800AC7BE4 /* tiger.wav */; };
+		F650AF881722053800AC7BE4 /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF7B1722053800AC7BE4 /* dog.wav */; };
+		F650AF891722053800AC7BE4 /* wolf.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF7C1722053800AC7BE4 /* wolf.wav */; };
+		F650AF8A1722053800AC7BE4 /* pig.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF7D1722053800AC7BE4 /* pig.wav */; };
+		F650AF8B1722053800AC7BE4 /* leopard.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF7E1722053800AC7BE4 /* leopard.wav */; };
+		F650AF8C1722053800AC7BE4 /* lamb.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF7F1722053800AC7BE4 /* lamb.wav */; };
+		F650AF8D1722053800AC7BE4 /* frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF801722053800AC7BE4 /* frog.wav */; };
+		F650AF8E1722053800AC7BE4 /* dolphins.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF811722053800AC7BE4 /* dolphins.wav */; };
+		F650AF8F1722053800AC7BE4 /* chimp.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF821722053800AC7BE4 /* chimp.wav */; };
+		F650AF901722053800AC7BE4 /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF831722053800AC7BE4 /* cat.wav */; };
+		F650AF911722053800AC7BE4 /* bear.wav in Resources */ = {isa = PBXBuildFile; fileRef = F650AF841722053800AC7BE4 /* bear.wav */; };
+		F650AF921722053800AC7BE4 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F650AF851722053800AC7BE4 /* alarm.mp3 */; };
+		F650AF931722053800AC7BE4 /* helicopter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F650AF861722053800AC7BE4 /* helicopter.mp3 */; };
+		F650AF95172205A700AC7BE4 /* word_sound.lst in Resources */ = {isa = PBXBuildFile; fileRef = F650AF94172205A700AC7BE4 /* word_sound.lst */; };
 		F6583AE017159B31007FE2C0 /* words.lst in Resources */ = {isa = PBXBuildFile; fileRef = F6583ADF17159B31007FE2C0 /* words.lst */; };
 		F6658163171F68BB0085955F /* MathGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDED2EB1713812F004FF02C /* MathGame.m */; };
 /* End PBXBuildFile section */
@@ -134,6 +148,20 @@
 		F62A60A517172FB300C3D83C /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
 		F62A60A71717315700C3D83C /* NSMutableArray_Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArray_Shuffling.h; sourceTree = "<group>"; };
 		F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArray_Shuffling.m; sourceTree = "<group>"; };
+		F650AF7A1722053800AC7BE4 /* tiger.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tiger.wav; sourceTree = "<group>"; };
+		F650AF7B1722053800AC7BE4 /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
+		F650AF7C1722053800AC7BE4 /* wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wolf.wav; sourceTree = "<group>"; };
+		F650AF7D1722053800AC7BE4 /* pig.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pig.wav; sourceTree = "<group>"; };
+		F650AF7E1722053800AC7BE4 /* leopard.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = leopard.wav; sourceTree = "<group>"; };
+		F650AF7F1722053800AC7BE4 /* lamb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lamb.wav; sourceTree = "<group>"; };
+		F650AF801722053800AC7BE4 /* frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = frog.wav; sourceTree = "<group>"; };
+		F650AF811722053800AC7BE4 /* dolphins.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dolphins.wav; sourceTree = "<group>"; };
+		F650AF821722053800AC7BE4 /* chimp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimp.wav; sourceTree = "<group>"; };
+		F650AF831722053800AC7BE4 /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
+		F650AF841722053800AC7BE4 /* bear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bear.wav; sourceTree = "<group>"; };
+		F650AF851722053800AC7BE4 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		F650AF861722053800AC7BE4 /* helicopter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = helicopter.mp3; sourceTree = "<group>"; };
+		F650AF94172205A700AC7BE4 /* word_sound.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_sound.lst; sourceTree = "<group>"; };
 		F6583ADF17159B31007FE2C0 /* words.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.lst; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,18 +253,9 @@
 		222C691416E154D5000B5696 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */,
-				22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */,
+				F650AF79172204BD00AC7BE4 /* sounds */,
 				6D83DF441721CEF900689A97 /* braille.lst */,
-				22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */,
-				22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */,
-				22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */,
-				22B9857A171F593400CEF8A3 /* Crowd_Applause.mp3 */,
-				22B98577171F54E700CEF8A3 /* Blop.mp3 */,
-				22B98574171F52AB00CEF8A3 /* A-Tone.mp3 */,
-				22FFC120171885700085FF86 /* Buzzer.aiff */,
-				22FFC11D1718847D0085FF86 /* HitWallObs.aiff */,
-				22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */,
+				F650AF94172205A700AC7BE4 /* word_sound.lst */,
 				F62A60A71717315700C3D83C /* NSMutableArray_Shuffling.h */,
 				F62A60A81717315700C3D83C /* NSMutableArray_Shuffling.m */,
 				6D45E644171600CC00FE7C9C /* DDFileReader.h */,
@@ -271,6 +290,37 @@
 				222C693A16E154D6000B5696 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F650AF79172204BD00AC7BE4 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F650AF7A1722053800AC7BE4 /* tiger.wav */,
+				F650AF7B1722053800AC7BE4 /* dog.wav */,
+				F650AF7C1722053800AC7BE4 /* wolf.wav */,
+				F650AF7D1722053800AC7BE4 /* pig.wav */,
+				F650AF7E1722053800AC7BE4 /* leopard.wav */,
+				F650AF7F1722053800AC7BE4 /* lamb.wav */,
+				F650AF801722053800AC7BE4 /* frog.wav */,
+				F650AF811722053800AC7BE4 /* dolphins.wav */,
+				F650AF821722053800AC7BE4 /* chimp.wav */,
+				F650AF831722053800AC7BE4 /* cat.wav */,
+				F650AF841722053800AC7BE4 /* bear.wav */,
+				F650AF851722053800AC7BE4 /* alarm.mp3 */,
+				F650AF861722053800AC7BE4 /* helicopter.mp3 */,
+				22B98589171F6D8E00CEF8A3 /* Donkey_Kong_Win.mp3 */,
+				22B98586171F5CF300CEF8A3 /* JazzyElevatorMusic.mp3 */,
+				22B98583171F5B4B00CEF8A3 /* Yahoo.mp3 */,
+				22B98580171F5A2600CEF8A3 /* Sad_Trombone.mp3 */,
+				22B9857D171F59A600CEF8A3 /* SMALL_CROWD_APPLAUSE.mp3 */,
+				22B9857A171F593400CEF8A3 /* Crowd_Applause.mp3 */,
+				22B98577171F54E700CEF8A3 /* Blop.mp3 */,
+				22B98574171F52AB00CEF8A3 /* A-Tone.mp3 */,
+				22FFC120171885700085FF86 /* Buzzer.aiff */,
+				22FFC11D1718847D0085FF86 /* HitWallObs.aiff */,
+				22FFC11217187F680085FF86 /* Double_Toot_Button.aiff */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +414,20 @@
 				22B98587171F5CF400CEF8A3 /* JazzyElevatorMusic.mp3 in Resources */,
 				22B9858A171F6D8F00CEF8A3 /* Donkey_Kong_Win.mp3 in Resources */,
 				6D83DF451721CEF900689A97 /* braille.lst in Resources */,
+				F650AF871722053800AC7BE4 /* tiger.wav in Resources */,
+				F650AF881722053800AC7BE4 /* dog.wav in Resources */,
+				F650AF891722053800AC7BE4 /* wolf.wav in Resources */,
+				F650AF8A1722053800AC7BE4 /* pig.wav in Resources */,
+				F650AF8B1722053800AC7BE4 /* leopard.wav in Resources */,
+				F650AF8C1722053800AC7BE4 /* lamb.wav in Resources */,
+				F650AF8D1722053800AC7BE4 /* frog.wav in Resources */,
+				F650AF8E1722053800AC7BE4 /* dolphins.wav in Resources */,
+				F650AF8F1722053800AC7BE4 /* chimp.wav in Resources */,
+				F650AF901722053800AC7BE4 /* cat.wav in Resources */,
+				F650AF911722053800AC7BE4 /* bear.wav in Resources */,
+				F650AF921722053800AC7BE4 /* alarm.mp3 in Resources */,
+				F650AF931722053800AC7BE4 /* helicopter.mp3 in Resources */,
+				F650AF95172205A700AC7BE4 /* word_sound.lst in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
