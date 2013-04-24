@@ -226,7 +226,7 @@ Specs *gameSpecs = nil;
 }
 
 - (IBAction)submitSettingsPressed:(id)sender {
-    
+    //settings submitted!!!!!
 }
 
 - (IBAction)memorySegmentPressed:(id)sender {

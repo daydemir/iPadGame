@@ -53,7 +53,7 @@ NSArray *gridContent;
     clickedButton = nil;
     int gamesize=0;
     gameGrid = [[Grid alloc] init];
-    if ([gameSpecs memory] != FALSE || [gameSpecs memory] != TRUE) { //make default memory setting false
+    if ([gameSpecs memory] != FALSE && [gameSpecs memory] != TRUE) { //make default memory setting false
         [gameSpecs setMemory:FALSE];
     }
     
