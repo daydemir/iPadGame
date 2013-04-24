@@ -135,7 +135,7 @@ Specs *gameSpecs = nil;
     [difficultyControl setSelectedSegmentIndex:[gameSpecs difficultyLevel]];
     [gameTypeControl setSelectedSegmentIndex:[gameSpecs gameType]];
     
-    UIFont *font = [UIFont boldSystemFontOfSize:24.0];
+    UIFont *font = [UIFont boldSystemFontOfSize:22.0];
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
                                                           forKey:UITextAttributeFont ];
     //[memoryControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
@@ -171,34 +171,34 @@ Specs *gameSpecs = nil;
     */
     
     if([gameSpecs memory]) {
-        _memoryLabel.text = @"Cards are face DOWN"; }
+        _memoryLabel.text = @"Cards Face Down"; }
     {
-        _memoryLabel.text = @"Cards are face UP"; }
+        _memoryLabel.text = @"Cards Face Up"; }
     
     GameType gt = [gameSpecs gameType];
     
     if(gt == kWordToWord) {
-        _GameTypeLabel.text = @"Word To Word";
+        _GameTypeLabel.text = @"Game Type: Words";
     }
     else if (gt == kWordToSound) {
-        _GameTypeLabel.text  = @"Word to Sound"; }
+        _GameTypeLabel.text  = @"Game Type: Words and Sounds"; }
     else if (gt == kSoundToSound){
-        _GameTypeLabel.text = @"Sound to Sound"; }
+        _GameTypeLabel.text = @"Game Type: Sounds"; }
     else {
-        _GameTypeLabel.text = @"Math"; 
+        _GameTypeLabel.text = @"Game Type: Math"; 
     }
     
     DifficultyLevel dl = [gameSpecs difficultyLevel];
     if(dl == kEasy) {
-        _GameDifficultyLabel.text = @"Easy"; }
+        _GameDifficultyLabel.text = @"Difficulty: Easy"; }
     else if (dl == kVeryEasy) {
-        _GameDifficultyLabel.text  = @"Super Easy"; }
+        _GameDifficultyLabel.text  = @"Difficulty:Super Easy"; }
     else if (dl == kMedium) {
-        _GameDifficultyLabel.text  = @"Medium"; }
+        _GameDifficultyLabel.text  = @"Difficulty:Medium"; }
     else if (dl == kHard) {
-        _GameDifficultyLabel.text  = @"Hard"; }
+        _GameDifficultyLabel.text  = @"Difficulty:Hard"; }
     else {
-        _GameDifficultyLabel.text = @"SUPER Hard!"; }
+        _GameDifficultyLabel.text = @"Difficulty: SUPER Hard!"; }
     
     // Do any additional setup after loading the view, typically from a nib.
 }

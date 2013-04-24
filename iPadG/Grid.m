@@ -85,8 +85,8 @@
             words_chosen = [NSMutableArray array];
             selectedSet = [NSMutableArray array];
             //read file
-            NSString* path = [[NSBundle mainBundle] pathForResource:@"words"
-                                                             ofType:@"lst"];
+            NSString* path = [[NSBundle mainBundle] pathForResource:@"animals"
+                                                             ofType:@"txt"];
             DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:path];
             NSString * line = nil;
             //fetch input by lines

@@ -173,6 +173,9 @@ NSArray *gridContent;
         if ([cardContent label] == NULL) {
             [button setTitle:[NSString stringWithFormat:@"iMATCH"] forState:UIControlStateNormal];
         }
+        else if([cardContent hasSound]){
+            [button setTitle:@"~" forState:UIControlStateNormal];
+        }
         else {
             [button setTitle:[NSString stringWithFormat:@"%@", [cardContent label]] forState:UIControlStateNormal];
         }
@@ -201,7 +204,7 @@ NSArray *gridContent;
     if([currentContent hasSound]){
         
         //play sound
-        NSString *addr = [[sender titleLabel] text];
+        NSString *addr = [currentContent word];
         NSString *myString = [addr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
         SoundEffects *sound = [[SoundEffects alloc] initWithSoundNamed:myString];
         [sound play];
@@ -265,9 +268,14 @@ NSArray *gridContent;
     sender.backgroundColor = green;
     sender2.backgroundColor = green;
     Content *currentCard1 = [gridContent objectAtIndex:[sender tag]];
-    [sender setTitle:[NSString stringWithFormat:@"%@", currentCard1.word] forState:UIControlStateNormal];
+    if([currentCard1 hasSound] == false){
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard1.word] forState:UIControlStateNormal];
+    }
+    
     Content *currentCard2 = [gridContent objectAtIndex:[sender2 tag]];
-    [sender2 setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
+    if([currentCard2 hasSound] == false){
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
+    }
 }
 
 -(void)highlightSelectedButton:(UIButton*)sender
@@ -275,7 +283,10 @@ NSArray *gridContent;
     UIColor * gray = [UIColor colorWithRed:204/255.0f green:204/255.0f blue:204/255.0f alpha:1.0f];
     sender.backgroundColor = gray;
     Content *currentCard = [gridContent objectAtIndex:[sender tag]];
-    [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.word] forState:UIControlStateNormal];
+    if([currentCard hasSound] == false){
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.word] forState:UIControlStateNormal];
+    }
+    
 }
 
 -(void)highlightNoMatchButtons:(UIButton*)sender secondButton:(UIButton*)sender2
@@ -286,7 +297,9 @@ NSArray *gridContent;
     sender.backgroundColor = red;
     sender2.backgroundColor = red;
     Content *currentCard2 = [gridContent objectAtIndex:[sender2 tag]];
-    [sender2 setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
+    if([currentCard2 hasSound] == false){
+        [sender2 setTitle:[NSString stringWithFormat:@"%@", currentCard2.word] forState:UIControlStateNormal];
+    }
 
     [self performSelector:@selector(clearButtonHighlighting:) withObject:sender afterDelay:1];
     [self performSelector:@selector(clearButtonHighlighting:) withObject:sender2 afterDelay:1];
@@ -299,9 +312,12 @@ NSArray *gridContent;
     }
     else {
         sender.backgroundColor = [UIColor whiteColor];
-        [sender setTitle:[NSString stringWithFormat:@"%@", @"hello"] forState:UIControlStateNormal];
+        [sender setTitle:[NSString stringWithFormat:@"%@", @"~"] forState:UIControlStateNormal];
         Content *currentCard = [gridContent objectAtIndex:[sender tag]];
-        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.label] forState:UIControlStateNormal];
+        if([currentCard hasSound] == false){
+            [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.word] forState:UIControlStateNormal];
+        }
+
     }
 }
 
@@ -326,6 +342,7 @@ NSArray *gridContent;
 
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex    {
     if(buttonIndex == 0){
+        oneButtonClickedAlready = false;
         [self performSegueWithIdentifier:@"quitGame" sender:self];
     }
     [actionSheet dismissWithClickedButtonIndex:1 animated:true];
