@@ -268,4 +268,16 @@ NSArray *gridContent;
     }
 }
 
+
+
+/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ //send specs to gameplayviewcontroller
+    if([segue.identifier isEqualToString:@"winSegue"]){
+        iPadGameViewController  *controller = [segue destinationViewController];
+        [controller setGameSpecs:gameSpecs];
+        NSLog(@"SEGUE IDENTIFIED");
+    }
+}*/
+
+
+
 @end

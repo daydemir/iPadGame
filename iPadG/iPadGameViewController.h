@@ -7,12 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Specs.h"
 
 @interface iPadGameViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *NumPlayersLabel;
 @property (weak, nonatomic) IBOutlet UILabel *GameTypeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *GameDifficultyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *TimerLabel;
+
+@property (retain, nonatomic) IBOutlet UIButton *MathButton;
+@property (retain, nonatomic) IBOutlet UIButton *WordToWordButton;
+@property (retain, nonatomic) IBOutlet UIButton *WordToSoundButton;
+@property (retain, nonatomic) IBOutlet UIButton *SoundToSoundButton;
+
+@property (retain, nonatomic) IBOutlet UIButton *EasyButton;
+@property (retain, nonatomic) IBOutlet UIButton *MediumButton;
+@property (retain, nonatomic) IBOutlet UIButton *HardButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gameTypeControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *difficultyControl;
 
 
 
@@ -38,7 +50,10 @@
 - (IBAction)MediumPressed:(id)sender;
 - (IBAction)HardPressed:(id)sender;
 
+- (IBAction)gameTypeSegmentPressed:(id)sender;
+- (IBAction)difficultySegmentPressed:(id)sender;
 
+- (IBAction)submitSettingsPressed:(id)sender;
 
 
 @end

@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wt1-7o-q7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2098" y="-6478"/>
+            <point key="canvasLocation" x="-2978" y="-4350"/>
         </scene>
         <!--I Pad Game View Controller-->
         <scene sceneID="rBq-Jl-ggt">
@@ -98,8 +98,8 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sMT-NR-rQT">
-                                <rect key="frame" x="15" y="74" width="733" height="201"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sMT-NR-rQT">
+                                <rect key="frame" x="15" y="74" width="154" height="141"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Math">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,26 +110,25 @@
                                 </state>
                                 <connections>
                                     <action selector="MathPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="mNf-Bn-Thq"/>
-                                    <segue destination="2" kind="modal" id="LYb-to-PpN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aZc-YV-blf">
-                                <rect key="frame" x="20" y="309" width="733" height="201"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aZc-YV-blf">
+                                <rect key="frame" x="20" y="304" width="149" height="206"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Word to Word">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="medium_blue_450px.png"/>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="WordToWordPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="167-gz-MBg"/>
-                                    <segue destination="2" kind="modal" id="E2U-D2-s7u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8P3-ho-n0x">
-                                <rect key="frame" x="18" y="539" width="733" height="201"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8P3-ho-n0x">
+                                <rect key="frame" x="18" y="539" width="146" height="170"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Word to Sound">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,11 +139,10 @@
                                 </state>
                                 <connections>
                                     <action selector="WordToSoundPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="CvE-OP-IxL"/>
-                                    <segue destination="2" kind="modal" id="GEv-cJ-uxP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kh5-DR-8nQ">
-                                <rect key="frame" x="20" y="768" width="728" height="201"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kh5-DR-8nQ">
+                                <rect key="frame" x="20" y="768" width="144" height="206"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sound to Sound">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,33 +153,17 @@
                                 </state>
                                 <connections>
                                     <action selector="SoundToSoundPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="n1U-SW-lOR"/>
-                                    <segue destination="2" kind="modal" id="Sik-EF-uvJ"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" id="hwy-Ul-n71">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Choose Game Type" id="5TF-h2-b0c"/>
                                 </items>
                             </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O5e-Sx-H5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3581" y="-5504"/>
-        </scene>
-        <!--I Pad Game View Controller-->
-        <scene sceneID="4">
-            <objects>
-                <viewController id="2" customClass="iPadGameViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="dmZ-lF-jaU">
-                                <rect key="frame" x="20" y="56" width="728" height="313"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="dmZ-lF-jaU">
+                                <rect key="frame" x="509" y="74" width="239" height="246"/>
                                 <color key="backgroundColor" red="0.039215686270000001" green="0.1529411765" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="10" height="0.0"/>
@@ -197,12 +179,12 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="EasyPressed:" destination="2" eventType="touchUpInside" id="UMq-xL-lej"/>
+                                    <action selector="EasyPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="MQE-iO-1Tm"/>
                                     <segue destination="hy7-3l-aam" kind="modal" id="buz-8S-eAG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RaZ-BG-H2S">
-                                <rect key="frame" x="20" y="381" width="728" height="292"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RaZ-BG-H2S">
+                                <rect key="frame" x="509" y="341" width="239" height="283"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="MEDIUM">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -212,18 +194,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="MediumPressed:" destination="2" eventType="touchUpInside" id="Bku-HV-LiY"/>
+                                    <action selector="MediumPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="gZE-68-dRB"/>
                                     <segue destination="hy7-3l-aam" kind="modal" id="25i-zW-CoR"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" id="5Sh-ka-bTF">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                                <items>
-                                    <navigationItem title="Difficulty" id="x05-9b-R13"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XAe-Y0-shR">
-                                <rect key="frame" x="20" y="680" width="728" height="305"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XAe-Y0-shR">
+                                <rect key="frame" x="509" y="656" width="239" height="288"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="HARD">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -233,17 +209,69 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="HardPressed:" destination="2" eventType="touchUpInside" id="gAs-m9-q2p"/>
+                                    <action selector="HardPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="CXy-W0-mFD"/>
                                     <segue destination="hy7-3l-aam" kind="modal" id="zat-1f-rl3"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TVJ-9Q-C0c">
+                                <rect key="frame" x="49" y="175" width="671" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Word to Word"/>
+                                    <segment title="Sound to Sound"/>
+                                    <segment title="Word to Sound"/>
+                                    <segment title="Math"/>
+                                </segments>
+                                <connections>
+                                    <action selector="gameTypeSegmentPressed:" destination="UJg-Qf-k3c" eventType="valueChanged" id="az8-WU-VLk"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="7tk-5a-VDC">
+                                <rect key="frame" x="259" y="360" width="251" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="difficultySegmentPressed:" destination="UJg-Qf-k3c" eventType="valueChanged" id="u3R-WQ-Xj3"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2v2-W8-Gi4">
+                                <rect key="frame" x="315" y="806" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit Settings">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitSettingsPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="7zY-b7-SRj"/>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="Ffk-gD-vWl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="EasyButton" destination="dmZ-lF-jaU" id="oV7-PI-pFL"/>
+                        <outlet property="HardButton" destination="XAe-Y0-shR" id="K79-Db-6tf"/>
+                        <outlet property="MathButton" destination="sMT-NR-rQT" id="9nL-vf-vDf"/>
+                        <outlet property="MediumButton" destination="RaZ-BG-H2S" id="Wdy-js-kOg"/>
+                        <outlet property="SoundToSoundButton" destination="kh5-DR-8nQ" id="RAn-tN-Gvy"/>
+                        <outlet property="WordToSoundButton" destination="8P3-ho-n0x" id="zDB-71-Bbc"/>
+                        <outlet property="WordToWordButton" destination="aZc-YV-blf" id="crs-mv-83u"/>
+                        <outlet property="difficultyControl" destination="7tk-5a-VDC" id="HGK-gt-LXc"/>
+                        <outlet property="gameTypeControl" destination="TVJ-9Q-C0c" id="ioY-j8-pbz"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5e-Sx-H5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3586" y="-4408"/>
+            <point key="canvasLocation" x="-3814" y="-4250"/>
         </scene>
         <!--Gameplay View Controller-->
         <scene sceneID="a54-7M-3dy">
@@ -452,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-8p-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-769" y="-2993"/>
+            <point key="canvasLocation" x="-1277" y="-3513"/>
         </scene>
         <!--winView-->
         <scene sceneID="2iS-7h-lPR">
@@ -494,7 +522,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jty-Wa-dBJ" kind="modal" id="VhV-fr-KDc"/>
+                                    <segue destination="Jty-Wa-dBJ" kind="modal" identifier="gameStarts" id="VhV-fr-KDc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -503,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLi-HB-XVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="-3921"/>
+            <point key="canvasLocation" x="829" y="-2713"/>
         </scene>
         <!--I Pad Game View Controller-->
         <scene sceneID="PsW-8v-lHt">
@@ -539,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRI-bH-g15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-769" y="-5101"/>
+            <point key="canvasLocation" x="31" y="-5541"/>
         </scene>
     </scenes>
     <resources>
@@ -564,10 +592,22 @@
                 <relationship kind="action" name="TwoPlayerPressed:"/>
                 <relationship kind="action" name="WordToSoundPressed:"/>
                 <relationship kind="action" name="WordToWordPressed:"/>
+                <relationship kind="action" name="difficultySegmentPressed:"/>
+                <relationship kind="action" name="gameTypeSegmentPressed:"/>
+                <relationship kind="action" name="submitSettingsPressed:"/>
+                <relationship kind="outlet" name="EasyButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="GameDifficultyLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="GameTypeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="HardButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="MathButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="MediumButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="NumPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SoundToSoundButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="TimerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="WordToSoundButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="WordToWordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="difficultyControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="gameTypeControl" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
     </classes>
@@ -577,8 +617,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FmD-ZV-7vN"/>
-        <segue reference="VhV-fr-KDc"/>
-        <segue reference="GEv-cJ-uxP"/>
+        <segue reference="zat-1f-rl3"/>
+        <segue reference="ZR7-rT-yDn"/>
     </inferredMetricsTieBreakers>
 </document>

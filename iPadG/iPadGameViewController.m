@@ -24,15 +24,25 @@
 @synthesize GameTypeLabel = _GameTypeLabel;
 @synthesize GameDifficultyLabel = _GameDifficultyLabel;
 @synthesize TimerLabel = _TimerLabel;
-Specs *gameSpecs;
+@synthesize EasyButton;
+@synthesize MediumButton;
+@synthesize HardButton;
+@synthesize MathButton;
+@synthesize WordToSoundButton;
+@synthesize WordToWordButton;
+@synthesize SoundToSoundButton;
+@synthesize gameTypeControl;
+
+Specs *gameSpecs = nil;
 
 
 
-
-- (void)viewDidLoad
+-(void)awakeFromNib
 {
-    [super viewDidLoad];
-    NSLog(@"VIEW DID LOAD");
+    
+    
+    
+    NSLog(@"INITIALIZATION");
     
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"JazzyElevatorMusic" ofType:@"mp3"];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
@@ -41,6 +51,17 @@ Specs *gameSpecs;
     
     [player play];
     
+    
+    
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"VIEW DID LOAD");
+    
+
     SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
     [se play];
     
@@ -131,6 +152,8 @@ Specs *gameSpecs;
 - (IBAction)WordToWordPressed:(id)sender {
     [gameSpecs setGameType:kWordToWord];
     NSLog(@"Game Type is Word to Word");
+    
+    [sender setBackgroundColor:[UIColor grayColor]];
 }
 
 - (IBAction)WordToSoundPressed:(id)sender {
@@ -161,23 +184,41 @@ Specs *gameSpecs;
 -(IBAction)HardPressed:(id)sender {
     [gameSpecs setDifficultyLevel:kHard];
     NSLog(@"Difficulty is Hard");
+    [sender setBackgroundColor:[UIColor grayColor]];
 }
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ //send specs to gameplayviewcontroller
     if([segue.identifier isEqualToString:@"gameStarts"]){
-        if(gameSpecs == nil) {
+        /**if(gameSpecs == nil) {
             gameSpecs = [[Specs alloc] init];
             [gameSpecs setDifficultyLevel:kEasy];
             [gameSpecs setGameType:kWordToWord];
             [gameSpecs setMultiplayer:false];
             [gameSpecs setTimed:false];
             NSLog(@"default settings activated");
-        }
+        }**/
         GameplayViewController  *controller = [segue destinationViewController];
         [controller setGameSpecs:gameSpecs];
         NSLog(@"SEGUE IDENTIFIED");
     }
 }
+
+-(IBAction)gameTypeSegmentPressed:(id)sender
+{
+    [gameSpecs setGameType:gameTypeControl.selectedSegmentIndex];
+    NSLog(@"%i", [gameSpecs gameType]);
+}
+
+- (IBAction)difficultySegmentPressed:(id)sender {
+    [gameSpecs setDifficultyLevel:gameTypeControl.selectedSegmentIndex+1];
+}
+
+- (IBAction)submitSettingsPressed:(id)sender {
+    
+}
+
+
+
 
 @end

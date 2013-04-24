@@ -27,6 +27,8 @@
 		222C694A16E15792000B5696 /* medium_blue_450px.png in Resources */ = {isa = PBXBuildFile; fileRef = 222C694816E15792000B5696 /* medium_blue_450px.png */; };
 		2256EE26171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
 		2256EE27171341830068C092 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256EE25171341830068C092 /* Specs.m */; };
+		225C226A17221524004E54EE /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225C226917221524004E54EE /* LandingPageViewController.m */; };
+		225C226B17221524004E54EE /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225C226917221524004E54EE /* LandingPageViewController.m */; };
 		227035B11714102200227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035AF1714102200227B56 /* Grid.m */; };
 		227035B21714102200227B56 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035AF1714102200227B56 /* Grid.m */; };
 		227035B31714102200227B56 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 227035B01714102200227B56 /* Content.m */; };
@@ -102,6 +104,8 @@
 		222C694816E15792000B5696 /* medium_blue_450px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium_blue_450px.png; sourceTree = "<group>"; };
 		2256EE24171341830068C092 /* Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specs.h; sourceTree = "<group>"; };
 		2256EE25171341830068C092 /* Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
+		225C226817221524004E54EE /* LandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPageViewController.h; sourceTree = "<group>"; };
+		225C226917221524004E54EE /* LandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageViewController.m; sourceTree = "<group>"; };
 		227035AD1714102200227B56 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
 		227035AE1714102200227B56 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		227035AF1714102200227B56 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				2256EE25171341830068C092 /* Specs.m */,
 				222C692816E154D5000B5696 /* iPadGameViewController.h */,
 				222C692916E154D5000B5696 /* iPadGameViewController.m */,
+				225C226817221524004E54EE /* LandingPageViewController.h */,
+				225C226917221524004E54EE /* LandingPageViewController.m */,
 				222C691416E154D5000B5696 /* Supporting Files */,
 			);
 			path = iPadG;
@@ -415,6 +421,7 @@
 				F62A60A617172FB300C3D83C /* DDFileReader.m in Sources */,
 				F62A60A91717315700C3D83C /* NSMutableArray_Shuffling.m in Sources */,
 				22FFC117171880C80085FF86 /* SoundEffects.m in Sources */,
+				225C226A17221524004E54EE /* LandingPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +435,7 @@
 				227035B41714102200227B56 /* Content.m in Sources */,
 				227035BF1714121700227B56 /* GameplayViewController.m in Sources */,
 				F6658163171F68BB0085955F /* MathGame.m in Sources */,
+				225C226B17221524004E54EE /* LandingPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
