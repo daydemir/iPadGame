@@ -32,13 +32,14 @@
 @synthesize WordToWordButton;
 @synthesize SoundToSoundButton;
 @synthesize gameTypeControl;
+@synthesize difficultyControl;
 @synthesize memoryControl;
 
 Specs *gameSpecs = nil;
 
 
 
--(void)awakeFromNib
+/*-(void)awakeFromNib
 {
     
     
@@ -54,14 +55,33 @@ Specs *gameSpecs = nil;
     
     
     
+}*/
+
++(void)initialize
+{
+    gameSpecs = [[Specs alloc] init];
+    NSLog(@"gamespecs init");
+}
+/*- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    if(self = [super initWithCoder:aDecoder]) {
+        //self.instanceVariable = [aDecoder decodeObjectForKey:INSTANCEVARIABLE_KEY];
+        
+        // similarly for other instance variables
+        
+        
+        
+    }
+    
+    return self;
 }
 
-
-/*-(id)initWithCoder:(NSCoder *)decoder
-{
-    //should be called only once i think..
-    NSLog(@"init with coder!");
-    return self;
+- (void)encodeWithCoder:(NSCoder *)enCoder {
+    [super encodeWithCoder:enCoder];
+    
+    //[enCoder encodeObject:instanceVariable forKey:INSTANCEVARIABLE_KEY];
+    
+    // Similarly for the other instance variables.
 }*/
 
 
@@ -69,10 +89,19 @@ Specs *gameSpecs = nil;
 {
     [super viewDidLoad];
     NSLog(@"VIEW DID LOAD");
+    [self printGameSpecs];
     
 
     SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
     [se play];
+    
+    
+    //setting segmented controls
+    [gameSpecs memory]? [memoryControl setSelectedSegmentIndex:1]:[memoryControl setSelectedSegmentIndex:0];
+    [difficultyControl setSelectedSegmentIndex:[gameSpecs difficultyLevel]];
+    [gameTypeControl setSelectedSegmentIndex:[gameSpecs gameType]];
+    
+    
     
     if([gameSpecs multiplayer]) {
         _NumPlayersLabel.text = @"2";
@@ -91,8 +120,11 @@ Specs *gameSpecs = nil;
     
     GameType gt = [gameSpecs gameType];
     
+    
+    
     if(gt == kWordToWord) {
-        _GameTypeLabel.text = @"Word To Word"; }
+        _GameTypeLabel.text = @"Word To Word";
+    }
     else if (gt == kWordToSound) {
         _GameTypeLabel.text  = @"Word to Sound"; }
     else if (gt == kSoundToSound){
@@ -126,8 +158,7 @@ Specs *gameSpecs = nil;
 
 
 - (IBAction)ChooseSettingsSelected:(id)sender {
-    gameSpecs = [[Specs alloc] init];
-    NSLog(@"gamespecs init");
+
     
 }
 
@@ -222,7 +253,7 @@ Specs *gameSpecs = nil;
 }
 
 - (IBAction)difficultySegmentPressed:(id)sender {
-    [gameSpecs setDifficultyLevel:gameTypeControl.selectedSegmentIndex+1];
+    [gameSpecs setDifficultyLevel:gameTypeControl.selectedSegmentIndex];
 }
 
 - (IBAction)submitSettingsPressed:(id)sender {
@@ -241,6 +272,48 @@ Specs *gameSpecs = nil;
     }
 }
 
+
+-(void)printGameSpecs
+{
+    GameType gt = [gameSpecs gameType];
+    
+    NSString *gametype = @"nothing" ;
+    NSString *difficulty = @"no diff" ;
+    NSString *memory;
+    
+    if(gt == kWordToWord) {
+        gametype = @"Word To Word";
+    }
+    else if (gt == kWordToSound) {
+        gametype  = @"Word to Sound"; }
+    else if (gt == kSoundToSound){
+        gametype = @"Sound to Sound"; }
+    else if (gt == kMath){
+        gametype = @"Math";
+    }
+    
+    DifficultyLevel dl = [gameSpecs difficultyLevel];
+    if(dl == kEasy) {
+        difficulty = @"Easy"; }
+    else if (dl == kVeryEasy) {
+        difficulty  = @"Very Easy"; }
+    else if (dl == kMedium) {
+        difficulty  = @"Medium"; }
+    else if (dl == kHard) {
+        difficulty  = @"Hard"; }
+    else if (dl == kVeryHard){
+        difficulty = @"Very Hard!"; }
+    
+    BOOL *m = [gameSpecs memory];
+    if(m)   {
+        memory = @"true";
+    }
+    else if( !m ){
+        memory = @"false";
+    }
+
+    NSLog(@"Specs are: %@, %@, %@", gametype, difficulty, memory);
+}
 
 
 
