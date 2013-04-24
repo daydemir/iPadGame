@@ -13,9 +13,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+  /*  if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
+    {
+        UIGraphicsBeginImageContext(self.window.frame.size);
+        [[UIImage imageNamed:@"background2.png"] drawInRect:self.window.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.window.backgroundColor = [UIColor colorWithPatternImage:image];
+        //[self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]]];
+        
+        return YES;
+    }
+    else {
+        UIGraphicsBeginImageContext(self.window.frame.size);
+        [[UIImage imageNamed:@"background.jpg"] drawInRect:self.window.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.window.backgroundColor = [UIColor colorWithPatternImage:image];
+        //[self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]]];
+        
+        return YES;
+
+    }*/
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -42,5 +66,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

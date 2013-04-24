@@ -107,7 +107,7 @@ NSArray *gridContent;
 -(void)createButtons:(int)numButtons array:(NSArray*)gc
 {
     //default for 16 cards or 8 cards
-    int yOffset = 56;
+    int yOffset = 0;
     int xOffset = 0;
     int yOffsetIncrement = 225;
     int width = 192;
@@ -317,4 +317,17 @@ NSArray *gridContent;
 
 
 
+- (IBAction)quitGamePressed:(id)sender {
+    UIActionSheet *gameQuit = [[UIActionSheet alloc] initWithTitle:@"Are you sure?" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Quit",@"Resume", nil];
+    [gameQuit showInView:[self.view window]];
+
+    
+}
+
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex    {
+    if(buttonIndex == 0){
+        [self performSegueWithIdentifier:@"quitGame" sender:self];
+    }
+    [actionSheet dismissWithClickedButtonIndex:1 animated:true];
+}
 @end

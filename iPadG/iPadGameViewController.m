@@ -24,6 +24,7 @@
 @synthesize GameTypeLabel = _GameTypeLabel;
 @synthesize GameDifficultyLabel = _GameDifficultyLabel;
 @synthesize TimerLabel = _TimerLabel;
+@synthesize memoryLabel = _memoryLabel;
 @synthesize EasyButton;
 @synthesize MediumButton;
 @synthesize HardButton;
@@ -46,12 +47,7 @@ Specs *gameSpecs = nil;
     
     NSLog(@"INITIALIZATION");
     
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"JazzyElevatorMusic" ofType:@"mp3"];
-    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
-    player.numberOfLoops = -1; //infinite
-    
-    [player play];
+
     
     
     
@@ -61,6 +57,22 @@ Specs *gameSpecs = nil;
 {
     gameSpecs = [[Specs alloc] init];
     NSLog(@"gamespecs init");
+    [gameSpecs setMemory:FALSE];
+    [gameSpecs setGameType:kWordToWord];
+    [gameSpecs setDifficultyLevel:kEasy];
+    
+    
+    
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"JazzyElevatorMusic" ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    player.numberOfLoops = -1; //infinite
+    
+    [player play];
+    
+    
+    
+
 }
 /*- (id)initWithCoder:(NSCoder *)aDecoder {
     
@@ -90,10 +102,32 @@ Specs *gameSpecs = nil;
     [super viewDidLoad];
     NSLog(@"VIEW DID LOAD");
     [self printGameSpecs];
+    //[[self view] setBackgroundColor:[UIColor clearColor]];
+    // set background here
+    /*if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
+       {
+           UIGraphicsBeginImageContext(self.view.frame.size);
+           [[UIImage imageNamed:@"background2.png"] drawInRect:self.view.bounds];
+           UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+           UIGraphicsEndImageContext();
+           
+           self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+       }
+    else {
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageNamed:@"background.jpg"] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    }*/
     
 
-    SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
-    [se play];
+    
+    
+
+    //SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"Buzzer.aiff"];
+    //[se play];
     
     
     //setting segmented controls
@@ -101,9 +135,26 @@ Specs *gameSpecs = nil;
     [difficultyControl setSelectedSegmentIndex:[gameSpecs difficultyLevel]];
     [gameTypeControl setSelectedSegmentIndex:[gameSpecs gameType]];
     
+    UIFont *font = [UIFont boldSystemFontOfSize:24.0];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
+                                                          forKey:UITextAttributeFont ];
+    //[memoryControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    //[[UISegmentedControl appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    NSDictionary *unselectedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont boldSystemFontOfSize:22], UITextAttributeFont,
+                                [UIColor blackColor], UITextAttributeTextColor,
+                                nil];
+    [[UISegmentedControl appearance] setTitleTextAttributes:unselectedAttributes forState:UIControlStateNormal];
+    NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
+    [[UISegmentedControl appearance] setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
     
     
-    if([gameSpecs multiplayer]) {
+    //[[UIButton appearance] setTitleTextAttributes:attributes];
+    
+    
+    
+    /*if([gameSpecs multiplayer]) {
         _NumPlayersLabel.text = @"2";
         //NSLog(@"CHECKED MULTI");
     }
@@ -117,10 +168,14 @@ Specs *gameSpecs = nil;
     else {
         _TimerLabel.text = @"No";
     }
+    */
+    
+    if([gameSpecs memory]) {
+        _memoryLabel.text = @"Cards are face DOWN"; }
+    {
+        _memoryLabel.text = @"Cards are face UP"; }
     
     GameType gt = [gameSpecs gameType];
-    
-    
     
     if(gt == kWordToWord) {
         _GameTypeLabel.text = @"Word To Word";
@@ -137,13 +192,13 @@ Specs *gameSpecs = nil;
     if(dl == kEasy) {
         _GameDifficultyLabel.text = @"Easy"; }
     else if (dl == kVeryEasy) {
-        _GameDifficultyLabel.text  = @"Very Easy"; }
+        _GameDifficultyLabel.text  = @"Super Easy"; }
     else if (dl == kMedium) {
         _GameDifficultyLabel.text  = @"Medium"; }
     else if (dl == kHard) {
         _GameDifficultyLabel.text  = @"Hard"; }
     else {
-        _GameDifficultyLabel.text = @"Very Hard!"; }
+        _GameDifficultyLabel.text = @"SUPER Hard!"; }
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -253,7 +308,7 @@ Specs *gameSpecs = nil;
 }
 
 - (IBAction)difficultySegmentPressed:(id)sender {
-    [gameSpecs setDifficultyLevel:gameTypeControl.selectedSegmentIndex];
+    [gameSpecs setDifficultyLevel:difficultyControl.selectedSegmentIndex];
 }
 
 - (IBAction)submitSettingsPressed:(id)sender {
@@ -304,7 +359,7 @@ Specs *gameSpecs = nil;
     else if (dl == kVeryHard){
         difficulty = @"Very Hard!"; }
     
-    BOOL *m = [gameSpecs memory];
+    BOOL m = [gameSpecs memory];
     if(m)   {
         memory = @"true";
     }
@@ -313,6 +368,22 @@ Specs *gameSpecs = nil;
     }
 
     NSLog(@"Specs are: %@, %@, %@", gametype, difficulty, memory);
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration :(UIInterfaceOrientation)fromInterfaceOrientation {
+    
+    // change background here
+    /*if(fromInterfaceOrientation == UIInterfaceOrientationPortrait){
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageNamed:@"background2.png"] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    }*/
+    
+
+    
 }
 
 

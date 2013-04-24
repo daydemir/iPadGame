@@ -10,8 +10,9 @@
 #import "Grid.h"    
 #import "Specs.h"
 
-@interface GameplayViewController : UIViewController
+@interface GameplayViewController : UIViewController<UIActionSheetDelegate>
 
 @property (nonatomic) Specs *gameSpecs;
+- (IBAction)quitGamePressed:(id)sender;
 
 @end

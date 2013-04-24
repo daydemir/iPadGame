@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *GameTypeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *GameDifficultyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *TimerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *memoryLabel;
 
 @property (retain, nonatomic) IBOutlet UIButton *MathButton;
 @property (retain, nonatomic) IBOutlet UIButton *WordToWordButton;
