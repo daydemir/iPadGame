@@ -237,8 +237,8 @@ NSArray *gridContent;
         if([currentContent matchID] == [previousContent matchID])
         {
             [self highlightMatchedButtons:clickedButton secondButton:sender];
-            [currentContent setMatched:true];
-            [previousContent setMatched:true];
+            [currentContent setMatched:YES];
+            [previousContent setMatched:YES];
             SoundEffects *se = [[SoundEffects alloc] initWithSoundNamed:@"A-Tone.mp3"];
             [se play];
             if([gameGrid gameOver])
@@ -314,7 +314,7 @@ NSArray *gridContent;
         sender.backgroundColor = [UIColor whiteColor];
         
         Content *currentCard = [gridContent objectAtIndex:[sender tag]];
-        [sender setTitle:[NSString stringWithFormat:@"%@", @""] forState:UIControlStateNormal];
+        [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.label] forState:UIControlStateNormal];
         if([gameSpecs memory]){
             [sender setTitle:[NSString stringWithFormat:@"%@", currentCard.label] forState:UIControlStateNormal];
         }
